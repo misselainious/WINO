@@ -1,11 +1,18 @@
-import React from "react"
+import React, { Component } from "react"
 import CheckBoxes from "../Checkboxes/Checkboxes"
 import "./CheckboxSidebar.css"
-const CheckboxSidebar = props =>{
-    const checkboxArray = props.checkableArrays.map( (arry,i) => {
-        return <CheckBoxes checkables={arry} key={parseInt(i)}/>
-    })
-    return <div className="sidebar">{checkboxArray}</div>
+
+//need to make pull request 
+
+class CheckboxSidebar extends Component {
+
+    render() {
+        const checkboxArray = this.props.checkableArrays.map((arry, i) => {
+            return <CheckBoxes checkables={arry} key={parseInt(i)} />
+        })
+
+        return <div className="sidebar">{checkboxArray}</div>
+    }
 }
 
 
