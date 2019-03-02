@@ -1,130 +1,141 @@
-// var mongoose = require('mongoose');
-// var Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+//var DataTypes= require('DataTypes')
+mongoose.connect('mongodb://localhost:27017/wineDB', { useNewUrlParser: true });
 
-// var wineSchema = new Schema({
+var Schema = mongoose.Schema;
 
-//         wine_code: {
-//             type: DataTypes.STRING
-//         },
-//         country: {
-//             type: DataTypes.STRING
-//         },
-//         region: {
-//             type: DataTypes.STRING
-//         },
-//         subregion: {
-//             type: DataTypes.STRING
-//         },
-//         producer: {
-//             type: DataTypes.STRING
-//         },
-//         color: {
-//             type: DataTypes.STRING
-//         },
-//         wine_desc: {
-//             type: DataTypes.STRING
-//         },
-//         abv: {
-//             type: DataTypes.STRING
-//         },
-//         acidity: {
-//             type: DataTypes.STRING
-//         },
-//         redisual_sugar: {
-//             type: DataTypes.STRING
-//         },
-//         dosage: {
-//             type: DataTypes.STRING
-//         },
-//         years_blend: {
-//             type: DataTypes.STRING
-//         },
-//         bottle_date: {
-//             type: DataTypes.STRING
-//         },
-//         disgorgement: {
-//             type: DataTypes.STRING
-//         },
-//         closure: {
-//             type: DataTypes.STRING
-//         },
-//         annual_production: {
-//             type: DataTypes.STRING
-//         },
-//         varieties: {
-//             type: DataTypes.STRING
-//         },
-//         maceration: {
-//             type: DataTypes.STRING
-//         },
-//         pump_punch: {
-//             type: DataTypes.STRING
-//         },
-//         destem: {
-//             type: DataTypes.STRING
-//         },
-//         f_vessel: {
-//             type: DataTypes.STRING
-//         },
-//         f_duration: {
-//             type: DataTypes.STRING
-//         },
-//         aging_method: {
-//             type: DataTypes.STRING
-//         },
-//         aging_duration: {
-//             type: DataTypes.STRING
-//         },
-//         filtered: {
-//             type: DataTypes.STRING
-//         },
-//         fining: {
-//             type: DataTypes.STRING
-//         },
-//         yeast: {
-//             type: DataTypes.STRING
-//         },
-//         lees: {
-//             type: DataTypes.STRING
-//         },
-//         malo: {
-//             type: DataTypes.STRING
-//         },
-//         sulfur: {
-//             type: DataTypes.STRING
-//         },
-//         vinyard_name: {
-//             type: DataTypes.STRING
-//         },
-//         soil: {
-//             type: DataTypes.STRING
-//         },
-//         elevation: {
-//             type: DataTypes.STRING
-//         },
-//         aspect: {
-//             type: DataTypes.STRING
-//         },
-//         vine_age: {
-//             type: DataTypes.STRING
-//         },
-//         vine_yields: {
-//             type: DataTypes.STRING
-//         },
-//         farming_practices: {
-//             type: DataTypes.STRING
-//         },
-//         vine_training: {
-//             type: DataTypes.STRING
-//         },
-//         grape_picking: {
-//             type: DataTypes.STRING
-//         },
-//         notes: {
-//             type: DataTypes.STRING
-//         }
+var wineSchema = new Schema({
+
+    wine_code: {
+        type: String
+    },
+    country: {
+        type: String
+    },
+    region: {
+        type: String
+    },
+    subregion: {
+        type: String
+    },
+    producer: {
+        type: String
+    },
+    color: {
+        type: String
+    },
+    wine_desc: {
+        type: String
+    },
+    abv: {
+        type: String
+    },
+    acidity: {
+        type: String
+    },
+    redisual_sugar: {
+        type: String
+    },
+    dosage: {
+        type: String
+    },
+    years_blend: {
+        type: String
+    },
+    bottle_date: {
+        type: String
+    },
+    disgorgement: {
+        type: String
+    },
+    closure: {
+        type: String
+    },
+    annual_production: {
+        type: String
+    },
+    varieties: {
+        type: String
+    },
+    maceration: {
+        type: String
+    },
+    pump_punch: {
+        type: String
+    },
+    destem: {
+        type: String
+    },
+    f_vessel: {
+        type: String
+    },
+    f_duration: {
+        type: String
+    },
+    aging_method: {
+        type: String
+    },
+    aging_duration: {
+        type: String
+    },
+    filtered: {
+        type: String
+    },
+    fining: {
+        type: String
+    },
+    yeast: {
+        type: String
+    },
+    lees: {
+        type: String
+    },
+    malo: {
+        type: String
+    },
+    sulfur: {
+        type: String
+    },
+    vinyard_name: {
+        type: String
+    },
+    soil: {
+        type: String
+    },
+    elevation: {
+        type: String
+    },
+    aspect: {
+        type: String
+    },
+    vine_age: {
+        type: String
+    },
+    vine_yields: {
+        type: String
+    },
+    farming_practices: {
+        type: String
+    },
+    vine_training: {
+        type: String
+    },
+    grape_picking: {
+        type: String
+    },
+    notes: {
+        type: String
+    }
 
 
-//     });
+});
 
-// module.exports = mongoose.model('Wine', wineSchema);
+
+var wine = mongoose.model('wineList', wineSchema);
+wine.findOne(  (err, result) => { 
+    if (err) {return err}
+    console.log(result) 
+})
+
+
+module.exports = mongoose.model('Wine', wineSchema);
