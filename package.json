@@ -21,10 +21,15 @@
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.3",
+    "fast-csv": "^2.4.1",
     "if-env": "^1.0.4",
+    "mongoose": "^5.4.16",
+    "mysql": "^2.12.0",
+    "mysql2": "^1.6.5",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.1"
+    "react-scripts": "^2.1.1",
+    "sequelize": "^4.41.2"
   }
 }

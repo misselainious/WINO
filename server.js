@@ -2,6 +2,19 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const mongoose = require("mongoose");
+
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/wineDB");
+
+//Code for importing .csv
+// const session = require('express-session');
+// const flash = require('connect-flash');
+// const mongoose = require('mongoose');
+// mongoose.Promise = global.Promise;
+// mongoose.connect('mongodb://localhost/wine', { useMongoClient: true });
+// require("./models/wine");
+
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
