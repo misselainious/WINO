@@ -24,8 +24,11 @@
     "fast-csv": "^2.4.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.4.16",
+<<<<<<< HEAD
     "mysql": "^2.12.0",
     "mysql2": "^1.6.5",
+=======
+>>>>>>> 040d55f7a3121adbb52be1735ea52ac714b7c3a2
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
