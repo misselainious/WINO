@@ -1,7 +1,6 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
 
-var wineSchema = new Schema({
+const wineSchema = new mongoose.Schema({
 
         code: String,
         country: String,
@@ -19,7 +18,7 @@ var wineSchema = new Schema({
         disgorgement_date: String,
         closure: String,
         annual_cases_produced: Number,
-        varieties: String,
+        constieties: String,
         maceration_notes: String,
         pumpover: String,
         destemming: String,
@@ -79,3 +78,11 @@ module.exports = mongoose.model('Wine', wineSchema);
 // // Export the Example model
 // module.exports = Wine;
 // module.exports = mongoose.model('Wine', wineSchema);
+const wine = mongoose.model('wineList', wineSchema, "wineList");
+
+wine.findOne((err, result) => {
+    if (err) { return err }
+    console.log("wine find results", result)
+})
+
+module.exports = wine
