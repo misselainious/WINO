@@ -1,7 +1,13 @@
 var mongoose = require('mongoose');
-//var DataTypes= require('DataTypes')
+mongoose.connection.on("open", function (ref) {
+    console.log("Connected to mongo server.");
+});
+mongoose.connection.on('error', function (err) { console.log(err) });
 mongoose.connect('mongodb://localhost:27017/wineDB', { useNewUrlParser: true });
 
+
+
+//console.log(mongoose.connection)
 var Schema = mongoose.Schema;
 
 var wineSchema = new Schema({
@@ -129,13 +135,13 @@ var wineSchema = new Schema({
 
 
 });
+var wine = mongoose.model('wineList', wineSchema, "wineList");
 
-
-var wine = mongoose.model('wineList', wineSchema);
-wine.findOne(  (err, result) => { 
-    if (err) {return err}
-    console.log(result) 
+wine.findOne((err, result) => {
+    if (err) { return err }
+    console.log("wine find results", result)
 })
 
 
-module.exports = mongoose.model('Wine', wineSchema);
+
+module.exports = wine
