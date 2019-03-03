@@ -6,6 +6,7 @@ import Homepage from "./components/Homepage/Homepage";
 // import Home from "./pages/home";
 import AllWines from "./pages/allwines";
 import Admin from "./pages/admin";
+import Onewine from "./pages/onewine";
 // import Wrapper from "./components/Wrapper";
 // import Footer from "../src/components/Footer";
 
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path="/" component={Homepage} />
             <Route exact path="/allwines" component={AllWines} />
             <Route exact path="/admin" component={Admin} />
+            <Route exact path="/onewine/:id" component={Onewine} />
             {/* <Route exact path="/producers" component={Producers} />
              <Route exact path="/aboutus" component={AboutUs} /> */}
           </Switch>
@@ -36,19 +38,3 @@ class App extends Component {
 
 
 export default App;
-
-// function App() {
-  //   return (
-  //     <Router>
-  //       <div>
-  //         <Wrapper>
-  //           <Route exact path="/" component={Home} />
-  //           <Route exact path="/allwines" component={AllWines} />
-  //           {/* <Route exact path="/about" component={About} /> */}
-  //         </Wrapper>
-  //         <Footer />
-  //       </div>
-  // </Router>
-  //   );
-  // }
-
