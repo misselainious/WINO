@@ -229,12 +229,12 @@ const Homepage = () => (
             </p> */}
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+            <Image bordered rounded size='large' src='images/winePouring.jpg' />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <Button size='huge'>Producers</Button>
+            <Button size='huge'>See All Wines</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -244,17 +244,18 @@ const Homepage = () => (
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "What a Company"
+              "A gourmet meal without a glass of wine just seems tragic to me somehow."
             </Header>
-            <p style={{ fontSize: '1.33em' }}>get some reviews for this section</p>
+            <p style={{ fontSize: '1.33em' }}>- Kathy Mattea</p>
           </Grid.Column>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "I shouldn't have gone with their competitor."
+              "The discovery of a good wine is increasingly better for mankind than the discovery of a new star."
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              <Image avatar src='/images/avatar/large/nan.jpg' />
-              <b>Nan</b> Chief Fun Officer Acme Toys
+              {/* <Image avatar src='/images/avatar/large/nan.jpg' /> */}
+              <b></b>- Leonardo Da Vinci
+             
             </p>
           </Grid.Column>
         </Grid.Row>
@@ -299,17 +300,17 @@ const Homepage = () => (
               <List link inverted>
                 <List.Item as='a'>Sitemap</List.Item>
                 <List.Item as='a'>Contact Us</List.Item>
-                <List.Item as='a'>Religious Ceremonies</List.Item>
-                <List.Item as='a'>Gazebo Plans</List.Item>
+                {/* <List.Item as='a'>Religious Ceremonies</List.Item>
+                <List.Item as='a'>Gazebo Plans</List.Item> */}
               </List>
             </Grid.Column>
             <Grid.Column width={3}>
               <Header inverted as='h4' content='Services' />
               <List link inverted>
-                <List.Item as='a'>Banana Pre-Order</List.Item>
-                <List.Item as='a'>DNA FAQ</List.Item>
+                <List.Item as='a'>Wine Pre-Order</List.Item>
+                {/* <List.Item as='a'>DNA FAQ</List.Item> */}
                 <List.Item as='a'>How To Access</List.Item>
-                <List.Item as='a'>Favorite X-Men</List.Item>
+                {/* <List.Item as='a'>Favorite X-Men</List.Item> */}
               </List>
             </Grid.Column>
             <Grid.Column width={7}>
@@ -317,7 +318,8 @@ const Homepage = () => (
                 Address
               </Header>
               <p>
-               5655 College Avenue, Oakland CA 94618
+               5655 College Avenue, Oakland CA 94618 • orders@winewise.biz   
+               • (p) 510.848.6879 • (f) 510.848.6880
               </p>
             </Grid.Column>
           </Grid.Row>

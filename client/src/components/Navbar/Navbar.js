@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Homepage from '../Homepage/Homepage';
+
 import {
   Button,
   Container,
-  // Divider,
-  // Grid,
-  // Header,
   Icon,
-  // Image,
-  // List,
   Menu,
   Responsive,
   Segment,
@@ -72,7 +67,7 @@ class Navbar extends Component {
                 </Menu.Item>
               </Container>
             </Menu>
-            {/* <Homepage /> */}
+           
           </Segment>
         </Visibility>
 
