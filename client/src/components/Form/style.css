@@ -1,0 +1,9 @@
+.form-control {
+    background-color: rgba(215, 207, 223, 0.705);
+    width: 30%;
+    margin-top: 10px;
+}
+.btn{
+    background-color: rgb(122, 151, 122);
+    color: black;
+}

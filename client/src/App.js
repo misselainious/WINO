@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./components/Homepage/Homepage";
 import Home from "./pages/home";
 import AllWines from "./pages/allwines";
+import Admin from "./pages/admin";
 import Wrapper from "./components/Wrapper";
 import Footer from "../src/components/Footer";
 
@@ -25,6 +26,7 @@ function App() {
         <Wrapper>
           <Route exact path="/" component={Home} />
           <Route exact path="/allwines" component={AllWines} />
+          <Route exact path="/admin" component={Admin} />
           {/* <Route exact path="/about" component={About} /> */}
         </Wrapper>
         <Footer />
