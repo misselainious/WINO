@@ -48,7 +48,7 @@ var wineSchema = new Schema({
 
 //     });
 
-// module.exports = mongoose.model('Wine', wineSchema);
+module.exports = mongoose.model('Wine', wineSchema);
 
 
 // Require mongoose
