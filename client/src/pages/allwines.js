@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 // import Container from "../components/Container";
-import API from "../components/utils/API";
 import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar"
 
 
@@ -13,7 +12,6 @@ class Wines extends Component {
 //   componentDidMount() {
 //     this.loadWines();
 //   }
-
 
 //HANDLE Blah-blah-blah
 

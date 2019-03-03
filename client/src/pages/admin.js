@@ -52,7 +52,7 @@ class Admin extends Component {
                   placeholder="notes (Optional)"
                 />
                 <FormBtn
-                  disabled={!(this.state.country && this.state.code)}
+                  // disabled={!(this.state.country && this.state.code)}
                   onClick={this.handleFormSubmit}
                 >
                   Submit Wine

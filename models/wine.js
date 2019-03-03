@@ -4,10 +4,10 @@
 // var wineSchema = new Schema({
 
 //         wine_code: {
-//             type: DataTypes.STRING
+//             type: String
 //         },
 //         country: {
-//             type: DataTypes.STRING
+//             type: String
 //         },
 //         region: {
 //             type: DataTypes.STRING
@@ -121,7 +121,7 @@
 //             type: DataTypes.STRING
 //         },
 //         notes: {
-//             type: DataTypes.STRING
+//             type: String
 //         }
 
 
