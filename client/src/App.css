@@ -1,4 +1,8 @@
-.App {
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:400,700'); */
+body{
+   background-image: url(../src/images/winePouring.jpg);
+
+/* .App {
   text-align: center;
 }
 
@@ -21,4 +25,4 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+} */
