@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Input, TextArea, FormBtn } from "../components/Form";
-import API from "../components/utils/API";
+import API from "../utils/API";
 
 class Admin extends Component {
     state = {
@@ -9,7 +9,7 @@ class Admin extends Component {
         country: "",
         notes: ""
     };
-    
+
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({

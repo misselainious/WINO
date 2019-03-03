@@ -7,7 +7,7 @@ export default {
   },
   // Gets the wine with the given id
   getWine: function(id) {
-    return axios.get("/onewine/" + id);
+    return axios.get("/api/onewine/" + id);
   },
   // Deletes the book with the given id
   // deleteWine: function(id) {
