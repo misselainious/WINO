@@ -4,11 +4,12 @@ import API from "../components/utils/API";
 
 class Admin extends Component {
     state = {
-        books: [],
+        wines: [],
         code: "",
         country: "",
         notes: ""
     };
+    
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
