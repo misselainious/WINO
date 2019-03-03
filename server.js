@@ -6,16 +6,14 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/wineDB");
 
-//Code for importing .csv
-// const session = require('express-session');
-// const flash = require('connect-flash');
-// const mongoose = require('mongoose');
-// mongoose.Promise = global.Promise;
-// mongoose.connect('mongodb://localhost/wine', { useMongoClient: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/wineDB', { useNewUrlParser: true });
+mongoose.connection.on("open", function (ref) {
+  console.log("Connected to mongo server.");
+});
+mongoose.connection.on('error', function (err) { console.log(err) });
+
 // require("./models/wine");
-
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
