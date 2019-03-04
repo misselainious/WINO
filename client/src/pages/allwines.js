@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import Container from "../components/Container";
-import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar"
+import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar";
 
 
 
