@@ -9,10 +9,7 @@ import { Grid } from "semantic-ui-react";
 
 class Wines extends Component {
   state = {
-    wines: [],
-    code: "",
-    producer: "",
-    notes: ""
+    wines: []
   };
 
   componentDidMount() {
@@ -50,8 +47,7 @@ loadWines = () => {
                   <ListItem key={wine._id}>
                     <Link to={"/wines/" + wine._id}>
                       <strong>
-                        {wine.Code} by {wine.Producer}
-                        and also {wine.Notes}
+                        {wine.Code} by { wine.Producer } and also { wine.Country }
                       </strong>
                     </Link>
                   
