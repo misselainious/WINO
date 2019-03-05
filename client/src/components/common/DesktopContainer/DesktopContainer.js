@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-import { Responsive, Visibility, Segment } from "semantic-ui-react";
-import HomeHeading from "../../Homepage/HomeHeading/HomeHeading";
+import { Responsive, Visibility } from "semantic-ui-react";
+
 import Navbar from "../Navbar/Navbar";
 
 class DesktopContainer extends Component {
@@ -21,15 +21,7 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-          <Segment
-            inverted
-            textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
-            vertical
-          >
           <Navbar fixed={fixed} />
-            <HomeHeading />
-          </Segment>
         </Visibility>
 
         {children}
