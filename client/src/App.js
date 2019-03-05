@@ -5,6 +5,7 @@ import { Responsive } from "semantic-ui-react";
 import Home from "./pages/home";
 import AllWines from "./pages/allwines";
 import Admin from "./pages/admin";
+import Onewine from "./pages/onewine";
 // import Wrapper from "./components/Wrapper";
 // import Footer from "../src/components/Footer";
 import DesktopContainer from "./components/common/DesktopContainer/DesktopContainer";
@@ -58,19 +59,3 @@ const PageSwitch = props => {
 
 
 export default App;
-
-// function App() {
-  //   return (
-  //     <Router>
-  //       <div>
-  //         <Wrapper>
-  //           <Route exact path="/" component={Home} />
-  //           <Route exact path="/allwines" component={AllWines} />
-  //           {/* <Route exact path="/about" component={About} /> */}
-  //         </Wrapper>
-  //         <Footer />
-  //       </div>
-  // </Router>
-  //   );
-  // }
-

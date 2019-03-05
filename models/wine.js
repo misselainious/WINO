@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const wineSchema = new mongoose.Schema({
+const wineSchema = new Schema({
 
         code: String,
         country: String,
@@ -44,11 +45,49 @@ const wineSchema = new mongoose.Schema({
         notes: String
     });
 
-const wine = mongoose.model('wineList', wineSchema, "wineList");
 
-wine.findOne((err, result) => {
-    if (err) { return err }
-    console.log("wine find results", result)
-})
+//     });
 
-module.exports = wine
+// module.exports = mongoose.model('Wine', wineSchema);
+
+
+// Require mongoose
+// var mongoose = require("mongoose");
+
+// // Get a reference to the mongoose Schema constructor
+// var Schema = mongoose.Schema;
+
+// // Using the Schema constructor, create a new ExampleSchema object
+// // This is similar to a Sequelize model
+// var WineSchema = new Schema({
+//   // `string` must be of type String. We "trim" it to remove any trailing white space
+//   // `string` is a required field, and a custom error message is thrown if it is not supplied
+//   code: {
+//     type: String
+//   },
+//   producer: {
+//     type: String
+//   },
+//   notes: {
+//       type: String
+//   }
+// });
+
+// // This creates our model from the above schema, using mongoose's model method
+// var Wine = mongoose.model("Wine", WineSchema);
+
+// // Export the Example model
+// module.exports = Wine;
+// module.exports = mongoose.model('Wine', wineSchema);
+
+
+const Wine = mongoose.model('wineList', wineSchema, "wineList");
+
+// Wine.findOne((err, result) => {
+//     if (err) { return err }
+//     console.log("wine find results", result)
+// })
+
+module.exports = Wine
+
+
