@@ -1,6 +1,12 @@
 import React, { Component } from "react";
-import { Input, TextArea, FormBtn } from "../components/Form";
+// import { Input, TextArea, FormBtn } from "../components/Form";
 import API from "../utils/API";
+
+import {
+Segment,
+Form,
+Input
+} from 'semantic-ui-react'
 
 class Admin extends Component {
     state = {
@@ -25,44 +31,49 @@ class Admin extends Component {
             country: this.state.country,
             notes: this.state.notes
           })
-            // .then(res => this.loadBooks())
             .catch(err => console.log(err));
         }
       };
-  
-    render() {
-      return (
-        
-              <form>
-                <Input
-                  value={this.state.code}
-                  onChange={this.handleInputChange}
-                  name="code"
-                  placeholder="code (required)"
-                />
-                <Input
-                  value={this.state.country}
-                  onChange={this.handleInputChange}
-                  name="country"
-                  placeholder="country (required)"
-                />
-                <TextArea
-                  value={this.state.notes}
-                  onChange={this.handleInputChange}
-                  name="notes"
-                  placeholder="notes (Optional)"
-                />
-                <FormBtn
-                  // disabled={!(this.state.country && this.state.code)}
-                  onClick={this.handleFormSubmit}
-                >
-                  Submit Wine
-                </FormBtn>
-              </form>
-        
-      );
-    }
-  }
+
+        render() {
+          return (
+            <Segment>
+                  <Form>
+                    <Form.Group>
+                    <Form.Input
+                      value={this.state.code}
+                      onChange={this.handleInputChange}
+                      name="code"
+                      placeholder="code (required)"
+                      class="forminput"
+                    />
+                    <Form.Input
+                      value={this.state.country}
+                      onChange={this.handleInputChange}
+                      name="country"
+                      placeholder="country (required)"
+                      class="forminput"
+                    />
+                    <Form.TextArea
+                      value={this.state.notes}
+                      onChange={this.handleInputChange}
+                      name="notes"
+                      placeholder="notes (Optional)"
+                    />
+                    <Form.Button
+                      // disabled={!(this.state.country && this.state.code)}
+                      onClick={this.handleFormSubmit}
+                    >
+                      Submit Wine
+                    </Form.Button>
+                    </Form.Group>
+                  </Form>
+              </Segment>
+          );
+        }
+      }
+
   
   export default Admin;
   
+
