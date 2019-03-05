@@ -1,3 +1,4 @@
 module.exports = {
-    Wine: require("./wine")
+    Wine: require("./wine"),
+    Producer: require("./producer")
 }
