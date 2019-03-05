@@ -5,12 +5,14 @@ import { Button, Container, Menu } from 'semantic-ui-react';
 const Navbar = props => {
   const fixed = props.fixed;
   return (
+   
     <Menu
       fixed={fixed ? 'top' : null}
       inverted={!fixed}
       pointing={!fixed}
       secondary={!fixed}
       size='large'
+      color='black'
     >
       <Container>
         <Menu.Item as='a' active>
