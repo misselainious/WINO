@@ -1,8 +1,9 @@
+
 import React, { Component } from "react";
+import wine from "../../src/"
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../components/List";
-
 
 class Onewine extends Component {
 
@@ -15,9 +16,17 @@ class Onewine extends Component {
 // }
 
 componentDidMount() {
-    API.getWine(this.props.match.params.id)
-      .then(res => this.setState({ wine: res.data }))
+    // API.getWine(this.props.match.params.id)
+    //   .then(res => this.setState({ wine: res.data }))
+    //   .catch(err => console.log(err));
+    // event.preventDefault();
+
+
+    
+    API.getWines()
+      .then(res => this.setState({ wines: res.data }))
       .catch(err => console.log(err));
+
   }
     
 

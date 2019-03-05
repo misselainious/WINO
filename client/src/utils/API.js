@@ -3,11 +3,12 @@ import axios from "axios";
 export default {
   // Gets all wine
   getWines: function() {
-    return axios.get("/api/wine");
+    console.log("GETTING WINES")
+    return axios.get("/api/wines");
   },
   // Gets the wine with the given id
   getWine: function(id) {
-    return axios.get("/api/onewine/" + id);
+    return axios.get("/api/wine/" + id);
   },
   // Deletes the book with the given id
   // deleteWine: function(id) {

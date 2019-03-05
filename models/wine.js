@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const wineSchema = new mongoose.Schema({
+const wineSchema = new Schema({
 
         code: String,
         country: String,
@@ -47,7 +48,7 @@ const wineSchema = new mongoose.Schema({
 
 //     });
 
-module.exports = mongoose.model('Wine', wineSchema);
+// module.exports = mongoose.model('Wine', wineSchema);
 
 
 // Require mongoose
@@ -78,11 +79,15 @@ module.exports = mongoose.model('Wine', wineSchema);
 // // Export the Example model
 // module.exports = Wine;
 // module.exports = mongoose.model('Wine', wineSchema);
-const wine = mongoose.model('wineList', wineSchema, "wineList");
 
-wine.findOne((err, result) => {
-    if (err) { return err }
-    console.log("wine find results", result)
-})
 
-module.exports = wine
+const Wine = mongoose.model('wineList', wineSchema, "wineList");
+
+// Wine.findOne((err, result) => {
+//     if (err) { return err }
+//     console.log("wine find results", result)
+// })
+
+module.exports = Wine
+
+

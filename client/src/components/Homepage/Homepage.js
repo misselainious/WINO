@@ -99,9 +99,9 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>All Wines</Menu.Item>
-                <Menu.Item as='a'>Producers</Menu.Item>
-                <Menu.Item as='a'>About Us</Menu.Item>
+                <Menu.Item as='a' href="/allwines">All Wines</Menu.Item>
+                <Menu.Item as='a' href="/producers">Producers</Menu.Item>
+                <Menu.Item as='a'href="/aboutus">About Us</Menu.Item>
                 <Menu.Item position='right'>
                   <Button as='a' inverted={!fixed}>
                     Register
