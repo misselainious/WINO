@@ -2,6 +2,10 @@ import React, { Component } from "react";
 // import Container from "../components/Container";
 import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar";
 import API from "../utils/API";
+import { List, ListItem } from "../components/List";
+import { Link } from "react-router-dom";
+import { Grid } from "semantic-ui-react";
+
 
 class Wines extends Component {
   state = {
@@ -20,7 +24,7 @@ loadWines = () => {
   API.getWines()
     .then(res => {
       console.log("WInes: ", res)
-      this.setState({ books: res.data, code: "", producer: "", notes: "" })
+      this.setState({ wines: res.data, code: "", producer: "", notes: "" })
     }
     )
     .catch(err => console.log(err));
@@ -35,19 +39,19 @@ loadWines = () => {
     const producers=["producer1","producer2","producer3","producer4",]
     return (
     //  <Container>
-     <div>
+     <Grid>
         {/*CheckboxSidebar renders with a double layered array*/}
         <CheckboxSidebar checkableArrays={[countries,colors,regions,producers]} />
         
 
-        {/* {this.state.wines.length ? (
+        {this.state.wines.length ? (
               <List>
                 {this.state.wines.map(wine => (
                   <ListItem key={wine._id}>
                     <Link to={"/wines/" + wine._id}>
                       <strong>
-                        {wine.code} by {wine.producer}
-                        and also {wine.notes}
+                        {wine.Code} by {wine.Producer}
+                        and also {wine.Notes}
                       </strong>
                     </Link>
                   
@@ -56,10 +60,10 @@ loadWines = () => {
               </List>
             ) : (
               <h3>No Results to Display</h3>
-            )} */}
+            )}
 
 
-     </div>
+     </Grid>
     //  </Container>
     );
   }
