@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 // import Container from "../components/Container";
-import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar"
-import { List, ListItem } from "../components/List";
-import API from "../utils/API";
-import { Link } from "react-router-dom";
+import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar";
 
 class Wines extends Component {
   state = {
