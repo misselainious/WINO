@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import Container from "../components/Container";
 import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar";
+import API from "../utils/API";
 
 class Wines extends Component {
   state = {
@@ -39,7 +40,7 @@ loadWines = () => {
         <CheckboxSidebar checkableArrays={[countries,colors,regions,producers]} />
         
 
-        {this.state.wines.length ? (
+        {/* {this.state.wines.length ? (
               <List>
                 {this.state.wines.map(wine => (
                   <ListItem key={wine._id}>
@@ -55,7 +56,7 @@ loadWines = () => {
               </List>
             ) : (
               <h3>No Results to Display</h3>
-            )}
+            )} */}
 
 
      </div>
