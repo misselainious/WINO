@@ -5,9 +5,21 @@ module.exports = {
   findAll: function(req, res) {
     db.Wine
       .find(req.query)
-      .sort({ date: -1 })
+      // .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  findOne: (req,res) => {
+    db.Wine
+    .findOne({ _id: req.params.id })
+    .then( wine => {
+      res.json(wine)
+      console.log("I found one!")
+    })
+    .catch(err => {
+      console.log(err);
+      res.sendStatus(400);
+    });
   },
   findById: function(req, res) {
     db.Wine
@@ -35,3 +47,8 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   }
 };
+
+
+
+
+
