@@ -48,8 +48,15 @@ loadWines = () => {
               <List>
                 {this.state.wines.map(wine => (
                   <Grid>
-                    <Winecard />
-                   <DataWine 
+                    <Winecard header={wine.Wine} producer={wine.Producer} country={wine.Country} wineid={wine._id} />
+                   
+                    {/* <Link to={"/details/" + wine._id}>
+                      <strong>
+                        {wine.Code} by { wine.Producer } and also { wine.Country }
+                      </strong>
+                    </Link> */}
+
+                   {/* <DataWine 
                    header={wine.Wine} 
                    producer={wine.Producer} 
                    country={wine.Country} 
@@ -86,17 +93,13 @@ loadWines = () => {
                    vineage={wine.Vine_Age_years}
                    vineyields={wine.Vine_Yields_hl_ha}
   
-                   />
+                   /> */}
 
 
                   {/* <ListItem key={wine._id}>
-                    <Link to={"/wines/" + wine._id}>
-                      <strong>
-                        {wine.Code} by { wine.Producer } and also { wine.Country }
-                      </strong>
-                    </Link>
-                  
+              
                   </ListItem> */}
+
                   </Grid>
                 ))}
                
