@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Grid, Icon, Label, Menu, Table } from 'semantic-ui-react'
+import { Grid, Table } from 'semantic-ui-react'
 
 
 

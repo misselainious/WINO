@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Button, Container, Menu } from 'semantic-ui-react';
 
@@ -15,12 +16,12 @@ const Navbar = props => {
       color='red'
     >
       <Container>
-        <Menu.Item as='a' active>
+        <Link to="/"><Menu.Item active>
           Home
-        </Menu.Item>
-        <Menu.Item as='a'>All Wines</Menu.Item>
-        <Menu.Item as='a'>Producers</Menu.Item>
-        <Menu.Item as='a'>About Us</Menu.Item>
+        </Menu.Item></Link>
+        <Link to="/allwines"><Menu.Item>All Wines</Menu.Item></Link>
+        <Link to="/producers"><Menu.Item>Producers</Menu.Item></Link>
+        <Link to="/aboutus"><Menu.Item>About Us</Menu.Item></Link>
         <Menu.Item position='right'>
           <Button as='a' inverted={!fixed}>
             Register
