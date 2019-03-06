@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import {
-  Segment,
   Form,
-  Input
   } from 'semantic-ui-react'
 
 const options = [

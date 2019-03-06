@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { Container, Menu, Segment, Responsive, Sidebar, Icon, Button } from "semantic-ui-react";
 import HomeHeading from '../../Homepage/HomeHeading/HomeHeading';
+import { Link } from 'react-router-dom';
 
 class MobileContainer extends React.Component {
   state = {}
@@ -31,11 +32,11 @@ class MobileContainer extends React.Component {
           <Menu.Item as='a' active>
             Home
           </Menu.Item>
-          <Menu.Item as='a'>All Wines</Menu.Item>
-          <Menu.Item as='a'>Producers</Menu.Item>
-          <Menu.Item as='a'>About Us</Menu.Item>
-          <Menu.Item as='a'>Register</Menu.Item>
-          <Menu.Item as='a'>Members</Menu.Item>
+          <Link to="/">All Wines</Link>
+          <Link to="/">Producers</Link>
+          <Link to="/allwines">About Us</Link>
+          <Link to="/">Register</Link>
+          <Link to="/">Members</Link>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
