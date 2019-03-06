@@ -22,8 +22,8 @@ class Wines extends Component {
 loadWines = () => {
   API.getWines()
     .then(res => {
-      console.log("WInes: ", res)
-      this.setState({ wines: res.data, code: "", producer: "", notes: "" })
+      console.log("Wines: ", res)
+      this.setState({ wines: res.data })
     }
     )
     .catch(err => console.log(err));
@@ -47,7 +47,46 @@ loadWines = () => {
               <List>
                 {this.state.wines.map(wine => (
                   <Grid>
-                   <DataWine header={wine.Wine} producer={wine.Producer} country={wine.Country} region={wine.Region} subregion={wine.Subregion}/>
+                   <DataWine 
+                   header={wine.Wine} 
+                   producer={wine.Producer} 
+                   country={wine.Country} 
+                   region={wine.Region} 
+                   subregion={wine.Subregion}
+                   color={wine.Color}
+                   abv={wine.Alcohol_by_volume}
+                   acidity={wine.Acidity}
+                   residualsugar={wine.Residual_Sugar}
+                   dosage={wine.Dosage}
+                   blend={wine.Years_in_Blend}
+                   bottling={wine.Bottling_Date}
+                   disgorgement={wine.Disgorgement_Date}
+                   closure={wine.Closure}
+                   annual={wine.Annual_cases_produced}
+                   varieties={wine.varieties}
+                   maceration={wine.maceration}
+                   pumpover={wine.Pumpover_Punchdown}
+                   destem={wine.Destemming}
+                   fermentation_vessel={wine.Fermentation_vessel}
+                   fermentation_duration={wine.Fermentation_duration}
+                   agingmethod={wine.Aging_method}
+                   agingmonths={wine.Aging_duration_months}
+                   filtered={wine.Filtered}
+                   fining={wine.Fining_Agents}
+                   yeast={wine.Yeast}
+                   lees={wine.Lees_Contact_Stirring}
+                   malo={wine.Malolactic}
+                   sulfur={wine.Added_Sulfur}
+                   vineyard={wine.Vineyard_Name}
+                   soil={wine.Soil_Type}
+                   elevation={wine.Elevation_meters}
+                   aspect={wine.Vineyard_Aspect}
+                   vineage={wine.Vine_Age_years}
+                   vineyields={wine.Vine_Yields_hl_ha}
+  
+                   />
+
+
                   {/* <ListItem key={wine._id}>
                     <Link to={"/wines/" + wine._id}>
                       <strong>

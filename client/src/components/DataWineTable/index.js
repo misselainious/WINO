@@ -2,7 +2,8 @@
 import React from "react";
 import { Grid, Icon, Label, Menu, Table } from 'semantic-ui-react'
 
-// This file exports the Input, TextArea, and FormBtn components
+
+
 
 export function DataWine(props) {
   return (
@@ -32,9 +33,26 @@ export function DataWine(props) {
         <Table.Cell>{props.region}</Table.Cell>
       </Table.Row>
 
-      <Table.Row>    
-        <Table.Cell>Subregion</Table.Cell>
-        <Table.Cell>{props.subregion}</Table.Cell>
+
+    <Table.Row>    
+    <Table.Cell>Subregion</Table.Cell>
+    <Table.Cell>{props.subregion}</Table.Cell>
+  </Table.Row>
+
+   
+    <Table.Row>
+        <Table.Cell>ABV</Table.Cell>
+        <Table.Cell>{props.abv}</Table.Cell>
+      </Table.Row>
+
+      <Table.Row>
+        <Table.Cell>Acidity</Table.Cell>
+        <Table.Cell>{props.acidity}</Table.Cell>
+      </Table.Row>
+
+      <Table.Row>
+        <Table.Cell>Residual Sugar</Table.Cell>
+        <Table.Cell>{props.residualsugar}</Table.Cell>
       </Table.Row>
 
     </Table.Body>
