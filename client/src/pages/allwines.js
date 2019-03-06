@@ -6,6 +6,7 @@ import { List, ListItem } from "../components/List";
 import { DataWine} from "../components/DataWineTable";
 import { Link } from "react-router-dom";
 import { Grid } from "semantic-ui-react";
+import Winecard from "../components/WineCard"
 
 
 
@@ -47,6 +48,7 @@ loadWines = () => {
               <List>
                 {this.state.wines.map(wine => (
                   <Grid>
+                    <Winecard />
                    <DataWine 
                    header={wine.Wine} 
                    producer={wine.Producer} 
@@ -63,8 +65,8 @@ loadWines = () => {
                    disgorgement={wine.Disgorgement_Date}
                    closure={wine.Closure}
                    annual={wine.Annual_cases_produced}
-                   varieties={wine.varieties}
-                   maceration={wine.maceration}
+                   varieties={wine.Varieties}
+                   maceration={wine.Maceration_Notes}
                    pumpover={wine.Pumpover_Punchdown}
                    destem={wine.Destemming}
                    fermentation_vessel={wine.Fermentation_vessel}

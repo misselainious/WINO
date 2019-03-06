@@ -1,6 +1,11 @@
 import React, { Component } from "react";
-import { Form } from "semantic-ui-react";
 import API from "../utils/API";
+import {
+  Segment,
+  Form,
+  Input
+  } from 'semantic-ui-react'
+
 const options = [
   { key: 'r', text: 'Red', value: 'Red' },
   { key: 'w', text: 'White', value: 'White' },
@@ -16,11 +21,7 @@ const countryOptions =[
 ]
 
 
-import {
-Segment,
-Form,
-Input
-} from 'semantic-ui-react'
+
 
 class Admin extends Component {
   state = {
