@@ -2,9 +2,9 @@ import React, { Component } from "react";
 // import Container from "../components/Container";
 import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar";
 import API from "../utils/API";
-import { List, ListItem } from "../components/List";
+import { List } from "../components/List";
 import { DataWine} from "../components/DataWineTable";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Grid } from "semantic-ui-react";
 import Winecard from "../components/WineCard"
 

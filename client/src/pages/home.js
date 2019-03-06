@@ -20,7 +20,7 @@ const Home = () => (
     <Segment
       inverted
       textAlign='center'
-      style={{ minHeight: 700, padding: '1em 0em', backgroundImage: `url("./images/winePouring.jpg")` }}
+      style={{ minHeight: 700, padding: '1em 0em', backgroundImage: `url("./images/redPouring.jpg")` }}
       vertical
     >
 
