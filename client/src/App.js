@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Responsive } from "semantic-ui-react";
-
 import Home from "./pages/home";
 import AllWines from "./pages/allwines";
 import Admin from "./pages/admin";
@@ -14,7 +13,6 @@ import DesktopContainer from "./components/common/DesktopContainer/DesktopContai
 import MobileContainer from "./components/common/MobileContainer/MobileContainer";
 import Footer from "./components/common/Footer/Footer";
 import OneWine from "./pages/onewine";
-
 
 // import Wrapper from "./components/Wrapper";
 // import Footer from "../src/components/Footer";
@@ -40,13 +38,12 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <ResponsiveContainer>
-          <PageSwitch />
-          <Footer />
-        </ResponsiveContainer>
-      </Router>
-
+        <Router>
+          <ResponsiveContainer>
+            <PageSwitch/>
+            <Footer />
+          </ResponsiveContainer>
+        </Router>
     );
   }
 }

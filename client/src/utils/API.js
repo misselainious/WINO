@@ -17,5 +17,15 @@ export default {
   // Saves a book to the database
   saveWine: function(wineData) {
     return axios.post("/api/wine", wineData);
+  },
+
+  getProducers: function() {
+    return axios.get("/api/producers");
+  },
+  getProducer: function(id) {
+    return axios.get("/api/producers/" + id);
+  },
+  saveWine: function(producerData) {
+    return axios.post("/api/producers", producerData);
   }
 };
