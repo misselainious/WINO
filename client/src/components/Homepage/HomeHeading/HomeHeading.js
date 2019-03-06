@@ -25,10 +25,6 @@ const HomeHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    {/* <Button primary size='huge'>
-      Get Started
-      <Icon name='right arrow' />
-    </Button> */}
   </Container>
 )
 

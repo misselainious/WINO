@@ -1,9 +1,9 @@
 
 import React, { Component } from "react";
-import wine from "../../src/"
+// import wine from "../../src/"
 import API from "../utils/API";
-import { Link } from "react-router-dom";
-import { List, ListItem } from "../components/List";
+// import { Link } from "react-router-dom";
+// import { List, ListItem } from "../components/List";
 
 class Onewine extends Component {
 
