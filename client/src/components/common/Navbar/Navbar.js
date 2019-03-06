@@ -12,7 +12,7 @@ const Navbar = props => {
       pointing={!fixed}
       secondary={!fixed}
       size='large'
-      color='black'
+      color='red'
     >
       <Container>
         <Menu.Item as='a' active>

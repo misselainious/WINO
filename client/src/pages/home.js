@@ -1,30 +1,6 @@
-// import React, { Component } from "react";
-// // import Container from "../components/Container";
-
-// class Home extends Component {
-// //   state = {
-// //     wines: []
-// //   };
-
-// //   componentDidMount() {
-// //     this.loadWines();
-// //   }
-
-// //HANDLE Blah-blah-blah
-
-//   render() {
-//     return (
-//     //  <Container>
-//      <div></div>
-//     //  </Container>
-//     );
-//   }
-// }
-
-// export default Home;
-
 import React from "react";
 import HomeHeading from "../components/Homepage/HomeHeading/HomeHeading";
+// import Carousel from "../components/common/Carousel/Carousel";
 // import PropTypes from 'prop-types';
 import {
   Button,
@@ -44,10 +20,12 @@ const Home = () => (
     <Segment
       inverted
       textAlign='center'
-      style={{ minHeight: 700, padding: '1em 0em', backgroundImage: `url("./images/winePouring.jpg")`}}
+      style={{ minHeight: 700, padding: '1em 0em', backgroundImage: `url("./images/winePouring.jpg")` }}
       vertical
     >
+
       <HomeHeading />
+      {/* <Carousel /> */}
     </Segment>
 
     <Segment style={{ padding: '8em 0em' }} vertical>
@@ -60,13 +38,7 @@ const Home = () => (
             <p style={{ fontSize: '1.33em' }}>
               Since 1989, Wine Wise has been importing some of the finest estate-grown wines from France, Germany, Austria, Spain, Portugal and Greece. Our speciality is small family-firms that offer over-performing wines and exceptional value. Grower Champagnes and other sparkling wines are a particular area of emphasis for Wine Wise.
             </p>
-            {/* <Header as='h3' style={{ fontSize: '2em' }}>
-              We Make Bananas That Can Dance
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-              bioengineered.
-            </p> */}
+           
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
             <Image bordered rounded size='large' src='/images/winePouring.jpg' />
@@ -84,17 +56,17 @@ const Home = () => (
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "The discovery of a good wine is increasingly better for mankind than the discovery of a new star."
+            "A gourmet meal without a glass of wine just seems tragic to me somehow."
             </Header>
-            <p style={{ fontSize: '1.33em' }}>- Leonardo Da Vinci</p>
+            <p style={{ fontSize: '1.33em' }}>- Kathy Mattea</p>
           </Grid.Column>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "A gourmet meal without a glass of wine just seems tragic to me somehow."
+            "The discovery of a good wine is increasingly better for mankind than the discovery of a new star."
             </Header>
             <p style={{ fontSize: '1.33em' }}>
               <Image avatar src='./images/daVinci.jpg' />
-              <b></b>- Kathy Mattea
+              <b>Leonardo</b> Da Vinci
 
             </p>
           </Grid.Column>
@@ -131,38 +103,7 @@ const Home = () => (
         </Button>
       </Container>
     </Segment>
-    {/* <Segment inverted vertical style={{ padding: '5em 0em' }}>
-      <Container>
-        <Grid divided inverted stackable>
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='About' />
-              <List link inverted>
-                <List.Item as='a'>Sitemap</List.Item>
-                <List.Item as='a'>Contact Us</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='Services' />
-              <List link inverted>
-                <List.Item as='a'>Wine Pre-Order</List.Item>
-                <List.Item as='a'>How To Access</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={7}>
-              <Header as='h4' inverted>
-                Address
-              </Header>
-              <p>
-               5655 College Avenue, Oakland CA 94618 • orders@winewise.biz   
-               • (p) 510.848.6879 • (f) 510.848.6880
-              </p>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
-    </Segment> */}
-
+   
   </React.Fragment>
   // </ResponsiveContainer>
 )

@@ -6,7 +6,7 @@ import Home from "./pages/home";
 import AllWines from "./pages/allwines";
 import Admin from "./pages/admin";
 
-import Onewine from "./pages/onewine";
+// import Onewine from "./pages/onewine";
 // import Wrapper from "./components/Wrapper";
 // import Footer from "../src/components/Footer";
 
