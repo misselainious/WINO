@@ -14,7 +14,7 @@ const Winecard = (props) => (
         <span className='date'>{props.country}</span>
       </Card.Meta>
       <Card.Description> <Link to={"/details/" + props.wineid}>
-                      <Button color='olive'>View Wine</Button>
+                      <Button basic color='olive'>View Wine</Button>
                     </Link> </Card.Description>
     </Card.Content>
     <Card.Content extra>

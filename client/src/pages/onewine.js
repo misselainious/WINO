@@ -7,7 +7,6 @@ import { Grid, Table} from "semantic-ui-react";
 import Winecard from "../components/WineCard"
 
 
-
 class OneWine extends Component {
   state = {
     wine: {}
@@ -19,14 +18,17 @@ class OneWine extends Component {
       .catch(err => console.log(err));
   }
 
-  
+
+    
+ 
 //HANDLE Blah-blah-blah
 
-  render() {
+render() {
     return (
 
      <Grid>
-<h1>{this.state.wine.Code}</h1>
+
+
 
 <Table celled>
     <Table.Header>
