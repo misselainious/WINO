@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar";
 import API from "../utils/API";
 import { List, ListItem } from "../components/List";
+import { DataWine} from "../components/DataWineTable";
 import { Link } from "react-router-dom";
 import { Grid } from "semantic-ui-react";
 
@@ -44,19 +45,26 @@ loadWines = () => {
         {this.state.wines.length ? (
               <List>
                 {this.state.wines.map(wine => (
-                  <ListItem key={wine._id}>
+                  <Grid>
+                   <DataWine header={wine.Wine} producer={wine.Producer} country={wine.Country} region={wine.Region} subregion={wine.Subregion}/>
+                  {/* <ListItem key={wine._id}>
                     <Link to={"/wines/" + wine._id}>
                       <strong>
                         {wine.Code} by { wine.Producer } and also { wine.Country }
                       </strong>
                     </Link>
                   
-                  </ListItem>
+                  </ListItem> */}
+                  </Grid>
                 ))}
+               
               </List>
             ) : (
               <h3>No Results to Display</h3>
             )}
+
+
+
 
 
      </Grid>
