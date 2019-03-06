@@ -1,12 +1,32 @@
 import React from 'react'
-import { Card } from 'semantic-ui-react'
+import { Link } from "react-router-dom";
+import { Card, Grid, Image, Button} from 'semantic-ui-react'
+import "./style.css";
 
-const src = '/images/StockRED.png'
+const img = '/images/StockRED.png'
 
-const Winecard = () => (
-
-    <Card raised image={src} />
+const Winecard = (props) => (
+<Card className="card">
+    <Image src= "/images/StockRED.png" />
+    <Card.Content>
+      <Card.Header>{props.producer} {props.header}</Card.Header>
+      <Card.Meta>
+        <span className='date'>{props.country}</span>
+      </Card.Meta>
+      <Card.Description> <Link to={"/details/" + props.wineid}>
+                      <Button color='olive'>View Wine</Button>
+                    </Link> </Card.Description>
+    </Card.Content>
+    <Card.Content extra>
+      <a>
+        more here
+      </a>
+    </Card.Content>
+  </Card>
 
 )
 
 export default Winecard
+
+
+     

@@ -10,7 +10,7 @@ router.route("/")
 router
   .route("/:id")
   .get(wineController.findById)
-  .put(wineController.update)
-  .delete(wineController.remove);
+  // .put(wineController.update)
+  // .delete(wineController.remove);
 
 module.exports = router;

@@ -13,6 +13,7 @@ import Admin from "./pages/admin";
 import DesktopContainer from "./components/common/DesktopContainer/DesktopContainer";
 import MobileContainer from "./components/common/MobileContainer/MobileContainer";
 import Footer from "./components/common/Footer/Footer";
+import OneWine from "./pages/onewine";
 
 
 // import Wrapper from "./components/Wrapper";
@@ -56,6 +57,7 @@ const PageSwitch = props => {
       <Route exact path="/" component={Home} />
       <Route path="/allwines" component={AllWines} />
       <Route path="/admin" component={Admin} />
+      <Route path="/details/:id" component={OneWine} />
       {/* <Route path="/producers" component={Producers} />
         <Route path="/aboutus" component={AboutUs} /> */}
     </Switch>
