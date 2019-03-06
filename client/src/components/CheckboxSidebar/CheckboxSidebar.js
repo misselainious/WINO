@@ -1,6 +1,6 @@
-import React, { Component } from "react"
-import CheckBoxes from "../Checkboxes/Checkboxes"
-import "./CheckboxSidebar.css"
+import React, { Component } from "react";
+import CheckBoxes from "../Checkboxes/Checkboxes";
+import "./CheckboxSidebar.css";
 
 //need to make pull request 
 

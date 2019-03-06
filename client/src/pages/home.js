@@ -1,30 +1,7 @@
-// import React, { Component } from "react";
-// // import Container from "../components/Container";
-
-// class Home extends Component {
-// //   state = {
-// //     wines: []
-// //   };
-
-// //   componentDidMount() {
-// //     this.loadWines();
-// //   }
-
-// //HANDLE Blah-blah-blah
-
-//   render() {
-//     return (
-//     //  <Container>
-//      <div></div>
-//     //  </Container>
-//     );
-//   }
-// }
-
-// export default Home;
-
 import React from "react";
-import PropTypes from 'prop-types'
+import HomeHeading from "../components/Homepage/HomeHeading/HomeHeading";
+// import Carousel from "../components/common/Carousel/Carousel";
+// import PropTypes from 'prop-types';
 import {
   Button,
   Container,
@@ -33,34 +10,24 @@ import {
   Header,
   Image,
   Segment,
-} from 'semantic-ui-react'
+} from 'semantic-ui-react';
 
-// import MobileContainer from "../components/common/MobileContainer/MobileContainer";
-// import DesktopContainer from "./Home/DesktopContainer";
-
-
-
-// const getWidth = () => {
-//   const isSSR = typeof window === 'undefined'
-
-//   return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
-// }
-
-
-// const ResponsiveContainer = ({ children }) => (
-//   <div>
-//     <DesktopContainer getWidth={getWidth}>{children}</DesktopContainer>
-//     <MobileContainer getWidth={getWidth}>{children}</MobileContainer>
-//   </div>
-// )
-
-// ResponsiveContainer.propTypes = {
-//   children: PropTypes.node,
-// }
 
 const Home = () => (
   // <ResponsiveContainer>
   <React.Fragment>
+
+    <Segment
+      inverted
+      textAlign='center'
+      style={{ minHeight: 700, padding: '1em 0em', backgroundImage: `url("./images/winePouring.jpg")` }}
+      vertical
+    >
+
+      <HomeHeading />
+      {/* <Carousel /> */}
+    </Segment>
+
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
@@ -69,15 +36,9 @@ const Home = () => (
               Wine Wise: The Vienna Wine Company
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-            Since 1989, Wine Wise has been importing some of the finest estate-grown wines from France, Germany, Austria, Spain, Portugal and Greece. Our speciality is small family-firms that offer over-performing wines and exceptional value. Grower Champagnes and other sparkling wines are a particular area of emphasis for WineWise.
+              Since 1989, Wine Wise has been importing some of the finest estate-grown wines from France, Germany, Austria, Spain, Portugal and Greece. Our speciality is small family-firms that offer over-performing wines and exceptional value. Grower Champagnes and other sparkling wines are a particular area of emphasis for Wine Wise.
             </p>
-            {/* <Header as='h3' style={{ fontSize: '2em' }}>
-              We Make Bananas That Can Dance
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-              bioengineered.
-            </p> */}
+           
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
             <Image bordered rounded size='large' src='/images/winePouring.jpg' />
@@ -95,18 +56,18 @@ const Home = () => (
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "A gourmet meal without a glass of wine just seems tragic to me somehow."
+            "A gourmet meal without a glass of wine just seems tragic to me somehow."
             </Header>
             <p style={{ fontSize: '1.33em' }}>- Kathy Mattea</p>
           </Grid.Column>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "The discovery of a good wine is increasingly better for mankind than the discovery of a new star."
+            "The discovery of a good wine is increasingly better for mankind than the discovery of a new star."
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              {/* <Image avatar src='/images/avatar/large/nan.jpg' /> */}
-              <b></b>- Leonardo Da Vinci
-             
+              <Image avatar src='./images/daVinci.jpg' />
+              <b>Leonardo</b> Da Vinci
+
             </p>
           </Grid.Column>
         </Grid.Row>
@@ -118,7 +79,7 @@ const Home = () => (
           Our Mission
         </Header>
         <p style={{ fontSize: '1.33em' }}>
-        The philosophy of Wine Wise is straightforward: we seek wines of character from people we like and places which are not always well-known or popular. We are not averse to the classics, but we are not scared of the obscure. Our wines do not have to meet any ideological litmus test, but we do have to like them. If they are grown organically it does not hurt, but we don’t insist on it. While we have a number of sought-after and expensive wines in our portfolio, our animating force is the acquisition of great wines that almost anyone can afford to drink – a rather more exacting discipline than the converse. Above all, we like people. Our growers tend to be interesting and often amusing people, sometimes with a spiritual bent, sometimes unrepentantly earthy. We have watched with pleasure as the sons and daughters we knew as babies and children have grown up to be the proprietors of their parents’ estates. We like to think of ourselves as the link between these friends and the people drinking their wines in restaurants or at home. We have developed from an essentially one-man band into a team with a dozen or so sales representatives spanning virtually the entire state of California and a small phalanx of impossibly clever people handling the many functions that lie beyond the principals’ capabilities. We are very lucky people!
+          The philosophy of Wine Wise is straightforward: we seek wines of character from people we like and places which are not always well-known or popular. We are not averse to the classics, but we are not scared of the obscure. Our wines do not have to meet any ideological litmus test, but we do have to like them. If they are grown organically it does not hurt, but we don’t insist on it. While we have a number of sought-after and expensive wines in our portfolio, our animating force is the acquisition of great wines that almost anyone can afford to drink – a rather more exacting discipline than the converse. Above all, we like people. Our growers tend to be interesting and often amusing people, sometimes with a spiritual bent, sometimes unrepentantly earthy. We have watched with pleasure as the sons and daughters we knew as babies and children have grown up to be the proprietors of their parents’ estates. We like to think of ourselves as the link between these friends and the people drinking their wines in restaurants or at home. We have developed from an essentially one-man band into a team with a dozen or so sales representatives spanning virtually the entire state of California and a small phalanx of impossibly clever people handling the many functions that lie beyond the principals’ capabilities. We are very lucky people!
         </p>
         <Button as='a' size='large'>
           Read More
@@ -135,46 +96,15 @@ const Home = () => (
           Wine of the Month
         </Header>
         <p style={{ fontSize: '1.33em' }}>
-        maybe something super hip about the winery goes here
+          maybe something super hip about the winery goes here
         </p>
         <Button as='a' size='large'>
           Become a Member
         </Button>
       </Container>
     </Segment>
-    {/* <Segment inverted vertical style={{ padding: '5em 0em' }}>
-      <Container>
-        <Grid divided inverted stackable>
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='About' />
-              <List link inverted>
-                <List.Item as='a'>Sitemap</List.Item>
-                <List.Item as='a'>Contact Us</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='Services' />
-              <List link inverted>
-                <List.Item as='a'>Wine Pre-Order</List.Item>
-                <List.Item as='a'>How To Access</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={7}>
-              <Header as='h4' inverted>
-                Address
-              </Header>
-              <p>
-               5655 College Avenue, Oakland CA 94618 • orders@winewise.biz   
-               • (p) 510.848.6879 • (f) 510.848.6880
-              </p>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
-    </Segment> */}
-    
-    </React.Fragment>
+   
+  </React.Fragment>
   // </ResponsiveContainer>
 )
 export default Home;
