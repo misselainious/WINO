@@ -8,7 +8,7 @@ class CheckboxSidebar extends Component {
 
     render() {
         const checkboxArray = this.props.checkableArrays.map((arry, i) => {
-            return <CheckBoxes checkables={arry} key={parseInt(i)} />
+            return <CheckBoxes checkables={arry} handleFilterChange={this.props.handleFilterChange} key={parseInt(i)} />
         })
 
         return <div className="sidebar">{checkboxArray}</div>

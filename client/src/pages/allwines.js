@@ -12,7 +12,8 @@ import Winecard from "../components/WineCard"
 
 class Wines extends Component {
   state = {
-    wines: []
+    wines: [],
+    filter: []
   };
 
   componentDidMount() {
@@ -30,6 +31,21 @@ loadWines = () => {
     .catch(err => console.log(err));
 };
 
+handleFilterChange = event => {
+  console.log(event.target.value, event.target.checked);
+  if (event.target.checked) {
+    this.setState({
+      filter: [...this.state.filter, event.target.value]
+    });
+  } else {
+    const newFilter = this.state.filter.filter(elem => elem !== event.target.value);
+    this.setState({
+      filter: newFilter
+    });
+  }
+}
+
+
 //HANDLE Blah-blah-blah
 
   render() {
@@ -41,7 +57,7 @@ loadWines = () => {
     //  <Container>
      <Grid>
         {/*CheckboxSidebar renders with a double layered array*/}
-        <CheckboxSidebar checkableArrays={[countries,colors,regions,producers]} />
+        <CheckboxSidebar checkableArrays={[countries,colors,regions,producers]} handleFilterChange={this.handleFilterChange} />
         
 
         {this.state.wines.length ? (
