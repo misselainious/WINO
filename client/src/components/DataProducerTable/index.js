@@ -1,9 +1,9 @@
 import React from "react";
-import { Grid, Icon, Label, Menu, Table } from 'semantic-ui-react'
+import { Grid, Label, Table } from 'semantic-ui-react'
+
 
 export const DataProducers = (props) => {
     return (
-
 
     <Grid>
           <Table celled>
@@ -18,35 +18,54 @@ export const DataProducers = (props) => {
           <Table.Cell>
             <Label ribbon>First</Label>
           </Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
+          <Table.Cell>Producer</Table.Cell>
+          <Table.Cell>{props.producer}</Table.Cell>
         </Table.Row>
+        { (props.Owner_Name === "") ? null :
         <Table.Row>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
+          <Table.Cell>Owner Name:</Table.Cell>
+          <Table.Cell>{props.Owner_Name}</Table.Cell>
         </Table.Row>
+        }
+        { (props.Vineyard_Size_HA === "") ? null :
         <Table.Row>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
+          <Table.Cell>Vineyard Size in Hectares</Table.Cell>
+          <Table.Cell>{props.Vineyard_Size_HA}</Table.Cell>
         </Table.Row>
+        }
+        { (props.Total_Annual_Production === "") ? null :
+        <Table.Row>
+          <Table.Cell>Total Annual Production</Table.Cell>
+          <Table.Cell>{props.Total_Annual_Production}</Table.Cell>
+        </Table.Row>
+        }
+        { (props.City_of_Origin === "") ? null :
+        <Table.Row>
+          <Table.Cell>City of Origin</Table.Cell>
+          <Table.Cell>{props.City_of_Origin}</Table.Cell>
+        </Table.Row>
+        }
+        { (props.Region === "") ? null :
+        <Table.Row>
+          <Table.Cell>Region</Table.Cell>
+          <Table.Cell>{props.Region}</Table.Cell>
+        </Table.Row>
+        }
+        { (props.Subregion === "") ? null :
+        <Table.Row>
+          <Table.Cell>Subregion</Table.Cell>
+          <Table.Cell>{props.Subregion}</Table.Cell>
+        </Table.Row>
+        }
+        { (props.Country === "") ? null :
+        <Table.Row>
+          <Table.Cell>Country</Table.Cell>
+          <Table.Cell>{props.Country}</Table.Cell>
+        </Table.Row>
+        }
       </Table.Body>
       </Table>
     </Grid>
   )
 
 }
-
-// producer: String,
-// date_founded: String,
-// property_history: String,
-// owner_history: String,
-// owner_name: String,
-// other_important_people: String,
-// vineyard_size_ha: Number,
-// total_annual_production: String,
-// city_of_origin: String,
-// region: String,
-// subregion: String,
-// country: String

@@ -6,7 +6,7 @@ import { List, ListItem } from "../components/List";
 import { DataProducer} from "../components/DataProducerTable";
 import { Link } from "react-router-dom";
 import { Grid } from "semantic-ui-react";
-// import Producercard from "../components/ProducerCard"
+import Producercard from "../components/ProducerCard"
 
 class Producers extends Component {
   state = {
@@ -28,8 +28,6 @@ loadProducers = () => {
     .catch(err => console.log(err));
 };
 
-//HANDLE Blah-blah-blah
-
   render() {
     const countries=["Germany","France","Austria","Spain","Portugal","Greece"]
     return (
@@ -43,15 +41,7 @@ loadProducers = () => {
               <List>
                 {this.state.Producers.map(producer => (
                   <Grid>
-
-                  <ListItem key={producer._id}>
-                    <Link to={"/producers/" + producer._id}>
-                      <strong>
-                        {producer.Producer} founded in { producer.Date_Founded } in the country of { producer.Country }
-                      </strong>
-                    </Link>
-                  
-                  </ListItem>
+                      <Producercard header={producer.Producer}city={producer.city_of_origin}/>
                   </Grid>
                 ))}
                
@@ -64,18 +54,5 @@ loadProducers = () => {
     );
   }
 }
-
-// producer: String,
-// date_founded: String,
-// property_history: String,
-// owner_history: String,
-// owner_name: String,
-// other_important_people: String,
-// vineyard_size_ha: Number,
-// total_annual_production: String,
-// city_of_origin: String,
-// region: String,
-// subregion: String,
-// country: String
 
 export default Producers;

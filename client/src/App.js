@@ -4,6 +4,7 @@ import { Responsive } from "semantic-ui-react";
 import Home from "./pages/home";
 import AllWines from "./pages/allwines";
 import Admin from "./pages/admin";
+import Producers from "./pages/producers";
 
 // import Onewine from "./pages/onewine";
 // import Wrapper from "./components/Wrapper";
@@ -55,8 +56,8 @@ const PageSwitch = props => {
       <Route path="/allwines" component={AllWines} />
       <Route path="/admin" component={Admin} />
       <Route path="/details/:id" component={OneWine} />
-      {/* <Route path="/producers" component={Producers} />
-        <Route path="/aboutus" component={AboutUs} /> */}
+      <Route path="/producers" component={Producers} />
+      {/* <Route path="/aboutus" component={AboutUs} /> */}
     </Switch>
   )
 }
