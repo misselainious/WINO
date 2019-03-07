@@ -6,6 +6,8 @@ router.route("/")
   .get(wineController.findAll)
   .post(wineController.create);
 
+// router.route("/wines")
+//   .post(wineController.create)
 // Matches with "/api/books/:id"
 router
   .route("/:id")
