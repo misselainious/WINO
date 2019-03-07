@@ -7,7 +7,14 @@ const img = '/images/StockRED.png'
 
 const Winecard = (props) => (
 <Card className="card">
-    <Image src= "/images/StockRED.png" />
+
+{ (props.url === "") ?
+<Image src='/images/StockRED.png'/>
+:
+// Else Renders row with info
+<Image src={`https://gdurl.com${props.url}`}/>
+}
+    
     <Card.Content>
       <Card.Header>{props.producer} {props.header}</Card.Header>
       <Card.Meta>

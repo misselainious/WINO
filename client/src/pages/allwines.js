@@ -5,7 +5,7 @@ import API from "../utils/API";
 import { List } from "../components/List";
 import { DataWine} from "../components/DataWineTable";
 // import { Link } from "react-router-dom";
-import { Grid } from "semantic-ui-react";
+import { Grid, Card } from "semantic-ui-react";
 import Winecard from "../components/WineCard"
 
 
@@ -48,7 +48,8 @@ loadWines = () => {
               <List>
                 {this.state.wines.map(wine => (
                   <Grid>
-                    <Winecard header={wine.Wine} producer={wine.Producer} country={wine.Country} wineid={wine._id} />
+                  
+                    <Winecard header={wine.Wine} producer={wine.Producer} country={wine.Country} wineid={wine._id} url={wine.URL}/>
                    
                     {/* <Link to={"/details/" + wine._id}>
                       <strong>
@@ -99,7 +100,7 @@ loadWines = () => {
                   {/* <ListItem key={wine._id}>
               
                   </ListItem> */}
-
+                 
                   </Grid>
                 ))}
                
@@ -110,7 +111,7 @@ loadWines = () => {
 
 
 
-
+            
 
      </Grid>
     //  </Container>
