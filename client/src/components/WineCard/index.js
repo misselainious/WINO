@@ -9,12 +9,12 @@ const Winecard = (props) => (
     
       <Grid.Column>
         <Card className="card" >
-                    {/* { (props.url === "") ?<Image src='/images/StockRED.png'/>
+                    { (props.url === "") ?<Image src='/images/StockRED.png'/>
             :
             // Else Renders row with info
             <Image src={`https://gdurl.com${props.url}`}/>
-            } */}
-            <Image src= "/images/StockRED.png" />
+            }
+ 
             <Card.Content>
               <Card.Header>{props.producer} {props.header}</Card.Header>
               <Card.Meta>

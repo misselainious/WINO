@@ -93,7 +93,7 @@ handleFilterChange = event => {
                 {this.state.wines.map(wine => (
                   
                     
-                    <Winecard header={wine.Wine} producer={wine.Producer} country={wine.Country} wineid={wine._id} key={wine._id} />
+                    <Winecard header={wine.Wine} producer={wine.Producer} country={wine.Country} wineid={wine._id} key={wine._id} url={wine.URL} />
                   //   {/* <Card.Group>
                   //   <Card>
                   //     <Card.Content>
