@@ -1,7 +1,9 @@
 .checkboxContainer{
     text-align: left;
     border: 1px solid;
-    margin: 3px
+    margin: 3px;
+    overflow: scroll;
+    max-height: 200px;
 }
 
 .checkbox {
