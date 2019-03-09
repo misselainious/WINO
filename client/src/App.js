@@ -5,18 +5,17 @@ import Home from "./pages/home";
 import AllWines from "./pages/allwines";
 import Admin from "./pages/admin";
 import Producers from "./pages/producers";
+import AboutUs from "./pages/aboutus";
 
 // import Onewine from "./pages/onewine";
 // import Wrapper from "./components/Wrapper";
-// import Footer from "../src/components/Footer";
 
 import DesktopContainer from "./components/common/DesktopContainer/DesktopContainer";
 import MobileContainer from "./components/common/MobileContainer/MobileContainer";
 import Footer from "./components/common/Footer/Footer";
 import OneWine from "./pages/onewine";
 
-// import Wrapper from "./components/Wrapper";
-// import Footer from "../src/components/Footer";
+
 
 const getWidth = () => {
   const isSSR = typeof window === 'undefined'
@@ -57,7 +56,7 @@ const PageSwitch = props => {
       <Route path="/admin" component={Admin} />
       <Route path="/details/:id" component={OneWine} />
       <Route path="/producers" component={Producers} />
-      {/* <Route path="/aboutus" component={AboutUs} /> */}
+      <Route path="/aboutus" component={AboutUs} />
     </Switch>
   )
 }
