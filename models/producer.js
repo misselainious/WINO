@@ -19,9 +19,9 @@ const producerSchema = new Schema({
 
 const Producer = mongoose.model('producerList', producerSchema, 'producerList');
 
-Producer.findOne((err, result) => {
-    if (err) { return err }
-    console.log("producer results", result)
-})
+// Producer.findOne((err, result) => {
+//     if (err) { return err }
+//     console.log("producer results", result)
+// })
 
 module.exports = Producer

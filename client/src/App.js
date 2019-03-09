@@ -14,6 +14,7 @@ import DesktopContainer from "./components/common/DesktopContainer/DesktopContai
 import MobileContainer from "./components/common/MobileContainer/MobileContainer";
 import Footer from "./components/common/Footer/Footer";
 import OneWine from "./pages/onewine";
+import OneProducer from "./pages/oneproducer";
 
 
 
@@ -56,6 +57,7 @@ const PageSwitch = props => {
       <Route path="/admin" component={Admin} />
       <Route path="/details/:id" component={OneWine} />
       <Route path="/producers" component={Producers} />
+      <Route path="/details/:id" component={OneProducer} />
       <Route path="/aboutus" component={AboutUs} />
     </Switch>
   )
