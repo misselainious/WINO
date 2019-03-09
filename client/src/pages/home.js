@@ -84,6 +84,7 @@ const Home = () => (
         <Button as='a' size='large'>
           Read More
         </Button>
+        
         <Divider
           as='h4'
           className='header'
