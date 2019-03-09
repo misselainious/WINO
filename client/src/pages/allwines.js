@@ -12,7 +12,8 @@ import Winecard from "../components/WineCard"
 
 class Wines extends Component {
   state = {
-    wines: [], 
+    wines: [],
+    isLoading: false, 
     filters: {
       countries: [],
       colors: [],
@@ -27,6 +28,9 @@ class Wines extends Component {
 
 
 loadWines = () => {
+  this.setState({
+    isLoading: true
+  })
   API.getWines()
     .then(res => {
       console.log("Wines: ", res)
@@ -104,7 +108,7 @@ handleFilterChange = event => {
               </List>
     
             ) : (
-              <h3>No Results to Display</h3>
+              <h3>{this.state.isLoading ? "loading...": "No results to display"}</h3>
             )}
 
 
