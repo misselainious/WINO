@@ -15,6 +15,8 @@ class Wines extends Component {
     wines: [],
     producerNames: [],
     regionNames: [],
+    isLoading: false, 
+
     filters: {
       countries: [],
       colors: [],
@@ -29,7 +31,11 @@ class Wines extends Component {
   }
 
 
+
   loadWines = () => {
+    this.setState({
+    isLoading: true
+  })
     API.getWines()
       .then(res => {
         this.setState({ wines: res.data })
@@ -52,6 +58,7 @@ class Wines extends Component {
           producerNames.push(producer.Producer)
         })
         this.setState({ producerNames })
+
       }
       )
       .catch(err => console.log(err));
@@ -121,13 +128,14 @@ class Wines extends Component {
                   <Winecard header={wine.Wine} producer={wine.Producer} country={wine.Country} wineid={wine._id} key={wine._id} url={wine.URL} />
                 ))}
 
-              </GridRow>
-            </Grid>
-          </List>
-
-        ) : (
-            <h3>No Results to Display</h3>
-          )}
+                
+                </GridRow>
+                </Grid>
+              </List>
+    
+            ) : (
+              <h3>{this.state.isLoading ? "loading...": "No results to display"}</h3>
+            )}
 
 
 
