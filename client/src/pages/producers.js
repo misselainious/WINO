@@ -34,7 +34,7 @@ loadProducers = () => {
     //  <Container>
      <Grid>
         {/*CheckboxSidebar renders with a double layered array*/}
-        <CheckboxSidebar checkableArrays={[countries]} />
+        {/* <CheckboxSidebar checkableArrays={[countries]} /> */}
         
 
         {this.state.Producers.length ? (
