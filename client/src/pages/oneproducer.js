@@ -11,6 +11,7 @@ class OneProducer extends Component {
   };
 
   componentDidMount() {
+      console.log("Producer did mount")
     API.getProducer(this.props.match.params.id)
       .then(res => this.setState({ producer: res.data }))
       .catch(err => console.log(err));

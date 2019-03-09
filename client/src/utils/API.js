@@ -23,6 +23,7 @@ export default {
     return axios.get("/api/producers");
   },
   getProducer: function(id) {
+    console.log("GET PRODUCER")
     return axios.get("/api/producers/" + id);
   }
   // saveWine: function(producerData) {
