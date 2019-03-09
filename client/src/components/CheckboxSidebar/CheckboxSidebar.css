@@ -1,5 +1,7 @@
 .sidebar{
     max-width: 250px;
+    position: fixed;
+    margin-top:150px;
     
 }
 

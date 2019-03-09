@@ -15,7 +15,7 @@ class Wines extends Component {
     wines: [],
     producerNames: [],
     regionNames: [],
-    isLoading: false, 
+    isLoading: false,
 
     filters: {
       countries: [],
@@ -24,28 +24,25 @@ class Wines extends Component {
       producers: []
     }
   };
-
+  //onload we get all the wine and producer data
   componentDidMount() {
     this.loadWines();
     this.loadProducers();
   }
-
-
-
   loadWines = () => {
     this.setState({
-    isLoading: true
-  })
+      isLoading: true
+    })
     API.getWines()
       .then(res => {
         this.setState({ wines: res.data })
-        let regionNames =[]
+        let regionNames = []
         res.data.map(wine => {
-          if (!regionNames.includes(wine.Region)){
+          if (!regionNames.includes(wine.Region)) {
             regionNames.push(wine.Region)
           }
         })
-        this.setState({regionNames})
+        this.setState({ regionNames })
       }
       )
       .catch(err => console.log(err));
@@ -66,7 +63,7 @@ class Wines extends Component {
 
   //HANDLE Blah-blah-blah
   handleFilterChange = event => {
-    console.log('event.target', event.target);
+    // console.log('event.target', event.target);
     if (event.target.checked) {
       //define the selected filter
       const selectedFilter = event.target.getAttribute("data-filter");
@@ -91,6 +88,7 @@ class Wines extends Component {
   }
 
   render() {
+    const mainStyle = { marginLeft: "250px" }
     const countries = ["Germany", "France", "Austria", "Spain", "Portugal", "Greece"]
     const colors = ["Rosé", "White", "Red"]
     const regions = this.state.regionNames;
@@ -111,36 +109,43 @@ class Wines extends Component {
     }]
     //should filter so that at least one of the elements is the selected ones
     //TEST THOURGHLY, THIS WILL BE BUGGY
-    let wineList = this.state.wines.filter(wine =>
-      (this.state.filters["producers"].includes(wine.Producer) || this.state.filters["colors"].includes(wine.Color)
-        || this.state.filters["regions"].includes(wine.Region) || this.state.filters["countries"].includes(wine.Country))
-    )
-
+    //TODO Make the footer less wonky
+    let wineList = this.state.wines
+    console.log("preWinelist", wineList)
+    //this is a hacky way to access the wine data field given that each word is
+    //slightly different than the actual keyword
+    const wineFieldAdjuster = { "countries": "Country", "regions": "Region", "producers": "Producer", "colors": "Color" }
+    // filter by each keyword if the filter is selected
+    for (let keyword of ["producers", "countries", "colors", "regions"]) {
+      wineList = wineList.filter(wine => {
+        return (
+          (this.state.filters[keyword].length === 0) ||
+          this.state.filters[keyword].includes(wine[wineFieldAdjuster[keyword]])
+        )
+      })
+    }
+    console.log("postWinelist", wineList)
+    
     return (
       <Grid>
         {/*CheckboxSidebar renders with a double layered array*/}
         <CheckboxSidebar checkableArrays={filterElements} handleFilterChange={this.handleFilterChange} />
         {wineList.length ? (
-          <List>
-            <Grid>
+          <List >
+            <Grid style={mainStyle}>
               <GridRow columns='three'>
                 {wineList.map(wine => (
                   <Winecard header={wine.Wine} producer={wine.Producer} country={wine.Country} wineid={wine._id} key={wine._id} url={wine.URL} />
                 ))}
 
-                
-                </GridRow>
-                </Grid>
-              </List>
-    
-            ) : (
-              <h3>{this.state.isLoading ? "loading...": "No results to display"}</h3>
-            )}
 
+              </GridRow>
+            </Grid>
+          </List>
 
-
-
-
+        ) : (
+            <h3>{this.state.isLoading ? "loading..." : "No results to display"}</h3>
+          )}
       </Grid>
       //  </Container>
     );
