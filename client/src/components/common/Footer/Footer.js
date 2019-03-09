@@ -28,8 +28,9 @@ const Footer = props => {
                                 Address
         </Header>
                             <p>
-                                5655 College Avenue, Oakland CA 94618 • orders@winewise.biz
-                                • (p) 510.848.6879 • (f) 510.848.6880
+                                5655 College Avenue, Oakland CA 94618
+                                <br/>
+                                (phone) 510.848.6879 • (fax) 510.848.6880
         </p>
                         </Grid.Column>
                     </Grid.Row>

@@ -33,13 +33,10 @@ render() {
         <Grid>
         {this.state.Producers.length ? (
               <List>
-                <Grid>
-                  {/* <GridRow> */}        
+                <Grid>       
                 {this.state.Producers.map(producer => (
                     <Producercard id={producer._id} producer={producer.Producer} country={producer.Country} region={producer.Region}/>            
                 ))}
-                
-                {/* </GridRow> */}
                 </Grid>
               </List> 
             ) : (

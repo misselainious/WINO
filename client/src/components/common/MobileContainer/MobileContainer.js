@@ -32,11 +32,11 @@ class MobileContainer extends React.Component {
           <Menu.Item as='a' active>
             Home
           </Menu.Item>
-          <Link to="/">All Wines</Link>
-          <Link to="/">Producers</Link>
-          <Link to="/allwines">About Us</Link>
-          <Link to="/">Register</Link>
-          <Link to="/">Members</Link>
+          <Link to="/allwines">All Wines</Link>
+          <Link to="/producers">Producers</Link>
+          <Link to="/aboutus">About Us</Link>
+          <Link to="/register">Register</Link>
+          <Link to="/members">Members</Link>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -61,7 +61,7 @@ class MobileContainer extends React.Component {
                 </Menu.Item>
               </Menu>
             </Container>
-            <HomeHeading mobile />
+            {/* <HomeHeading mobile /> */}
           </Segment>
 
           {children}
