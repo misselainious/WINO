@@ -40,12 +40,16 @@ loadWines = () => {
 handleFilterChange = event => {
   console.log('event.target', event.target);
   if (event.target.checked) {
-    const filterArray = this.state.filters[event.target.getAttribute("data-Filter")];
+    //define the selected filter
+    const selectedFilter =event.target.getAttribute("data-filter");
+    const filterArray = this.state.filters[selectedFilter];
     filterArray.push(event.target.value);
+    //the bug seems to come from set state, we're accidentally getting rid of all the other arrays
+    //we will need to use the previous state
+    let oldFilters=this.state.filters
+    oldFilters[selectedFilter]=filterArray
     this.setState({
-      filters: {
-        [event.target.getAttribute("data-filter")]: filterArray
-      }
+      filters: oldFilters
     })
   } else {
     const filterArray = this.state.filters[event.target.getAttribute("data-Filter")].filter(elem => elem !== event.target.value);
@@ -76,40 +80,23 @@ handleFilterChange = event => {
       filterType: "producers",
       elements: producers
   }]
+  //should filter so that at least one of the elements is the selected ones
+  //TEST THOURGHLY, THIS WILL BE BUGGY
+  let wineList=this.state.wines.filter( wine => 
+    (this.state.filters["producers"].includes(wine.Producer) || this.state.filters["colors"].includes(wine.Color) 
+    ||this.state.filters["regions"].includes(wine.Region) ||this.state.filters["countries"].includes(wine.Country) )
+    )
+  
     return (
-    //  <Container>
      <Grid>
         {/*CheckboxSidebar renders with a double layered array*/}
         <CheckboxSidebar checkableArrays={filterElements} handleFilterChange={this.handleFilterChange} />
-        
-
-        {this.state.wines.length ? (
+        {wineList.length ? (
               <List>
                 <Grid>
                   <GridRow columns='three'>
-                  
-
-                
-                {this.state.wines.map(wine => (
-                  
-                    
+                {wineList.map(wine => (    
                     <Winecard header={wine.Wine} producer={wine.Producer} country={wine.Country} wineid={wine._id} key={wine._id} url={wine.URL} />
-                  //   {/* <Card.Group>
-                  //   <Card>
-                  //     <Card.Content>
-                  //       <Image floated='right' size='mini' src='' />
-                  //       <Card.Header>{wine.Wine}</Card.Header>
-                  //       <Card.Meta>{wine.Producer}</Card.Meta>
-                  //       <Card.Meta>{wine.Country}</Card.Meta>
-                  //       <Card.Meta>{wine._id}</Card.Meta>
-                  //       <Card.Description>
-                  //         {wine.Notes}
-                  //       </Card.Description>
-                  //     </Card.Content>
-                  //   </Card>
-                  // </Card.Group> */}
-
-                 
                 ))}
                 
                 </GridRow>
