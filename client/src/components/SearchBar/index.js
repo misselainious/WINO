@@ -11,7 +11,7 @@ const source = _.times(5, () => ({
   price: faker.finance.amount(0, 100, 2, "$")
 }));
 
-export default class SearchExampleStandard extends Component {
+export default class SearchBar extends Component {
 
     state = {
         wines: []
@@ -24,8 +24,9 @@ export default class SearchExampleStandard extends Component {
   resetComponent = () =>
     this.setState({ isLoading: false, wines: [], value: "" });
 
+    //What shows on the results bar when you click on it:
   handleResultSelect = (e, { result }) =>
-    this.setState({ value: result.Code });
+    this.setState({ value: result.Producer });
 
   handleSearchChange = (e, { value }) => {
     this.setState({ isLoading: true, value });
@@ -40,7 +41,7 @@ export default class SearchExampleStandard extends Component {
       if (this.state.value.length < 1) return this.resetComponent();
 
       const re = new RegExp(_.escapeRegExp(this.state.value), "i");
-      const isMatch = result => re.test(result.Code);
+      const isMatch = result => re.test(result.Producer);
 
       this.setState({
         isLoading: false,
@@ -52,6 +53,12 @@ export default class SearchExampleStandard extends Component {
   render() {
     const { isLoading, value, wines } = this.state;
 
+    // const resRender = ({ Code, Producer }) => (
+    //   <span key="name">
+    //     {Code}, {Producer} 
+    //   </span>
+    // );
+
     return (
       <Grid>
         <Grid.Column width={6}>
@@ -61,9 +68,11 @@ export default class SearchExampleStandard extends Component {
             onSearchChange={_.debounce(this.handleSearchChange, 500, {
               leading: true
             })}
-            wines={wines}
+            results={wines}
             value={value}
-            {...this.props.Code}
+            // {...this.props}
+            {...this.state.wines.Producer}
+            // resRender={resRender}
           />
         </Grid.Column>
         <Grid.Column width={10}>
