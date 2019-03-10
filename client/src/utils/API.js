@@ -14,7 +14,6 @@ export default {
   // deleteWine: function(id) {
   //   return axios.delete("/api/wine/" + id);
   // },
-  // Saves a book to the database
   saveWine: function(wineData) {
     return axios.post("/api/wines", wineData);
   },
