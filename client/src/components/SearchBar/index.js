@@ -3,6 +3,7 @@ import _ from "lodash";
 import React, { Component } from "react";
 import { Search, Grid, Header, Segment } from "semantic-ui-react";
 import API from '../../utils/API'
+import { Link } from "react-router-dom"
 
 
 // const source = _.times(5, () => ({
@@ -55,10 +56,12 @@ export default class SearchBar extends Component {
   render() {
     const { isLoading, value, wines } = this.state;
 
-    const resRender = ({ Code, Producer }) => (
-      <span key="name">
-        {Code}, {Producer} 
-      </span>
+    const resRender = ({ Code, Producer, _id }) => (
+      <Link to={"/details/" + _id}>
+        <span key="name">
+          {Code}, {Producer} 
+        </span>
+      </Link>
     );
 
 
@@ -73,11 +76,9 @@ export default class SearchBar extends Component {
             })}
             results={wines}
             value={value}
-            //what is being searched for
-            {...this.props.Producer}
-
             resultRenderer={resRender}
-            
+
+            // {...this.props.Producer}
             // {...this.props}
             // {...this.state.wines.Producer}
             // resRender={resRender}
