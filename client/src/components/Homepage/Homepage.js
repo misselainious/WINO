@@ -13,7 +13,7 @@ import {
   Responsive,
   Segment,
   Sidebar,
-  Visibility,
+  Visibility
 } from 'semantic-ui-react'
 
 
