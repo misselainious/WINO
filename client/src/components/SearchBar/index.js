@@ -63,7 +63,7 @@ export default class SearchExampleStandard extends Component {
             })}
             wines={wines}
             value={value}
-            {...this.props}
+            {...this.props.Code}
           />
         </Grid.Column>
         <Grid.Column width={10}>
