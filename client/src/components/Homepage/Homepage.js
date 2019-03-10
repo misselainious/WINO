@@ -17,6 +17,7 @@ import {
 } from 'semantic-ui-react'
 
 
+
 const getWidth = () => {
   const isSSR = typeof window === 'undefined'
 

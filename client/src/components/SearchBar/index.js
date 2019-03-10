@@ -1,15 +1,16 @@
 import _ from "lodash";
-import faker from "faker";
+// import faker from "faker";
 import React, { Component } from "react";
 import { Search, Grid, Header, Segment } from "semantic-ui-react";
 import API from '../../utils/API'
 
-const source = _.times(5, () => ({
-  title: faker.company.companyName(),
-  description: faker.company.catchPhrase(),
-  image: faker.internet.avatar(),
-  price: faker.finance.amount(0, 100, 2, "$")
-}));
+
+// const source = _.times(5, () => ({
+//   title: faker.company.companyName(),
+//   description: faker.company.catchPhrase(),
+//   image: faker.internet.avatar(),
+//   price: faker.finance.amount(0, 100, 2, "$")
+// }));
 
 export default class SearchBar extends Component {
 
@@ -41,6 +42,7 @@ export default class SearchBar extends Component {
       if (this.state.value.length < 1) return this.resetComponent();
 
       const re = new RegExp(_.escapeRegExp(this.state.value), "i");
+      //what is being tested for in search input
       const isMatch = result => re.test(result.Producer);
 
       this.setState({
@@ -53,11 +55,12 @@ export default class SearchBar extends Component {
   render() {
     const { isLoading, value, wines } = this.state;
 
-    // const resRender = ({ Code, Producer }) => (
-    //   <span key="name">
-    //     {Code}, {Producer} 
-    //   </span>
-    // );
+    const resRender = ({ Code, Producer }) => (
+      <span key="name">
+        {Code}, {Producer} 
+      </span>
+    );
+
 
     return (
       <Grid>
@@ -70,23 +73,17 @@ export default class SearchBar extends Component {
             })}
             results={wines}
             value={value}
+            //what is being searched for
+            {...this.props.Producer}
+
+            resultRenderer={resRender}
+            
             // {...this.props}
-            {...this.state.wines.Producer}
+            // {...this.state.wines.Producer}
             // resRender={resRender}
           />
         </Grid.Column>
-        <Grid.Column width={10}>
-          <Segment>
-            <Header>State</Header>
-            <pre style={{ overflowX: "auto" }}>
-              {JSON.stringify(this.state, null, 2)}
-            </pre>
-            <Header>Options</Header>
-            <pre style={{ overflowX: "auto" }}>
-              {JSON.stringify(this.state.wines, null, 2)}
-            </pre>
-          </Segment>
-        </Grid.Column>
+
       </Grid>
     );
   }

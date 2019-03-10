@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Container, Menu} from 'semantic-ui-react';
 import SearchBar from "../../SearchBar/index"
+
 // import SB from "../../search2/index"
 // import "./Navbar.css";
 

@@ -7,6 +7,7 @@ import { DataWine } from "../components/DataWineTable";
 // import { Link } from "react-router-dom";
 import { Grid, GridRow } from "semantic-ui-react";
 import Winecard from "../components/WineCard"
+import "semantic-ui-css/semantic.min.css";
 
 
 
