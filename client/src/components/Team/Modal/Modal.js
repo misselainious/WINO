@@ -1,5 +1,5 @@
-import React from 'react'
-import { Button, Header, Image, Modal } from 'semantic-ui-react'
+import React from 'react';
+import { Button, Header, Image, Modal } from 'semantic-ui-react';
 
 const SalesTeamModal; = () => (
   <Modal trigger={<Button>Show Modal</Button>}>

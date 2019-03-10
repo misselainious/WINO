@@ -106,7 +106,6 @@ const AboutUs = () => (
                 </Grid>
             </Segment>
 
-
             <Container>
             <Divider
                 as='h4'
@@ -123,7 +122,7 @@ const AboutUs = () => (
                 <Grid celled='internally' columns='equal' stackable>
                     <Grid.Row textAlign='center'>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3' style={{ fontSize: '1.5em' }}>
                                 Meliza Mokrani
             </Header>
                             <p style={{ fontSize: '1em' }}>
@@ -133,7 +132,7 @@ const AboutUs = () => (
                         </p>
                         </Grid.Column>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3' style={{ fontSize: '1.5em' }}>
                                 Ben Herod
             </Header>
                             <p style={{ fontSize: '1em' }}>
@@ -150,7 +149,7 @@ const AboutUs = () => (
                 <Grid celled='internally' columns='equal' stackable>
                     <Grid.Row textAlign='center'>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3' style={{ fontSize: '1.5em' }}>
                                 Elizabeth Darden
             </Header>
                             <p style={{ fontSize: '1em' }}>
@@ -160,7 +159,7 @@ const AboutUs = () => (
                         </p>
                         </Grid.Column>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3' style={{ fontSize: '1.5em' }}>
                                 Marc West-Texeira
             </Header>
                             <p style={{ fontSize: '1em' }}>
@@ -177,7 +176,7 @@ const AboutUs = () => (
                 <Grid celled='internally' columns='equal' stackable>
                     <Grid.Row textAlign='center'>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3' style={{ fontSize: '1.5em' }}>
                                 Brian Cook
             </Header>
                             <p style={{ fontSize: '1em' }}>
@@ -187,7 +186,7 @@ const AboutUs = () => (
                         </p>
                         </Grid.Column>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3' style={{ fontSize: '1.5em' }}>
                                 Hugh Weiler
             </Header>
                             <p style={{ fontSize: '1em' }}>
@@ -204,7 +203,7 @@ const AboutUs = () => (
                 <Grid celled='internally' columns='equal' stackable>
                     <Grid.Row textAlign='center'>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3' style={{ fontSize: '1.5em' }}>
                                 Matt Peterson
             </Header>
                             <p style={{ fontSize: '1em' }}>
@@ -214,7 +213,7 @@ const AboutUs = () => (
                         </p>
                         </Grid.Column>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3' style={{ fontSize: '1.5em' }}>
                                 Allyson Buist
             </Header>
                             <p style={{ fontSize: '1em' }}>
@@ -231,7 +230,7 @@ const AboutUs = () => (
                 <Grid celled='internally' columns='equal' stackable>
                     <Grid.Row textAlign='center'>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3' style={{ fontSize: '1.5em' }}>
                                 John Bauccio
             </Header>
                             <p style={{ fontSize: '1em' }}>
@@ -241,7 +240,7 @@ const AboutUs = () => (
                         </p>
                         </Grid.Column>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3' style={{ fontSize: '1.5em' }}>
                                 Tami Wong
             </Header>
                             <p style={{ fontSize: '1em' }}>
@@ -258,7 +257,7 @@ const AboutUs = () => (
                 <Grid celled='internally' columns='equal' stackable>
                     <Grid.Row textAlign='center'>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3' style={{ fontSize: '1.5em' }}>
                                 Mark Johnson
             </Header>
                             <p style={{ fontSize: '1em' }}>
@@ -268,7 +267,7 @@ const AboutUs = () => (
                         </p>
                         </Grid.Column>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3' style={{ fontSize: '1.5em' }}>
                                 Nicole (Puncochar) Frazier
             </Header>
                             <p style={{ fontSize: '1em' }}>
@@ -281,21 +280,15 @@ const AboutUs = () => (
                 </Grid>
             </Segment>
 
-            {/* <Header as='h3' style={{ fontSize: '2em' }}>
-                    Sales Team
-                </Header>
             
-                <p style={{ fontSize: '1em' }}>
-                
-                
-        </p> */}
+                        <Grid.Column textAlign='center'>
+                            <Button size='huge'>See Sales Team</Button>
+                        </Grid.Column>
+                   
 
-
-            {/* <Button as='a' size='large'>
-                    Become a Member
-        </Button> */}
             {/* </Container>
         </Segment> */}
+        
         </Container>
         </Segment>
     </React.Fragment>
