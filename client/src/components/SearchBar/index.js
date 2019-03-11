@@ -54,12 +54,13 @@ export default class SearchBar extends Component {
   };
 
   render() {
+    
     const { isLoading, value, wines } = this.state;
 
     const resRender = ({ Code, Producer, _id }) => (
       <Link to={"/details/" + _id}>
         <span key="name">
-          {Code}, {Producer} 
+        {Producer} , {Code}
         </span>
       </Link>
     );
@@ -69,6 +70,7 @@ export default class SearchBar extends Component {
       <Grid>
         <Grid.Column width={6}>
           <Search
+            placeholder="Search..."
             loading={isLoading}
             onResultSelect={this.handleResultSelect}
             onSearchChange={_.debounce(this.handleSearchChange, 500, {
