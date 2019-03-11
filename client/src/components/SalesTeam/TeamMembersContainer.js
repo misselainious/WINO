@@ -4,9 +4,9 @@ import salesTeamMembers from "../../salesTeam.json";
 import TeamMemberCard from "./TeamMemberCard";
 
 
-function pairTeamMembers() {
+function pairTeamMembers(modalFn) {
     const teamMemberCards = salesTeamMembers.map((member, i) => {
-        return <TeamMemberCard key={i} {...member} />
+        return <TeamMemberCard key={i} member={member} openModal={modalFn} />
     });
     
     const pairs = [];
@@ -19,7 +19,7 @@ function pairTeamMembers() {
 }
 
 function TeamMembersContainer(props) {
-    const pairs = pairTeamMembers();
+    const pairs = pairTeamMembers(props.handleOpenModal);
     return (
         <Container>
             <Grid>

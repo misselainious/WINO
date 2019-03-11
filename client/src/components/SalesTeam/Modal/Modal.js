@@ -2,21 +2,37 @@ import React from 'react';
 import { Button, Header, Image, Modal } from 'semantic-ui-react';
 
 
-const SalesTeamModal = () => (
+const SalesTeamModal = props => {
 
-  <Modal trigger={<Button>More Info</Button>}>
-   
-    <Modal.Header>Member Biography</Modal.Header>
-    <Modal.Content image>
-      <Image wrapped size='medium' src='/images/winesPouring.jpg' />
-      <Modal.Description>
-        <Header>Profile</Header>
+  const name = props.member ? props.member.name : "";
+  const email = props.member ? props.member.email : "";
+  const phone = props.member ? props.member.phone : "";
+  const bio = props.member ? props.member.bio : "";
+  
+  return (
 
-        <p>bio information for each team member goes here</p>
-        <p>additional information for those who have two paragraphs</p>
-      </Modal.Description>
-    </Modal.Content>
-  </Modal>
-)
+    <Modal 
+      // trigger={<Button>More Info</Button>}
+      open={props.open}
+    >
+      <Modal.Header>{name}</Modal.Header>
+      <Modal.Content image>
+        <Image wrapped size='medium' src='/images/winesPouring.jpg' />
+        <Modal.Description>
+          <Header>{`${email} • ${phone}`}</Header>
+          <p>
+            {bio}
+          </p>
+          {/* <p>bio information for each team member goes here</p>
+          <p>additional information for those who have two paragraphs</p> */}
+        </Modal.Description>
+      </Modal.Content>
+      <Modal.Content>
+        <Button onClick={props.closeModal}>Close</Button>
+      </Modal.Content>
+      
+    </Modal>
+  )
+}
 
 export default SalesTeamModal;
