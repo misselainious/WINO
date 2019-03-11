@@ -28,7 +28,8 @@
     "react-dom": "^16.6.3",
     "react-responsive-carousel": "^3.1.47",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.8",
+    "react-scripts": "^2.1.1",
+    "semantic-ui-css": "^2.4.1",
     "sequelize": "^4.41.2"
   }
 }
