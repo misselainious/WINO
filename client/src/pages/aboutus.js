@@ -14,7 +14,7 @@ import {
 } from 'semantic-ui-react';
 import SalesTeamModal from "../components/SalesTeam/Modal/Modal";
 import TeamMemberCard from '../components/SalesTeam/TeamMemberCard'
-
+import TeamMembersContainer from '../components/SalesTeam/TeamMembersContainer';
 
 const AboutUs = () => (
     // <ResponsiveContainer>
@@ -118,8 +118,8 @@ const AboutUs = () => (
                 style={{ minHeight: 200, padding: '1em 0em', backgroundImage: `url("./images//wineBarrels.jpg")` }}
                 vertical>
             </Segment>
+            <TeamMembersContainer />
 
-            <Container>
                 {/* <Divider
                     as='h2'
                     className='header'
@@ -127,6 +127,7 @@ const AboutUs = () => (
                     style={{ margin: '1em 0em', textTransform: 'uppercase' }}>
                     <a href=''>SALES TEAM</a>
                 </Divider> */}
+            {/* <Container>
 
                 <Grid>
                     <Grid.Column
@@ -305,7 +306,7 @@ const AboutUs = () => (
                     </Grid>
                 </Segment>
 
-            </Container>
+            </Container> */}
 
         </Segment>
     </React.Fragment>

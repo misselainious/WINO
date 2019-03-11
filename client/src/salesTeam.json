@@ -3,7 +3,7 @@
       "id": 1,
       "name": "Meliza Mokrani",
       "image": "",
-      "region": "(San Francisco)",
+      "region": "San Francisco",
       "email": "meliza@winewise.biz",
       "phone": "707.363.1055",
       "bio": ""
@@ -12,7 +12,7 @@
       "id": 2,
       "name": "Ben Herod",
       "image": "",
-      "region": "(San Francisco)",
+      "region": "San Francisco",
       "email": "ben@winewise.biz",
       "phone": "415.308.2266",
       "bio": ""
@@ -21,7 +21,7 @@
       "id": 3,
       "name": "Elizabeth Darden",
       "image": "",
-      "region": "(Marin County and Sonoma County)",
+      "region": "Marin County and Sonoma County",
       "email": "elizabethd@winewise.biz",
       "phone": "415.640.8503",
       "bio": ""
@@ -30,7 +30,7 @@
       "id": 4,
       "name": "Marc West-Texeira",
       "image": "",
-      "region": "(East Bay, Contra Costa County, Napa County)",
+      "region": "East Bay, Contra Costa County, Napa County",
       "email": "marc@winewise.biz",
       "phone": "510.599.5566",
       "bio": ""
@@ -39,7 +39,7 @@
       "id": 5,
       "name": "Brian Cook",
       "image": "",
-      "region": "(Peninsula, San Francisco)",
+      "region": "Peninsula, San Francisco",
       "email": "bcook@winewise.biz",
       "phone": "415.539.8010",
       "bio": ""
@@ -48,7 +48,7 @@
       "id": 6,
       "name": "Hugh Weiler",
       "image": "",
-      "region": "(Sacramento, Central Valley, Tahoe)",
+      "region": "Sacramento, Central Valley, Tahoe",
       "email": "hugh@winewise.biz",
       "phone": "916.538.1616",
       "bio": ""
@@ -57,7 +57,7 @@
       "id": 7,
       "name": "Matt Peterson",
       "image": "",
-      "region": "(Santa Cruz, Monterey, Big Sur)",
+      "region": "Santa Cruz, Monterey, Big Sur",
       "email": "matt@winewise.biz",
       "phone": "831.383.9469",
       "bio": "Growing up with is an enthusiastic food and wine family of chefs and hospitality professionals, Matt gained an early interest in wines and their place in everyday life, the stories they tell, and the places they take you. His first job in the wine trade started at the age of 22, working for one of the larger wine companies, and quickly learned that side of the wine world wouldn’t keep his interest. Eventually the draw of the boutique wine importer and portfolio would attract his attention and heart, and keep it to this day. The warm and nourishing home Matt found at Wine Wise has never faded or failed to stoke his passion. Now a long term resident of Big Sur, and steward to Wine Wise’s most beautiful sales territory, Matt co-founded the Big Sur Food and Wine Festival and serves as their Vice President and Wine Director. Additionally, Matt is the Sommelier at Sierra Mar Restaurant at The Post Ranch Inn and consults for a couple local wine programs."
@@ -66,7 +66,7 @@
       "id": 8,
       "name": "Allyson Buist",
       "image": "",
-      "region": "(San Luis Obispo, Paso Robles, Santa Ynez, Santa Barbara)",
+      "region": "San Luis Obispo, Paso Robles, Santa Ynez, Santa Barbara",
       "email": "allyson@winewise.biz",
       "phone": "530.941.1890",
       "bio": ""
@@ -75,7 +75,7 @@
       "id": 9,
       "name": "John Bauccio",
       "image": "",
-      "region": "(Los Angeles)",
+      "region": "Los Angeles",
       "email": "john@winewise.biz",
       "phone": "213.400.8620",
       "bio": "While John’s love of WineWise’s spectacular portfolio began when he was one of the opening team of San Francisco’s famed Ferry Plaza Wine Merchant, his interest in wine began in his food obsessed Italian-American family, where he never knew a time when wine wasn’t on the dinner table. After a career path that included the music business and working in nearly every type of restaurant job, John graduated from The California Culinary Academy in San Francisco. His formal wine training began at Robert Mondavi Winery where he rose to the level of Senior Wine Educator and specialized in teaching both the public and the restaurant trade about wine and food. Eventually John settled in Los Angeles, where he proudly represents our fantastic and devoted producers."
@@ -84,7 +84,7 @@
       "id": 10,
       "name": "Tami Wong",
       "image": "",
-      "region": "(Orange County, Long Beach, San Diego)",
+      "region": "Orange County, Long Beach, San Diego",
       "email": "tami@winewise.biz",
       "phone": "619.665.3748",
       "bio": "A lifelong veteran of restaurants, Certified Sommelier Tami Wong was the second San Diegan to be chosen by Wine &amp; Spirits Magazine as one of the six Best New Sommeliers in 2014. She is a founding member of Nat Diego, San Diego’s first natural wine festival. She serves as a correspondent and consultant with Wine in Tami Time, San Diego Beverage Times and Campestre Magazine. As an Ambassador for the San Diego County Vintners Association, she is excited to explore and share our local bounty."
@@ -93,7 +93,7 @@
       "id": 11,
       "name": "Mark Johnson",
       "image": "",
-      "region": "(Mendocino County, Humboldt County)",
+      "region": "Mendocino County, Humboldt County",
       "email": "markdj@winewise.biz",
       "phone": "707.813.8183",
       "bio": "Mark Johnson has been a sales associate of WineWise since 2011. More broadly, Mark has been employed in the wine and food industry for over twenty five years, involved with sales both wholesale and retail, and in production. This experience gives him the tools to be a well regarded resource for his valued accounts. Outside of work, Mark is a home brewer, cider and wine maker. Particularly with his annual cider production, he has pondered the age old perplexities of charmat versus methode, dosage versus natural, Star Trek versus Star Wars."
@@ -102,7 +102,7 @@
       "id": 12,
       "name": "Nicole (Puncochar) Frazier",
       "image": "",
-      "region": "(Orange County)",
+      "region": "Orange County",
       "email": "nicole@winewise.biz",
       "phone": "612.839.2695",
       "bio": "An organic chemist in a previous life, Nicole Frazier traded her goggles and white coat for glassware and white gloves. Studying at UC Davis, she quickly discovered her true passion: wine. During a brief stint in direct-to-consumer sales, Nicole learned the value of personal relationships, following through, and an unpretentious approach to wine knowledge. She continues her studies through the Wine & Spirit Education Trust. Nicole prides herself on her Midwest work ethic, honest relationships, and (at least according to her mom), her ability to make friends with a wall. She married her Minnesota sweetheart and they live happily away from the snow with their two daughters. More than anything, Nicole drinks the wine she likes and believes that everyone else should, too."
@@ -111,7 +111,7 @@
         "id": 13,
         "name": "Elaine Cadman",
         "image": "",
-        "region": "(Order Desk)",
+        "region": "Order Desk",
         "email": "orders@winewise.biz",
         "phone": "510.473.5482",
         "bio": "After 10 years in the restaurant industry and sick of the snowy Boston weather Elaine packed up her Math degree and found a new home in sunny Oakland. She joined WineWise and hit her stride at the Order Desk happily entering orders and pouring over spreadsheets until 2017 when she made the ridiculous decision to pack up and travel the world for a year. 20 countries and only minor injuries later she returned to the Bay Area and rejoined WineWise, this time with a goal of getting this new website up and running. In her spare time she teaches Spin Class and Yoga and obsessively scuba dives whenever she can get somewhere warm."
@@ -120,7 +120,7 @@
         "id": 14,
         "name": "Hiram Simon",
         "image": "",
-        "region": "(Wine Wise Principal)",
+        "region": "Wine Wise Principal",
         "email": "hiram@winewise.biz",
         "phone": "510.848.6879",
         "bio": ""
@@ -129,7 +129,7 @@
         "id": 15,
         "name": "Brian Greenwood",
         "image": "",
-        "region": "(Wine Wise Principal)",
+        "region": "Wine Wise Principal",
         "email": "brian@winewise.biz",
         "phone": "510.524.2270",
         "bio": ""

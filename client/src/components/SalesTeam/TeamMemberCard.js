@@ -4,7 +4,7 @@ import { Button, Card, Grid, Header } from "semantic-ui-react";
 
 function TeamMemberCard(props) {
   return (
-    <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>\
+    <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
       <Header as='h3' style={{ fontSize: '1.5em' }}>
         {props.name}
       </Header>
