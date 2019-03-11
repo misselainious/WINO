@@ -40,7 +40,7 @@ const HomepageHeading = ({ mobile }) => (
         marginBottom: 0,
         marginTop: mobile ? '1.5em' : '3em',
       }}
-    />
+    /> 
     <Header
       as='h2'
       content='company logo or slogan here'
