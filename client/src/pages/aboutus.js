@@ -23,12 +23,7 @@ const AboutUs = () => (
             inverted
             textAlign='center'
             style={{ minHeight: 700, padding: '1em 0em', backgroundImage: `url("./images/vineyard.jpg")` }}
-            vertical
-        >
-        
-            <HomeHeading />
-           
-
+            vertical>
         </Segment> */}
 
         <Segment style={{ padding: '8em 0em' }} vertical>
@@ -116,18 +111,29 @@ const AboutUs = () => (
                 </Grid.Column>
             </Grid> */}
 
+            <Segment
+                inverted
+                textAlign='center'
+                style={{ minHeight: 200, padding: '1em 0em', backgroundImage: `url("./images//wineBarrels.jpg")` }}
+                vertical>
+            </Segment>
 
             <Container>
                 <Divider
-                    as='h4'
+                    as='h2'
                     className='header'
                     horizontal
-                    style={{ margin: '3em 0em', textTransform: 'uppercase' }}
+                    style={{ margin: '1em 0em', textTransform: 'uppercase' }}
                 >
                     <a href=''>SALES TEAM</a>
                 </Divider>
 
-
+                {/* <Grid>
+                    <Grid.Column
+                        textAlign='center'>
+                        <Button size='huge'>Sales Team</Button>
+                    </Grid.Column>
+                </Grid> */}
 
                 <Segment style={{ padding: '0em' }} vertical>
                     <Grid celled='internally' columns='equal' stackable>

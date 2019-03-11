@@ -1,13 +1,11 @@
 import React from "react";
 import { Grid } from "semantic-ui-react";
 
-function TeamCard(props) {
+
+function TeamMemberCard(props) {
   return (
     <Grid className="card">
-      <Grid className="img-container">
-        <img alt={props.name} src={props.image} />
-      </Grid>
-      <Grid className="content">
+      <Grid.Row className="content">
         <ul>
           <li>
             <strong>Name:</strong> {props.name}
@@ -22,14 +20,10 @@ function TeamCard(props) {
             <strong>Phone:</strong> {props.phone}
           </li>
         </ul>
-      </Grid>
-
-      {/* need to make this an onClick to pop up modal */}
-      <Button onClick={() => props.removeFriend(props.id)} className="remove">
-        𝘅
-      </Button>
+      </Grid.Row>
+      
     </Grid>
   );
 }
 
-export default TeamCard;
+export default TeamMemberCard;
