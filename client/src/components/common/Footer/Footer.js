@@ -2,9 +2,11 @@ import React from "react";
 import { Grid, Segment, Container, List, Header } from "semantic-ui-react";
 
 const Footer = props => {
+    const fixed = props.fixed;
     
     return (
-        <Segment inverted vertical style={{ padding: '5em 0em' }}
+        <Segment fixed={fixed ? 'bottom' : null} 
+        inverted vertical style={{ padding: '5em 0em' }}
         color='red'>
             <Container>
                 <Grid divided inverted stackable>
@@ -12,8 +14,8 @@ const Footer = props => {
                         <Grid.Column width={3}>
                             <Header inverted as='h4' content='About' />
                             <List link inverted>
-                                <List.Item as='a'>Sitemap</List.Item>
                                 <List.Item as='a'>Contact Us</List.Item>
+                                <List.Item as='a'>Sales Team</List.Item>
                             </List>
                         </Grid.Column>
                         <Grid.Column width={3}>
