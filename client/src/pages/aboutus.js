@@ -1,5 +1,6 @@
 import React from "react";
 import HomeHeading from "../components/Homepage/HomeHeading/HomeHeading";
+import Modal from "../components/SalesTeam/Modal/Modal";
 // import Carousel from "../components/common/Carousel/Carousel";
 // import PropTypes from 'prop-types';
 import {
@@ -11,6 +12,7 @@ import {
     Image,
     Segment,
 } from 'semantic-ui-react';
+import SalesTeamModal from "../components/SalesTeam/Modal/Modal";
 
 
 const AboutUs = () => (
@@ -107,197 +109,202 @@ const AboutUs = () => (
                 </Grid>
             </Segment>
 
-            <Grid>
+            {/* <Grid>
                 <Grid.Column
                     textAlign='center'>
                     <Button size='huge'>Sales Team</Button>
                 </Grid.Column>
-            </Grid>
+            </Grid> */}
+
 
             <Container>
-            <Divider
-                as='h4'
-                className='header'
-                horizontal
-                style={{ margin: '3em 0em', textTransform: 'uppercase' }}
-            >
-                <a href=''>SALES TEAM</a>
-            </Divider>
-            
-            
-            
-            <Segment style={{ padding: '0em' }} vertical>
-                <Grid celled='internally' columns='equal' stackable>
-                    <Grid.Row textAlign='center'>
-                        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '1.5em' }}>
-                                Meliza Mokrani
-            </Header>
-                            <p style={{ fontSize: '1em' }}>
-                                (San Francisco)
-                        <br />
-                                meliza@winewise.biz  • 707.363.1055
-                        </p>
-                        </Grid.Column>
-                        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '1.5em' }}>
-                                Ben Herod
-            </Header>
-                            <p style={{ fontSize: '1em' }}>
-                                (San Francisco)
-                        <br />
-                                ben@winewise.biz • 415.308.2266
-            </p>
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
-            </Segment>
+                <Divider
+                    as='h4'
+                    className='header'
+                    horizontal
+                    style={{ margin: '3em 0em', textTransform: 'uppercase' }}
+                >
+                    <a href=''>SALES TEAM</a>
+                </Divider>
 
-            <Segment style={{ padding: '0em' }} vertical>
-                <Grid celled='internally' columns='equal' stackable>
-                    <Grid.Row textAlign='center'>
-                        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '1.5em' }}>
-                                Elizabeth Darden
-            </Header>
-                            <p style={{ fontSize: '1em' }}>
-                                (Marin County and Sonoma County)
-                        <br />
-                                elizabethd@winewise.biz • 415.640.8503
-                        </p>
-                        </Grid.Column>
-                        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '1.5em' }}>
-                                Marc West-Texeira
-            </Header>
-                            <p style={{ fontSize: '1em' }}>
-                                (East Bay, Contra Costa County, Napa County)
-                        <br />
-                                marc@winewise.biz • 510.599.5566
-                         </p>
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
-            </Segment>
 
-            <Segment style={{ padding: '0em' }} vertical>
-                <Grid celled='internally' columns='equal' stackable>
-                    <Grid.Row textAlign='center'>
-                        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '1.5em' }}>
-                                Brian Cook
-            </Header>
-                            <p style={{ fontSize: '1em' }}>
-                                (Peninsula, San Francisco)
-                        <br />
-                                bcook@winewise.biz •415.539.8010
-                        </p>
-                        </Grid.Column>
-                        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '1.5em' }}>
-                                Hugh Weiler
-            </Header>
-                            <p style={{ fontSize: '1em' }}>
-                                (Sacramento, Central Valley, Tahoe)
-                        <br />
-                                hugh@winewise.biz • 916.538.1616
-                        </p>
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
-            </Segment>
 
-            <Segment style={{ padding: '0em' }} vertical>
-                <Grid celled='internally' columns='equal' stackable>
-                    <Grid.Row textAlign='center'>
-                        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '1.5em' }}>
-                                Matt Peterson
-            </Header>
-                            <p style={{ fontSize: '1em' }}>
-                                (Santa Cruz, Monterey, Big Sur)
-                        <br />
-                                matt@winewise.biz • 831.383.9469
-                        </p>
-                        </Grid.Column>
-                        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '1.5em' }}>
-                                Allyson Buist
-            </Header>
-                            <p style={{ fontSize: '1em' }}>
-                                (San Luis Obispo, Paso Robles, Santa Ynez, Santa Barbara)
-                        <br />
-                                allyson@winewise.biz •530.941.1890
-                       </p>
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
-            </Segment>
+                <Segment style={{ padding: '0em' }} vertical>
+                    <Grid celled='internally' columns='equal' stackable>
+                        <Grid.Row textAlign='center'>
+                            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                                <Header as='h3' style={{ fontSize: '1.5em' }}>
+                                    Meliza Mokrani
+                                </Header>
+                                <p style={{ fontSize: '1em' }}>
+                                    (San Francisco)
+                                <br />
+                                    meliza@winewise.biz  • 707.363.1055
+                                </p>
+                                <Modal />
+                            </Grid.Column>
+                            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                                <Header as='h3' style={{ fontSize: '1.5em' }}>
+                                    Ben Herod
+                                </Header>
+                                <p style={{ fontSize: '1em' }}>
+                                    (San Francisco)
+                                <br />
+                                    ben@winewise.biz • 415.308.2266
+                                </p>
+                                <Modal />
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                </Segment>
 
-            <Segment style={{ padding: '0em' }} vertical>
-                <Grid celled='internally' columns='equal' stackable>
-                    <Grid.Row textAlign='center'>
-                        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '1.5em' }}>
-                                John Bauccio
-            </Header>
-                            <p style={{ fontSize: '1em' }}>
-                                (Los Angeles)
-                        <br />
-                                john@winewise.biz • 213.400.8620
-                        </p>
-                        </Grid.Column>
-                        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '1.5em' }}>
-                                Tami Wong
-            </Header>
-                            <p style={{ fontSize: '1em' }}>
-                                (Orange County, Long Beach, San Diego)
-                        <br />
-                                tami@winewise.biz • 619.665.3748
-                       </p>
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
-            </Segment>
+                <Segment style={{ padding: '0em' }} vertical>
+                    <Grid celled='internally' columns='equal' stackable>
+                        <Grid.Row textAlign='center'>
+                            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                                <Header as='h3' style={{ fontSize: '1.5em' }}>
+                                    Elizabeth Darden
+                                </Header>
+                                <p style={{ fontSize: '1em' }}>
+                                    (Marin County and Sonoma County)
+                                <br />
+                                    elizabethd@winewise.biz • 415.640.8503
+                                </p>
+                                <Modal />
+                            </Grid.Column>
+                            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                                <Header as='h3' style={{ fontSize: '1.5em' }}>
+                                    Marc West-Texeira
+                                </Header>
+                                <p style={{ fontSize: '1em' }}>
+                                    (East Bay, Contra Costa County, Napa County)
+                                <br />
+                                    marc@winewise.biz • 510.599.5566
+                                </p>
+                                <Modal />
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                </Segment>
 
-            <Segment style={{ padding: '0em' }} vertical>
-                <Grid celled='internally' columns='equal' stackable>
-                    <Grid.Row textAlign='center'>
-                        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '1.5em' }}>
-                                Mark Johnson
-            </Header>
-                            <p style={{ fontSize: '1em' }}>
-                                (Mendocino County and Humboldt County)
-                        <br />
-                                markdj@winewise.biz • 707.813.8183
-                        </p>
-                        </Grid.Column>
-                        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                            <Header as='h3' style={{ fontSize: '1.5em' }}>
-                                Nicole (Puncochar) Frazier
-            </Header>
-                            <p style={{ fontSize: '1em' }}>
-                                (Orange County)
-                        <br />
-                                nicole@winewise.biz 612.839.2695
-                       </p>
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
-            </Segment>
+                <Segment style={{ padding: '0em' }} vertical>
+                    <Grid celled='internally' columns='equal' stackable>
+                        <Grid.Row textAlign='center'>
+                            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                                <Header as='h3' style={{ fontSize: '1.5em' }}>
+                                    Brian Cook
+                                </Header>
+                                <p style={{ fontSize: '1em' }}>
+                                    (Peninsula, San Francisco)
+                                <br />
+                                    bcook@winewise.biz • 415.539.8010
+                                </p>
+                                <Modal />
+                            </Grid.Column>
+                            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                                <Header as='h3' style={{ fontSize: '1.5em' }}>
+                                    Hugh Weiler
+                                </Header>
+                                <p style={{ fontSize: '1em' }}>
+                                    (Sacramento, Central Valley, Tahoe)
+                                <br />
+                                    hugh@winewise.biz • 916.538.1616
+                                </p>
+                                <Modal />
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                </Segment>
 
-            
-                        <Grid.Column textAlign='center'>
-                            <Button size='huge'>See Sales Team</Button>
-                        </Grid.Column>
-                   
+                <Segment style={{ padding: '0em' }} vertical>
+                    <Grid celled='internally' columns='equal' stackable>
+                        <Grid.Row textAlign='center'>
+                            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                                <Header as='h3' style={{ fontSize: '1.5em' }}>
+                                    Matt Peterson
+                                </Header>
+                                <p style={{ fontSize: '1em' }}>
+                                    (Santa Cruz, Monterey, Big Sur)
+                                <br />
+                                    matt@winewise.biz • 831.383.9469
+                                </p>
+                                <Modal />
+                            </Grid.Column>
+                            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                                <Header as='h3' style={{ fontSize: '1.5em' }}>
+                                    Allyson Buist
+                                </Header>
+                                <p style={{ fontSize: '1em' }}>
+                                    (San Luis Obispo, Paso Robles, Santa Ynez, Santa Barbara)
+                                <br />
+                                    allyson@winewise.biz • 530.941.1890
+                                </p>
+                                <Modal />
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                </Segment>
 
-            {/* </Container>
-        </Segment> */}
-        
-        </Container>
+                <Segment style={{ padding: '0em' }} vertical>
+                    <Grid celled='internally' columns='equal' stackable>
+                        <Grid.Row textAlign='center'>
+                            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                                <Header as='h3' style={{ fontSize: '1.5em' }}>
+                                    John Bauccio
+                                </Header>
+                                <p style={{ fontSize: '1em' }}>
+                                    (Los Angeles)
+                                <br />
+                                    john@winewise.biz • 213.400.8620
+                                </p>
+                                <Modal />
+                            </Grid.Column>
+                            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                                <Header as='h3' style={{ fontSize: '1.5em' }}>
+                                    Tami Wong
+                                </Header>
+                                <p style={{ fontSize: '1em' }}>
+                                    (Orange County, Long Beach, San Diego)
+                                <br />
+                                    tami@winewise.biz • 619.665.3748
+                                </p>
+                                <Modal />
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                </Segment>
+
+                <Segment style={{ padding: '0em' }} vertical>
+                    <Grid celled='internally' columns='equal' stackable>
+                        <Grid.Row textAlign='center'>
+                            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                                <Header as='h3' style={{ fontSize: '1.5em' }}>
+                                    Mark Johnson
+                                </Header>
+                                <p style={{ fontSize: '1em' }}>
+                                    (Mendocino County and Humboldt County)
+                                <br />
+                                    markdj@winewise.biz • 707.813.8183
+                                </p>
+                                <Modal />
+                            </Grid.Column>
+                            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                                <Header as='h3' style={{ fontSize: '1.5em' }}>
+                                    Nicole (Puncochar) Frazier
+                                </Header>
+                                <p style={{ fontSize: '1em' }}>
+                                    (Orange County)
+                                <br />
+                                    nicole@winewise.biz • 612.839.2695
+                                </p>
+                                <Modal />
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                </Segment>
+
+            </Container>
+
         </Segment>
     </React.Fragment>
     // </ResponsiveContainer>
