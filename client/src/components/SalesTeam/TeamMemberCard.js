@@ -1,28 +1,20 @@
 import React from "react";
-import { Grid } from "semantic-ui-react";
+import { Button, Card, Grid, Header } from "semantic-ui-react";
 
 
 function TeamMemberCard(props) {
   return (
-    <Grid className="card">
-      <Grid.Row className="content">
-        <ul>
-          <li>
-            <strong>Name:</strong> {props.name}
-          </li>
-          <li>
-            <strong>Region:</strong> {props.region}
-          </li>
-          <li>
-            <strong>Email:</strong> {props.email}
-          </li>
-          <li>
-            <strong>Phone:</strong> {props.phone}
-          </li>
-        </ul>
-      </Grid.Row>
-      
-    </Grid>
+    <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>\
+      <Header as='h3' style={{ fontSize: '1.5em' }}>
+        {props.name}
+      </Header>
+      <p style={{ fontSize: '1em' }}>
+        { `(${props.region})` }
+      <br />
+        { `${props.email} • ${props.phone}` }
+      </p>
+      <Button>More Info</Button>
+    </Grid.Column>
   );
 }
 

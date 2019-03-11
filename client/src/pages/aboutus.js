@@ -13,6 +13,7 @@ import {
     Segment,
 } from 'semantic-ui-react';
 import SalesTeamModal from "../components/SalesTeam/Modal/Modal";
+import TeamMemberCard from '../components/SalesTeam/TeamMemberCard'
 
 
 const AboutUs = () => (
@@ -119,36 +120,30 @@ const AboutUs = () => (
             </Segment>
 
             <Container>
-                <Divider
+                {/* <Divider
                     as='h2'
                     className='header'
                     horizontal
-                    style={{ margin: '1em 0em', textTransform: 'uppercase' }}
-                >
+                    style={{ margin: '1em 0em', textTransform: 'uppercase' }}>
                     <a href=''>SALES TEAM</a>
-                </Divider>
+                </Divider> */}
 
-                {/* <Grid>
+                <Grid>
                     <Grid.Column
                         textAlign='center'>
                         <Button size='huge'>Sales Team</Button>
                     </Grid.Column>
-                </Grid> */}
+                </Grid>
 
                 <Segment style={{ padding: '0em' }} vertical>
                     <Grid celled='internally' columns='equal' stackable>
                         <Grid.Row textAlign='center'>
-                            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                                <Header as='h3' style={{ fontSize: '1.5em' }}>
-                                    Meliza Mokrani
-                                </Header>
-                                <p style={{ fontSize: '1em' }}>
-                                    (San Francisco)
-                                <br />
-                                    meliza@winewise.biz  • 707.363.1055
-                                </p>
-                                <Modal />
-                            </Grid.Column>
+                            <TeamMemberCard 
+                                name="Meliza Mokrani" 
+                                region="San Francisco" 
+                                email="meliza@winewise.biz"
+                                phone="707.363.1055"
+                            />
                             <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                                 <Header as='h3' style={{ fontSize: '1.5em' }}>
                                     Ben Herod
@@ -160,6 +155,7 @@ const AboutUs = () => (
                                 </p>
                                 <Modal />
                             </Grid.Column>
+                            
                         </Grid.Row>
                     </Grid>
                 </Segment>
