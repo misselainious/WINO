@@ -107,8 +107,6 @@ class Wines extends Component {
       filterType: "producers",
       elements: producers
     }]
-    //should filter so that at least one of the elements is the selected ones
-    //TEST THOURGHLY, THIS WILL BE BUGGY
     //TODO Make the footer less wonky
     let wineList = this.state.wines
     console.log("preWinelist", wineList)
