@@ -97,14 +97,22 @@ const AboutUs = () => (
                                 Order Desk
             </Header>
                             <p style={{ fontSize: '1.33em' }}>
-                                <Image avatar src='./images/winecorks.jpg' />
+                                {/* <Image avatar src='./images/winecorks.jpg' /> */}
                                 <b>Elaine Cadman</b> • orders@winewise.biz • 510.473.5482
-    
-            </p>
+                                <br />
+                                <Image avatar src='./images/winecorks.jpg' />
+                            </p>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
             </Segment>
+
+            <Grid>
+                <Grid.Column
+                    textAlign='center'>
+                    <Button size='huge'>Sales Team</Button>
+                </Grid.Column>
+            </Grid>
 
             <Container>
             <Divider
