@@ -1,6 +1,6 @@
 import React from "react";
 import HomeHeading from "../components/Homepage/HomeHeading/HomeHeading";
-// import Carousel from "../components/common/Carousel/Carousel";
+import Carousel from "../components/common/Carousel/Carousel";
 // import PropTypes from 'prop-types';
 import {
   Button,
@@ -17,16 +17,16 @@ const Home = () => (
   // <ResponsiveContainer>
   <React.Fragment>
 
-    <Segment
+    {/* <Segment
       inverted
       textAlign='center'
       style={{ minHeight: 700, padding: '1em 0em', backgroundImage: `url("./images/redPouring.jpg")` }}
       vertical
-    >
-
+    > */}
+    <Carousel>
       <HomeHeading />
-      {/* <Carousel /> */}
-    </Segment>
+      </Carousel>
+    {/* </Segment> */}
 
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
@@ -41,6 +41,7 @@ const Home = () => (
 
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
+            {/* <Carousel /> */}
             <Image bordered rounded size='large' src='/images/winePouring.jpg' />
           </Grid.Column>
         </Grid.Row>
@@ -51,7 +52,7 @@ const Home = () => (
         </Grid.Row>
       </Grid>
     </Segment>
-    
+
     <Segment style={{ padding: '0em' }} vertical>
       <Grid celled='internally' columns='equal' stackable>
         <Grid.Row textAlign='center'>
@@ -85,7 +86,7 @@ const Home = () => (
         <Button as='a' size='large'>
           Read More
         </Button>
-        
+
         <Divider
           as='h4'
           className='header'
@@ -100,11 +101,12 @@ const Home = () => (
         <p style={{ fontSize: '1em' }}>
           Labruyere (2013) “Page Blanche” Blanc de Blancs Grand Cru Brut
         </p>
-        
-          <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/StockRed.png' />
-          </Grid.Column>
-        <br/>
+
+        <Grid.Column floated='right' width={6}>
+        <Carousel />
+          {/* <Image bordered rounded size='large' src='/images/StockRed.png' /> */}
+        </Grid.Column>
+        <br />
 
         <Button as='a' size='large'>
           Become a Member
