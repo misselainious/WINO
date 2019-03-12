@@ -103,8 +103,8 @@ const Home = () => (
         </p>
 
         <Grid.Column floated='right' width={6}>
-        <Carousel />
-          {/* <Image bordered rounded size='large' src='/images/StockRed.png' /> */}
+        {/* <Carousel /> */}
+          <Image bordered rounded size='large' src='/images/StockRed.png' />
         </Grid.Column>
         <br />
 
