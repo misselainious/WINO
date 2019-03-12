@@ -11,7 +11,9 @@ class OneWine extends Component {
   state = {
     wine: {}
   };
-
+  removeUnderscores(myString){
+    return myString.split("_").join(" ")
+  }
   componentDidMount() {
     API.getWine(this.props.match.params.id)
       .then(res => this.setState({ wine: res.data }))
@@ -99,7 +101,7 @@ render() {
         {
             wineObjKeys.map(key => 
                     wine[key] && <Table.Row key={key}>
-                        <Table.Cell>{key}</Table.Cell>
+                        <Table.Cell>{this.removeUnderscores(key)}</Table.Cell>
                         <Table.Cell>{wine[key]}</Table.Cell>
                     </Table.Row>
             )

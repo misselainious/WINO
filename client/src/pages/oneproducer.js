@@ -9,7 +9,9 @@ class OneProducer extends Component {
   state = {
     producer: {}
   };
-
+  removeUnderscores(myString){
+    return myString.split("_").join(" ")
+  }
   componentDidMount() {
       console.log("Producer did mount")
     API.getProducer(this.props.match.params.id)
@@ -34,7 +36,7 @@ render() {
         {
             producerObjKeys.map(key => 
                     producer[key] && <Table.Row key={key}>
-                        <Table.Cell>{key}</Table.Cell>
+                        <Table.Cell>{this.removeUnderscores(key)}</Table.Cell>
                         <Table.Cell>{producer[key]}</Table.Cell>
                     </Table.Row>
             )
