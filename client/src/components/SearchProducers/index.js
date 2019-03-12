@@ -6,17 +6,10 @@ import API from '../../utils/API'
 import { Link } from "react-router-dom"
 
 
-// const source = _.times(5, () => ({
-//   title: faker.company.companyName(),
-//   description: faker.company.catchPhrase(),
-//   image: faker.internet.avatar(),
-//   price: faker.finance.amount(0, 100, 2, "$")
-// }));
-
 export default class SearchBar extends Component {
 
     state = {
-        wines: []
+        producers: []
     }
 
   componentWillMount() {
@@ -24,7 +17,7 @@ export default class SearchBar extends Component {
   }
 
   resetComponent = () =>
-    this.setState({ isLoading: false, wines: [], value: "" });
+    this.setState({ isLoading: false, producers: [], value: "" });
 
     //What shows on the results bar when you click on it:
   handleResultSelect = (e, { result }) =>
@@ -32,9 +25,9 @@ export default class SearchBar extends Component {
 
   handleSearchChange = (e, { value }) => {
     this.setState({ isLoading: true, value });
-    API.getWines()
+    API.getProducers()
       .then(res => {
-        this.setState({ wines: res.data }) 
+        this.setState({ producers: res.data }) 
       }
       )
       .catch(err => console.log(err));
@@ -44,23 +37,23 @@ export default class SearchBar extends Component {
 
       const re = new RegExp(_.escapeRegExp(this.state.value), "i");
       //what is being tested for in search input
-      const isMatch = result => re.test(result.Producer);
+      const isMatch = result => re.test(result.producer);
 
       this.setState({
         isLoading: false,
-        wines: _.filter(this.state.wines, isMatch)
+        wines: _.filter(this.state.producers, isMatch)
       });
     }, 300);
   };
 
   render() {
     
-    const { isLoading, value, wines } = this.state;
+    const { isLoading, value, producers } = this.state;
 
-    const resRender = ({ Code, Producer, _id }) => (
-      <Link to={"/details/" + _id}>
+    const resRender = ({ Producer, _id }) => (
+      <Link to={"/producerdetails/" + _id}>
         <span key="name">
-        {Producer} , {Code}
+        {Producer}
         </span>
       </Link>
     );
@@ -70,20 +63,15 @@ export default class SearchBar extends Component {
       <Grid>
         <Grid.Column width={6}>
           <Search
-            placeholder="Search..."
+            placeholder="Search producers..."
             loading={isLoading}
             onResultSelect={this.handleResultSelect}
             onSearchChange={_.debounce(this.handleSearchChange, 500, {
               leading: true
             })}
-            results={wines}
+            results={producers}
             value={value}
             resultRenderer={resRender}
-
-            // {...this.props.Producer}
-            // {...this.props}
-            // {...this.state.wines.Producer}
-            // resRender={resRender}
           />
         </Grid.Column>
 
