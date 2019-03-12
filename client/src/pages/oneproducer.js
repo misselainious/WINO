@@ -22,7 +22,7 @@ class OneProducer extends Component {
 render() {
     const { producer } = this.state;
     delete producer._id
-    const producerObjKeys = Object.keys(producer);
+    const producerObjKeys = Object.keys(producer)
 
     return (
      <Grid>
