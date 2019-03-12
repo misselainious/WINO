@@ -1,59 +1,43 @@
 import React, { Component } from "react";
-import { Grid, Image } from "semantic-ui-react";
-import { Carousel } from "react-responsive-carousel";
+import HomeHeading from "../../Homepage/HomeHeading/HomeHeading";
+import {  Segment } from "semantic-ui-react";
+//import Home from "../../../pages/home";
+// import { Carousel } from "react-responsive-carousel";
 
 
 class imageScrolling extends Component {
 
   state = {
-    image: "",
+    imageArray: ["redPouring.jpg", "wineBarrels.jpg", "vineyard.jpg",
+       "winecorks.jpg"],
+    currentImageIndex: 0
+  }
+  componentDidMount() {
+    const timer = setInterval(() => {
+      if (this.state.currentImageIndex === this.state.imageArray.length - 1) {
+        this.setState({ currentImageIndex: 0 })
+      }
+      else {
+        this.setState({ currentImageIndex: this.state.currentImageIndex + 1 })
+      }
+    }, 3000)
+
   }
 
-
   render() {
+    let image = this.state.imageArray[this.state.currentImageIndex]
+   console.log(image," image")
     return (
-
-      // <Carousel autoPlay>
-      //   <Grid>
-      //     <Image src="./images/redPouring.jpg" />
-      //   </Grid>
-      //   <Grid>
-      //     <Image src="./images/wineBarrels.jpg" />
-      //   </Grid>
-      //   <Grid>
-      //     <Image src="./images/vineyard.jpg" />
-      //   </Grid>
-      //   <Grid>
-      //     <Image src="./images/wineInGlass.jpg" />
-      //   </Grid>
-      //   <Grid>
-      //     <Image src="./images/winecorks.jpg" />
-      //   </Grid>
-      // </Carousel>
-
-   
-
-        <Carousel showArrows={true} showThumbs={true}>
-  
-              <Grid>
-                <img src="./images/redPouring.jpg" alt="redPouring" />
-              </Grid>
-              <Grid>
-                <img src="./images/wineBarrels.jpg" alt="wineBarrels" />
-              </Grid>
-              <Grid>
-                <img src="./images/vineyard.jpg" alt="vineyard" />
-              </Grid>
-              <Grid>
-                <img src="./images/wineInGlass.jpg" alt="wineInGlass" />
-              </Grid>
-              <Grid>
-                <Image src="./images/winecorks.jpg" alt="winecorks" />
-              </Grid>
-           
-          ))
-      }
-      </Carousel>
+      
+      <Segment
+      inverted
+      textAlign='center'
+      style={{ minHeight: 700, padding: '1em 0em', backgroundImage: `url("./images/${image}")` }}
+      vertical
+    >
+    <HomeHeading />
+    </Segment>
+              
     );
   }
 }

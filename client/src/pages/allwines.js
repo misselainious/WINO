@@ -122,39 +122,39 @@ class Wines extends Component {
       })
     }
     console.log("postWinelist", wineList)
-    
+
     return (
 
-<Grid>
-{/*CheckboxSidebar renders with a double layered array*/}
-<Grid.Row>
+      <Grid>
+        {/*CheckboxSidebar renders with a double layered array*/}
+        <Grid.Row>
 
-  <Grid.Column width={2}>
-<CheckboxSidebar checkableArrays={filterElements} handleFilterChange={this.handleFilterChange} />
-</Grid.Column>
+          <Grid.Column width={2}>
+            <CheckboxSidebar checkableArrays={filterElements} handleFilterChange={this.handleFilterChange} />
+          </Grid.Column>
 
-<Grid.Column width={12}>
+          <Grid.Column width={12}>
 
-{wineList.length ? (
-  <List >
-  <Grid >
-  <Grid.Row columns={4}>
-        {wineList.map(wine => (
-          <Winecard header={wine.Wine} producer={wine.Producer} country={wine.Country} wineid={wine._id} key={wine._id} url={wine.URL} />
-        ))}
-  </Grid.Row>
-  </Grid>
-  </List>
-) : (
-    <h3>{this.state.isLoading ? "loading..." : "No results to display"}</h3>
-  )}
-  
+            {wineList.length ? (
+              <List >
+                <Grid >
+                  <Grid.Row columns={4}>
+                    {wineList.map(wine => (
+                      <Winecard header={wine.Wine} producer={wine.Producer} country={wine.Country} wineid={wine._id} key={wine._id} url={wine.URL} />
+                    ))}
+                  </Grid.Row>
+                </Grid>
+              </List>
+            ) : (
+                <h3>{this.state.isLoading ? "loading..." : "No results to display"}</h3>
+              )}
 
-  </Grid.Column>
-  </Grid.Row>
-</Grid>
 
-      
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+
+
     );
   }
 }

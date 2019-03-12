@@ -2,8 +2,8 @@
     text-align: left;
     border: 1px solid;
     margin: 3px;
-    overflow: scroll;
-    max-height: 200px;
+    overflow-y: scroll;
+    max-height: 150px;
 }
 
 .checkbox {
