@@ -24,5 +24,8 @@
 
 .registerBtn {
      background: #961f1f !important;
-     text: white;
+}
+
+.registerBtnText {
+     color: white;
 }
