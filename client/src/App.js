@@ -17,6 +17,7 @@ import MobileContainer from "./components/common/MobileContainer/MobileContainer
 import Footer from "./components/common/Footer/Footer";
 import OneWine from "./pages/onewine";
 import OneProducer from "./pages/oneproducer";
+import OtherHeading from "./components/Homepage/HomeHeading/OtherHeading";
 
 
 
@@ -60,6 +61,7 @@ class App extends Component {
     return (
         <Router>
           <ResponsiveContainer>
+            <OtherHeading />
             <PageSwitch/>
             <Footer />
           </ResponsiveContainer>

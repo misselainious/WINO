@@ -23,8 +23,7 @@ const SalesTeamModal = props => {
           <p>
             {bio}
           </p>
-          {/* <p>bio information for each team member goes here</p>
-          <p>additional information for those who have two paragraphs</p> */}
+         
         </Modal.Description>
       </Modal.Content>
       <Modal.Content>

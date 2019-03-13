@@ -7,6 +7,7 @@ import { DataWine } from "../components/DataWineTable";
 // import { Link } from "react-router-dom";
 import { Grid, GridRow } from "semantic-ui-react";
 import Winecard from "../components/WineCard"
+import SearchWines from "../components/SearchWines"
 
 
 
@@ -130,11 +131,12 @@ class Wines extends Component {
         <Grid.Row>
 
           <Grid.Column width={2}>
+          <SearchWines />
             <CheckboxSidebar checkableArrays={filterElements} handleFilterChange={this.handleFilterChange} />
           </Grid.Column>
 
           <Grid.Column width={12}>
-
+          
             {wineList.length ? (
               <List >
                 <Grid >

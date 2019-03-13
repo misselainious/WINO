@@ -60,7 +60,7 @@
       "region": "Santa Cruz, Monterey, Big Sur",
       "email": "matt@winewise.biz",
       "phone": "831.383.9469",
-      "bio": "Growing up with is an enthusiastic food and wine family of chefs and hospitality professionals, Matt gained an early interest in wines and their place in everyday life, the stories they tell, and the places they take you. His first job in the wine trade started at the age of 22, working for one of the larger wine companies, and quickly learned that side of the wine world wouldn’t keep his interest. Eventually the draw of the boutique wine importer and portfolio would attract his attention and heart, and keep it to this day. The warm and nourishing home Matt found at Wine Wise has never faded or failed to stoke his passion. Now a long term resident of Big Sur, and steward to Wine Wise’s most beautiful sales territory, Matt co-founded the Big Sur Food and Wine Festival and serves as their Vice President and Wine Director. Additionally, Matt is the Sommelier at Sierra Mar Restaurant at The Post Ranch Inn and consults for a couple local wine programs."
+      "bio": "Growing up with an enthusiastic food and wine family of chefs and hospitality professionals, Matt gained an early interest in wines and their place in everyday life, the stories they tell, and the places they take you. His first job in the wine trade started at the age of 22, working for one of the larger wine companies, and quickly learned that side of the wine world wouldn’t keep his interest. Eventually the draw of the boutique wine importer and portfolio would attract his attention and heart, and keep it to this day. The warm and nourishing home Matt found at Wine Wise has never faded or failed to stoke his passion. Now a long term resident of Big Sur, and steward to Wine Wise’s most beautiful sales territory, Matt co-founded the Big Sur Food and Wine Festival and serves as their Vice President and Wine Director. Additionally, Matt is the Sommelier at Sierra Mar Restaurant at The Post Ranch Inn and consults for a couple local wine programs."
     },
     {
       "id": 8,
@@ -87,7 +87,7 @@
       "region": "Orange County, Long Beach, San Diego",
       "email": "tami@winewise.biz",
       "phone": "619.665.3748",
-      "bio": "A lifelong veteran of restaurants, Certified Sommelier Tami Wong was the second San Diegan to be chosen by Wine &amp; Spirits Magazine as one of the six Best New Sommeliers in 2014. She is a founding member of Nat Diego, San Diego’s first natural wine festival. She serves as a correspondent and consultant with Wine in Tami Time, San Diego Beverage Times and Campestre Magazine. As an Ambassador for the San Diego County Vintners Association, she is excited to explore and share our local bounty."
+      "bio": "A lifelong veteran of restaurants, Certified Sommelier Tami Wong was the second San Diegan to be chosen by Wine & Spirits Magazine as one of the six Best New Sommeliers in 2014. She is a founding member of Nat Diego, San Diego’s first natural wine festival. She serves as a correspondent and consultant with Wine in Tami Time, San Diego Beverage Times and Campestre Magazine. As an Ambassador for the San Diego County Vintners Association, she is excited to explore and share our local bounty."
     },
     {
       "id": 11,
@@ -96,7 +96,7 @@
       "region": "Mendocino County, Humboldt County",
       "email": "markdj@winewise.biz",
       "phone": "707.813.8183",
-      "bio": "Mark Johnson has been a sales associate of WineWise since 2011. More broadly, Mark has been employed in the wine and food industry for over twenty five years, involved with sales both wholesale and retail, and in production. This experience gives him the tools to be a well regarded resource for his valued accounts. Outside of work, Mark is a home brewer, cider and wine maker. Particularly with his annual cider production, he has pondered the age old perplexities of charmat versus methode, dosage versus natural, Star Trek versus Star Wars."
+      "bio": "Mark Johnson has been a sales associate of WineWise since 2011. More broadly, Mark has been employed in the wine and food industry for over twenty five years, involved with sales both wholesale and retail, and in production. This experience gives him the tools to be a well regarded resource for his valued accounts. Outside of work, Mark is a home brewer, cider and wine maker. Particularly with his annual cider production,he has pondered the age old perplexities of charmat versus methode, dosage versus natural,Star Trek versus Star Wars."
     },
     {
       "id": 12,
@@ -115,24 +115,6 @@
         "email": "orders@winewise.biz",
         "phone": "510.473.5482",
         "bio": "After 10 years in the restaurant industry and sick of the snowy Boston weather Elaine packed up her Math degree and found a new home in sunny Oakland. She joined WineWise and hit her stride at the Order Desk happily entering orders and pouring over spreadsheets until 2017 when she made the ridiculous decision to pack up and travel the world for a year. 20 countries and only minor injuries later she returned to the Bay Area and rejoined WineWise, this time with a goal of getting this new website up and running. In her spare time she teaches Spin Class and Yoga and obsessively scuba dives whenever she can get somewhere warm."
-    },
-    {
-        "id": 14,
-        "name": "Hiram Simon",
-        "image": "",
-        "region": "Wine Wise Principal",
-        "email": "hiram@winewise.biz",
-        "phone": "510.848.6879",
-        "bio": ""
-    },
-    {
-        "id": 15,
-        "name": "Brian Greenwood",
-        "image": "",
-        "region": "Wine Wise Principal",
-        "email": "brian@winewise.biz",
-        "phone": "510.524.2270",
-        "bio": ""
     }
   ]
   
