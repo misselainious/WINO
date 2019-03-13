@@ -13,17 +13,12 @@ const HomeHeading = ({ mobile }) => (
         fontWeight: 'normal',
         marginBottom: 0,
         marginTop: mobile ? '1.5em' : '3em',
+        fontFamily: 'Merriweather',
       }}
     />
     <Header
-      as='h2'
-      content='company logo or slogan here'
-      inverted
-      style={{
-        fontSize: mobile ? '1.5em' : '1.7em',
-        fontWeight: 'normal',
-        marginTop: mobile ? '0.5em' : '1.5em',
-      }}
+      image="../images/winewiselogo.png"
+      className={'ui  image'}
     />
   </Container>
 )
