@@ -8,10 +8,10 @@ const SalesTeamModal = props => {
   const email = props.member ? props.member.email : "";
   const phone = props.member ? props.member.phone : "";
   const bio = props.member ? props.member.bio : "";
-  
+
   return (
 
-    <Modal 
+    <Modal
       // trigger={<Button>More Info</Button>}
       open={props.open}
     >
@@ -23,13 +23,14 @@ const SalesTeamModal = props => {
           <p>
             {bio}
           </p>
-         
+
         </Modal.Description>
       </Modal.Content>
-      <Modal.Content>
-        <Button onClick={props.closeModal}>Close</Button>
+      <Modal.Content
+      textAlign='center'>
+        <Button onClick={props.closeModal} >Close</Button>
       </Modal.Content>
-      
+
     </Modal>
   )
 }

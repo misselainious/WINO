@@ -30,13 +30,13 @@ class MobileContainer extends React.Component {
           visible={sidebarOpened}
         >
           <Menu.Item as='a' active>
-            Home
+            Wine Wise
           </Menu.Item>
           <Link to="/allwines">All Wines</Link>
           <Link to="/producers">Producers</Link>
           <Link to="/aboutus">About Us</Link>
           <Link to="/register">Register</Link>
-          <Link to="/members">Members</Link>
+          {/* <Link to="/members">Members</Link> */}
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
