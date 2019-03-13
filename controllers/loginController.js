@@ -20,7 +20,7 @@ module.exports = {
       }
     ];
     const { username, password } = req.body;
-    console.log("user" , username);
+    // console.log("user" , username);
     // Use your DB ORM logic here to find user and compare password
     
     // Finds first username and password match in users array (assumes usernames are unique)
