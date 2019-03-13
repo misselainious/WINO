@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import { Responsive } from "semantic-ui-react";
 import Home from "./pages/home";
 import AllWines from "./pages/allwines";
 import Admin from "./pages/admin";
 import Producers from "./pages/producers";
 import AboutUs from "./pages/aboutus";
+import Login from "./pages/login";
+import AuthService from './components/login/AuthService';
 
 // import Onewine from "./pages/onewine";
 // import Wrapper from "./components/Wrapper";
@@ -32,13 +34,30 @@ const ResponsiveContainer = ({ children }) => (
   </div>
 )
 
+const authService = new AuthService();
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+  <Route {...rest} render={(props) => (
+    authService.loggedIn()
+      ? <Component {...props} />
+      : <Redirect to='/login' />
+  )} />
+)
+
 class App extends Component {
 
   state = {
     wines: [],
   };
 
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.location !== this.props.location) {
+  //     this.setState({ prevPath: this.props.location })
+  //   }
+  // }
+
   render() {
+    // console.log('is logged in', authService.loggedIn());
     return (
         <Router>
           <ResponsiveContainer>
@@ -56,11 +75,12 @@ const PageSwitch = props => {
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/allwines" component={AllWines} />
-      <Route path="/admin" component={Admin} />
+      <PrivateRoute path="/admin" component={Admin} />
       <Route path="/details/:id" component={OneWine} />
       <Route path="/producers" component={Producers} />
       <Route path="/producerdetails/:id" component={OneProducer} />
       <Route path="/aboutus" component={AboutUs} />
+      <Route path="/login" component={Login}/>
     </Switch>
   )
 }

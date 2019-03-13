@@ -36,8 +36,8 @@ class Admin extends Component {
     this.setState({ [event.target.name]: event.target.value });
   }
   // separate onChange methods to assign state for Select form values
-  handleSelectCountryChange=(e,{value})=>this.setState({country:value})
-  handleSelectColorChange=(e,{value})=>this.setState({color:value})
+  handleSelectCountryChange=({value})=>this.setState({country:value})
+  handleSelectColorChange=({value})=>this.setState({color:value})
 
   handleFormSubmit = event => {
     console.log(this);

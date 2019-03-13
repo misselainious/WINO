@@ -5,6 +5,7 @@ import "./index.css";
 
 const Navbar = props => {
   const fixed = props.fixed;
+  const {pathname} = window.location;
   return (
    
     <Menu
