@@ -21,3 +21,8 @@
 .searchBarNav {
      margin-left: 65px !important;
 }
+
+.registerBtn {
+     background: #961f1f !important;
+     text: white;
+}
