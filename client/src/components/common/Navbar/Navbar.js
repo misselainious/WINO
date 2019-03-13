@@ -6,6 +6,7 @@ import SearchBar from "../../SearchBar/index"
 
 const Navbar = props => {
   const fixed = props.fixed;
+  const {pathname} = window.location;
   return (
    
     <Menu
@@ -18,12 +19,12 @@ const Navbar = props => {
       color='red'
     >
       <Container>
-        <Link to="/"><Menu.Item className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
+        <Link to="/"><Menu.Item className={`nav-link ${(pathname === "/") && "active"}`}>
           Home
         </Menu.Item></Link>
-        <Link to="/allwines"><Menu.Item className={window.location.pathname === "/allwines" ? "nav-link active" : "nav-link"}>All Wines</Menu.Item></Link>
-        <Link to="/producers"><Menu.Item className={window.location.pathname === "/producers" ? "nav-link active" : "nav-link"}>Producers</Menu.Item></Link>
-        <Link to="/aboutus" ><Menu.Item className={window.location.pathname === "/aboutus" ? "nav-link active" : "nav-link"}>About Us</Menu.Item></Link>
+        <Link to="/allwines"><Menu.Item className={pathname === "/allwines" ? "nav-link active" : "nav-link"}>All Wines</Menu.Item></Link>
+        <Link to="/producers"><Menu.Item className={pathname === "/producers" ? "nav-link active" : "nav-link"}>Producers</Menu.Item></Link>
+        <Link to="/aboutus" ><Menu.Item className={pathname === "/aboutus" ? "nav-link active" : "nav-link"}>About Us</Menu.Item></Link>
         <Menu.Item position="center">
           <SearchBar />
         </Menu.Item>
