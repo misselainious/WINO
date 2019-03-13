@@ -8,7 +8,7 @@ import {  Segment } from "semantic-ui-react";
 class imageScrolling extends Component {
 
   state = {
-    imageArray: ["redPouring.jpg", "vineyard.jpg", "winecorks.jpg"],
+    imageArray: ["redWine.png", "vineyard.jpg", "bottleTops.jpg"],
     currentImageIndex: 0
   }
   componentDidMount() {
