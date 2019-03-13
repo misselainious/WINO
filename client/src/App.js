@@ -18,6 +18,7 @@ import Footer from "./components/common/Footer/Footer";
 import OneWine from "./pages/onewine";
 import OneProducer from "./pages/oneproducer";
 import OtherHeading from "./components/Homepage/HomeHeading/OtherHeading";
+import ErrorPage from "./pages/errorpage";
 
 
 
@@ -81,6 +82,7 @@ const PageSwitch = props => {
       <Route path="/producerdetails/:id" component={OneProducer} />
       <Route path="/aboutus" component={AboutUs} />
       <Route path="/login" component={Login}/>
+      <Route path="*" component={ErrorPage} />
     </Switch>
   )
 }

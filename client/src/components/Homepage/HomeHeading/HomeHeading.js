@@ -21,6 +21,7 @@ const HomeHeading = ({ mobile }) => (
     />
     <img src="../images/winewiselogo.png"
       className={'ui centered small image'} />
+    <h2>Imported wines. Local people.</h2>
 
   </Container>
 )

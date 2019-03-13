@@ -24,7 +24,7 @@ const Navbar = props => {
         <Link to="/aboutus" ><Menu.Item className={pathname === "/aboutus" ? "nav-link active" : "nav-link"}><p>About Us</p></Menu.Item></Link>
         <Menu.Item position='right'>
           <Button className="registerBtn"  style={{ marginLeft: '0.5em' }}>
-            <p>Register</p>
+            <p className="registerBtnText">Register</p>
           </Button>
         </Menu.Item>
       </Container>

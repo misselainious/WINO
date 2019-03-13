@@ -61,6 +61,11 @@ export default class SearchBar extends Component {
 
     return (
       <Grid>
+        <Grid.Row>
+          <Header>
+            <h5 style={{marginLeft: 20}}>Search Our Producers</h5>
+          </Header>
+        </Grid.Row>
         <Grid.Column width={6}>
           <Search
             placeholder="Search producers..."
