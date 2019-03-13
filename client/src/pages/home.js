@@ -41,7 +41,7 @@ const Home = () => (
 
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            {/* <Carousel /> */}
+         
             <Image bordered rounded size='large' src='/images/winePouring.jpg' />
           </Grid.Column>
         </Grid.Row>
@@ -88,7 +88,7 @@ const Home = () => (
         </Button>
 
         <Divider
-          as='h4'
+          as='h2'
           className='header'
           horizontal
           style={{ margin: '3em 0em', textTransform: 'uppercase' }}
