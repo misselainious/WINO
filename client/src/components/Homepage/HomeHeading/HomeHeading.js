@@ -14,12 +14,14 @@ const HomeHeading = ({ mobile }) => (
         marginBottom: 0,
         marginTop: mobile ? '1.5em' : '3em',
         fontFamily: 'Merriweather',
+        textShadowColor: 'rgba(0, 0, 0, 0)',
+        textShadowOffset: {width: -1, height: 1},
+        textShadowRadius: 10
       }}
     />
-    <Header
-      image="../images/winewiselogo.png"
-      className={'ui  image'}
-    />
+    <img src="../images/winewiselogo.png"
+      className={'ui centered small image'} />
+
   </Container>
 )
 
