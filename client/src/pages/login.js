@@ -16,11 +16,11 @@ class Login extends Component {
 
         return (
             <Fragment>
-            <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
+            <Grid textAlign='center' style={{ height: '475px' }} verticalAlign='middle'>
                 <Grid.Column style={{ maxWidth: 450 }}>
                     <Header as='h2' textAlign='center'>
                     {/* <Image src='/logo.png' />  */}
-                    Log-in to your account
+                    Log-in to Your Account
                     </Header>
                     <Form size='large' onSubmit={this.handleFormSubmit}>
                         <Segment stacked>
