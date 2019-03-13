@@ -12,7 +12,7 @@ class Login extends Component {
         this.Auth = new AuthService();
     }
     render() {
-        console.log('this login', this);
+        // console.log('this login', this);
 
         return (
             <Fragment>
