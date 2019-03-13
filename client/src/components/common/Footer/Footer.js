@@ -35,11 +35,9 @@ return (
                         <Header as='h4' inverted>
                             Address
         </Header>
-                        <p>
                             5655 College Avenue, Oakland CA 94618
                                 <br />
                             (phone) 510.848.6879 • (fax) 510.848.6880
-        </p>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

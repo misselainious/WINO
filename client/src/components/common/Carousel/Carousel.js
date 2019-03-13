@@ -25,7 +25,6 @@ class imageScrolling extends Component {
 
   render() {
     let image = this.state.imageArray[this.state.currentImageIndex]
-   console.log(image," image")
     return (
       
       <Segment

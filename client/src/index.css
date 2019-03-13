@@ -3,3 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+p {
+  font-family: 'Cardo', serif;
+  font-size: 1.4em;
+  color: black;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+}
