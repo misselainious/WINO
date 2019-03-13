@@ -7,15 +7,13 @@ const Footer = props => {
         // position: "fixed",
         // bottom: "0px",
         // width:"100%",
-        padding: "2.1em 0em"
+        padding: "3.1em 0em"
 
 }
 return (
     <Segment fixed={fixed ? 'bottom' : null}
         inverted vertical style={footerStyle}
-        className="footerColor"
-        // color='black'
-        >
+        className="footerColor">
         <Container>
             <Grid divided inverted stackable>
                 <Grid.Row>
