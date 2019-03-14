@@ -67,12 +67,10 @@ export default class SearchBar extends Component {
 
 
     return (
-      <Grid>
-        <Grid.Row>
-        <Header>
+      <Grid style={{marginLeft: "auto", marginRight: "auto"}}>
+        {/* <Header>
             <h5 style={{marginLeft: 20}}>Search Our Wines</h5>
-        </Header>
-        </Grid.Row>
+        </Header> */}
         <Grid.Column width={6}>
           <Search
             placeholder="Search wines..."
@@ -86,7 +84,6 @@ export default class SearchBar extends Component {
             resultRenderer={resRender}
           />
         </Grid.Column>
-
       </Grid>
     );
   }
