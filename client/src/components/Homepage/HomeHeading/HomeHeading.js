@@ -13,18 +13,16 @@ const HomeHeading = ({ mobile }) => (
         fontWeight: 'normal',
         marginBottom: 0,
         marginTop: mobile ? '1.5em' : '3em',
+        fontFamily: 'Merriweather',
+        textShadowColor: 'rgba(0, 0, 0, 0)',
+        textShadowOffset: {width: -1, height: 1},
+        textShadowRadius: 10
       }}
     />
-    <Header
-      as='h2'
-      content='company logo or slogan here'
-      inverted
-      style={{
-        fontSize: mobile ? '1.5em' : '1.7em',
-        fontWeight: 'normal',
-        marginTop: mobile ? '0.5em' : '1.5em',
-      }}
-    />
+    <img src="../images/winewiselogo.png"
+      className={'ui centered small image'} />
+    <h2>Imported wines. Local people.</h2>
+
   </Container>
 )
 

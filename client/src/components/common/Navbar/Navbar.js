@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Container, Menu} from 'semantic-ui-react';
-import SearchBar from "../../SearchBar/index"
-// import "./Navbar.css";
+import "./index.css";
 
 const Navbar = props => {
   const fixed = props.fixed;
+  const {pathname} = window.location;
   return (
    
     <Menu
@@ -14,25 +14,17 @@ const Navbar = props => {
       pointing={!fixed}
       secondary={!fixed}
       size='large'
-      style={{ padding: '2em 0em' }}
-      color='red'
+      style={{ padding: '1.5em 0em' }}
     >
-      <Container>
-        <Link to="/"><Menu.Item className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
-          Home
-        </Menu.Item></Link>
-        <Link to="/allwines"><Menu.Item className={window.location.pathname === "/allwines" ? "nav-link active" : "nav-link"}>All Wines</Menu.Item></Link>
-        <Link to="/producers"><Menu.Item className={window.location.pathname === "/producers" ? "nav-link active" : "nav-link"}>Producers</Menu.Item></Link>
-        <Link to="/aboutus" ><Menu.Item className={window.location.pathname === "/aboutus" ? "nav-link active" : "nav-link"}>About Us</Menu.Item></Link>
-        <Menu.Item position="center">
-          <SearchBar />
-        </Menu.Item>
+      <Container className="navbarcustomstyle">
+        <img src="../images/winewisehead.png" alt="owlhead" className="owlHeadLogo"/>
+      <Link to="/"><Menu.Item className={pathname === "/" ? "nav-link active" : "nav-link"}><p>Wine Wise</p></Menu.Item></Link>
+        <Link to="/allwines"><Menu.Item className={pathname === "/allwines" ? "nav-link active" : "nav-link"}><p>All Wines</p></Menu.Item></Link>
+        <Link to="/producers"><Menu.Item className={pathname === "/producers" ? "nav-link active" : "nav-link"}><p>Producers</p></Menu.Item></Link>
+        <Link to="/aboutus" ><Menu.Item className={pathname === "/aboutus" ? "nav-link active" : "nav-link"}><p>About Us</p></Menu.Item></Link>
         <Menu.Item position='right'>
-          <Button as='a' inverted={!fixed}>
-            Register
-          </Button>
-          <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-            Members
+          <Button className="registerBtn"  style={{ marginLeft: '0.5em' }}>
+            <p className="registerBtnText">Register</p>
           </Button>
         </Menu.Item>
       </Container>
@@ -41,3 +33,6 @@ const Navbar = props => {
 }
 
 export default Navbar;
+
+// taken out of button
+//as='a' color='red' inverted={!fixed} primary={fixed} 

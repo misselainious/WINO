@@ -28,7 +28,7 @@ export default class SearchBar extends Component {
 
     //What shows on the results bar when you click on it:
   handleResultSelect = (e, { result }) =>
-    this.setState({ value: result.Producer });
+    this.setState({ value: result.Wine });
 
   handleSearchChange = (e, { value }) => {
     this.setState({ isLoading: true, value });
@@ -44,7 +44,7 @@ export default class SearchBar extends Component {
 
       const re = new RegExp(_.escapeRegExp(this.state.value), "i");
       //what is being tested for in search input
-      const isMatch = result => re.test(result.Producer);
+      const isMatch = result => re.test(result.Wine);
 
       this.setState({
         isLoading: false,
@@ -57,10 +57,10 @@ export default class SearchBar extends Component {
     
     const { isLoading, value, wines } = this.state;
 
-    const resRender = ({ Code, Producer, _id }) => (
+    const resRender = ({ Wine, Producer, _id }) => (
       <Link to={"/details/" + _id}>
         <span key="name">
-        {Producer} , {Code}
+        {Wine}, {Producer}
         </span>
       </Link>
     );
@@ -68,9 +68,14 @@ export default class SearchBar extends Component {
 
     return (
       <Grid>
+        <Grid.Row>
+        <Header>
+            <h5 style={{marginLeft: 20}}>Search Our Wines</h5>
+        </Header>
+        </Grid.Row>
         <Grid.Column width={6}>
           <Search
-            placeholder="Search..."
+            placeholder="Search wines..."
             loading={isLoading}
             onResultSelect={this.handleResultSelect}
             onSearchChange={_.debounce(this.handleSearchChange, 500, {
@@ -79,11 +84,6 @@ export default class SearchBar extends Component {
             results={wines}
             value={value}
             resultRenderer={resRender}
-
-            // {...this.props.Producer}
-            // {...this.props}
-            // {...this.state.wines.Producer}
-            // resRender={resRender}
           />
         </Grid.Column>
 

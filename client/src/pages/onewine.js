@@ -100,7 +100,7 @@ render() {
     <Table.Body>
         {
             wineObjKeys.map(key => 
-                    wine[key] && <Table.Row key={key}>
+                    wine[key] !== '' && <Table.Row key={key}>
                         <Table.Cell>{this.removeUnderscores(key)}</Table.Cell>
                         <Table.Cell>{wine[key]}</Table.Cell>
                     </Table.Row>

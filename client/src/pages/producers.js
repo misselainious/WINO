@@ -4,6 +4,7 @@ import API from "../utils/API";
 import { List } from "../components/List";
 import { Grid } from "semantic-ui-react";
 import Producercard from "../components/ProducerCard"
+import SearchProducers from "../components/SearchProducers"
 
 class Producers extends Component {
     state = {
@@ -33,7 +34,12 @@ render() {
         <Grid>
         {this.state.Producers.length ? (
               <List>
-                <Grid>       
+                <Grid>
+                  <Grid.Row>
+                      <center>
+                          <SearchProducers />
+                      </center>
+                  </Grid.Row>>   
                 {this.state.Producers.map(producer => (
                     <Producercard id={producer._id} producer={producer.Producer} country={producer.Country} region={producer.Region}/>            
                 ))}

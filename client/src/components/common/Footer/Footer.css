@@ -1,5 +1,10 @@
 .Footer {
+min-height: 700px;
 position:fixed;
 bottom:0;
 width:100%;
+}
+
+.footerColor {
+    background: #961f1f !important;
 }
