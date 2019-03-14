@@ -60,7 +60,15 @@ class Login extends Component {
       
         this.Auth.login(this.state.username,this.state.password)
             .then(res =>{
-               this.props.history.replace('/admin');
+                
+                // console.log('referrer', document.referrer);
+                // const redirRoute = document.referrer.split('://')[1].split('/');
+                // console.log("route:" , redirRoute);
+                const newLocation = sessionStorage.getItem('referrer');
+                sessionStorage.removeItem('referrer');
+            this.props.history.replace(newLocation);
+            //window.history.back();
+
             })
             .catch(err =>{
                 alert(err);
