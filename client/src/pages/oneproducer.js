@@ -52,7 +52,7 @@ render() {
                     </Table.Row>
             )
         }
-      }
+      
         </Table.Body>
         </Table>
         <h1></h1>

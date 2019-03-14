@@ -26,6 +26,9 @@ class Wines extends Component {
     }
   };
   //onload we get all the wine and producer data
+
+
+    
   componentDidMount() {
     this.loadWines();
     this.loadProducers();
@@ -89,11 +92,10 @@ class Wines extends Component {
 
   render() {
     const mainStyle = { marginLeft: "250px" }
-    const wineAreaStyle= {minHeight:"100vh"};
-    const countries = ["Germany", "France", "Austria", "Spain", "Portugal", "Greece"].sort();
-    const colors = ["Rosé", "White", "Red"].sort()
-    const regions = this.state.regionNames.sort();
-    const producers = this.state.producerNames.sort();
+    const countries = ["Germany", "France", "Austria", "Spain", "Portugal", "Greece"]
+    const colors = ["Rosé", "White", "Red"]
+    const regions = this.state.regionNames;
+    const producers = this.state.producerNames;
     //
     const filterElements = [{
       filterType: "countries",
@@ -110,6 +112,7 @@ class Wines extends Component {
     }]
     //TODO Make the footer less wonky
     let wineList = this.state.wines
+    // console.log("preWinelist", wineList)
     //this is a hacky way to access the wine data field given that each word is
     //slightly different than the actual keyword
     const wineFieldAdjuster = { "countries": "Country", "regions": "Region", "producers": "Producer", "colors": "Color" }
@@ -129,7 +132,7 @@ class Wines extends Component {
         {/*CheckboxSidebar renders with a double layered array*/}
         <Grid.Row>
 
-          <Grid.Column width={2} style={wineAreaStyle}>
+          <Grid.Column width={2}>
           <SearchWines />
             <CheckboxSidebar checkableArrays={filterElements} handleFilterChange={this.handleFilterChange} />
           </Grid.Column>
@@ -156,8 +159,7 @@ class Wines extends Component {
       </Grid>
 
 
-    );
-  }
-}
-
+  )
+            }
+            }
 export default Wines;
