@@ -19,6 +19,7 @@ import OneWine from "./pages/onewine";
 import OneProducer from "./pages/oneproducer";
 import OtherHeading from "./components/Homepage/HomeHeading/OtherHeading";
 import ErrorPage from "./pages/errorpage";
+import "./App.css";
 
 
 
@@ -38,11 +39,14 @@ const ResponsiveContainer = ({ children }) => (
 const authService = new AuthService();
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={(props) => (
+  <Route {...rest} render={(props) => {
+    // sessionStorage.setItem('referrer', window.location.pathname);
+    return (
     authService.loggedIn()
       ? <Component {...props} />
       : <Redirect to='/login' />
-  )} />
+    )}
+  } />
 )
 
 class App extends Component {

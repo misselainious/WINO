@@ -9,7 +9,7 @@ const routes = require("./routes");
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/wineDB', { useNewUrlParser: true });
 mongoose.connection.on("open", function (ref) {
-  console.log("Connected to mongo server.");
+  // console.log("Connected to mongo server.");
 });
 mongoose.connection.on('error', function (err) { console.log(err) });
 
@@ -29,9 +29,9 @@ app.use(routes);
 
 // Send every other request to the React app
 // Define any API routes before this runs
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

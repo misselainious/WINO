@@ -24,7 +24,7 @@ render() {
 
     const { wine } = this.state;
     delete wine._id
-    const wineObjKeys = Object.keys(wine);
+    const wineObjKeys = Object.keys(wine).filter(key => key!=='URL');
 
     // let wineList = wine
     // const FieldAdjuster = { "Alcohol_by_volume": "ABV", "Residual_Sugar": "Residual Sugar", "Years_in_Blend": "Years in Blend" }

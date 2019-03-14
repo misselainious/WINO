@@ -13,7 +13,6 @@ class OneProducer extends Component {
     return myString.split("_").join(" ")
   }
   componentDidMount() {
-      console.log("Producer did mount")
     API.getProducer(this.props.match.params.id)
       .then(res => this.setState({ producer: res.data }))
       .catch(err => console.log(err));
@@ -22,7 +21,7 @@ class OneProducer extends Component {
 render() {
     const { producer } = this.state;
     delete producer._id
-    const producerObjKeys = Object.keys(producer);
+    const producerObjKeys = Object.keys(producer)
 
     return (
      <Grid>

@@ -13,7 +13,9 @@ function TeamMemberCard(props) {
       <br />
         { `${props.member.email} • ${props.member.phone}` }
       </p>
-      <Button onClick={() => props.openModal(props.member)}>More Info</Button>
+      <Button onClick={() => props.openModal(props.member)} className="seeAllWinesBtn" size='small'>
+        <p className="seeAllWinesText">More Info</p>
+        </Button>
     </Grid.Column>
   );
 }

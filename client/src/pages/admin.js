@@ -40,7 +40,7 @@ class Admin extends Component {
   handleSelectColorChange=({value})=>this.setState({color:value})
 
   handleFormSubmit = event => {
-    console.log(this);
+    // console.log(this);
     event.preventDefault();
     if (this.state.producer) {
       API.saveWine({
@@ -94,8 +94,9 @@ class Admin extends Component {
         <Form.Button
           disabled={!(this.state.producer && this.state.code)}
           onClick={this.handleFormSubmit}
-        >
-          Submit</Form.Button>
+          className="seeAllWinesBtn" size='small'>
+          <p className="seeAllWinesText">
+          Submit</p></Form.Button>
       </Form>
     )
   }

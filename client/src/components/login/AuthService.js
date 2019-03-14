@@ -9,7 +9,7 @@ export default class AuthService {
 
     login(username, password) {
         // Get a token from api server using the fetch api
-        console.log('logindomain', this.domain);
+        // console.log('logindomain', this.domain);
         return this.fetch(`/api/login`, {
             method: 'POST',
             body: JSON.stringify({
@@ -26,7 +26,9 @@ export default class AuthService {
         // Checks if there is a saved token and it's still valid
         const token = this.getToken() // GEtting token from localstorage
         // console.log('token', token);
-        return !!token && !this.isTokenExpired(token) // handwaiving here
+        const loggedIn = !!token && !this.isTokenExpired(token);
+        !loggedIn && !sessionStorage.getItem('referrer') && sessionStorage.setItem('referrer', window.location.pathname);
+        return loggedIn; // handwaiving here
     }
 
     isTokenExpired(token) {

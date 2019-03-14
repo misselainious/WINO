@@ -22,7 +22,7 @@ class Producers extends Component {
     })
     API.getProducers()
       .then(res => {
-        console.log("----", res.data)
+        // console.log("----", res.data)
         this.setState({ Producers: res.data })
       }
       )
@@ -41,7 +41,7 @@ render() {
                       </center>
                   </Grid.Row>>   
                 {this.state.Producers.map(producer => (
-                    <Producercard id={producer._id} producer={producer.Producer} country={producer.Country} region={producer.Region}/>            
+                    <Producercard id={producer._id} producer={producer.Producer} country={producer.Country} region={producer.Region} key={producer._id}/>            
                 ))}
                 </Grid>
               </List> 
