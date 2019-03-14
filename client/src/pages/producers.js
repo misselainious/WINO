@@ -22,8 +22,15 @@ class Producers extends Component {
     })
     API.getProducers()
       .then(res => {
-        // console.log("----", res.data)
-        this.setState({ Producers: res.data })
+        //The World's least efficient way of alphabetizing an array of objects
+        let idArray=[];
+        res.data.map( producer => {idArray.push(producer.Producer)})
+        idArray.sort()
+        let alphabeticalProducers = []
+        idArray.map( id => {
+          alphabeticalProducers.push( res.data.find( (producer)=>{ return producer.Producer === id } ))
+        })
+        this.setState({ Producers: alphabeticalProducers })
       }
       )
       .catch(err => console.log(err));
