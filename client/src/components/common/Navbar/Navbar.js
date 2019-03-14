@@ -33,6 +33,3 @@ const Navbar = props => {
 }
 
 export default Navbar;
-
-// taken out of button
-//as='a' color='red' inverted={!fixed} primary={fixed} 

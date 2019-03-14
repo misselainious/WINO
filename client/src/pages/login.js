@@ -58,10 +58,18 @@ class Login extends Component {
 
     handleFormSubmit(e) {
         e.preventDefault();
+   
+        this.Auth.login(this.state.username,this.state.password)
+            .then(res =>{
+                
+                // console.log('referrer', document.referrer);
+                // const redirRoute = document.referrer.split('://')[1].split('/');
+                // console.log("route:" , redirRoute);
+                const newLocation = sessionStorage.getItem('referrer');
+                sessionStorage.removeItem('referrer');
+            this.props.history.replace(newLocation);
+            //window.history.back();
 
-        this.Auth.login(this.state.username, this.state.password)
-            .then(res => {
-                this.props.history.replace('/admin');
             })
             .catch(err => {
                 alert(err);

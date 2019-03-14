@@ -39,11 +39,14 @@ const ResponsiveContainer = ({ children }) => (
 const authService = new AuthService();
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={(props) => (
+  <Route {...rest} render={(props) => {
+    // sessionStorage.setItem('referrer', window.location.pathname);
+    return (
     authService.loggedIn()
       ? <Component {...props} />
       : <Redirect to='/login' />
-  )} />
+    )}
+  } />
 )
 
 class App extends Component {
