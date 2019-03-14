@@ -128,12 +128,13 @@ class Wines extends Component {
 
     return (
 
-      <Grid>
+      <Grid style={{marginTop: "50px"}}>
         {/*CheckboxSidebar renders with a double layered array*/}
+        <SearchWines />
         <Grid.Row>
 
-          <Grid.Column width={2}>
-          <SearchWines />
+          <Grid.Column width={2} style={wineAreaStyle}>
+   
             <CheckboxSidebar checkableArrays={filterElements} handleFilterChange={this.handleFilterChange} />
           </Grid.Column>
 
