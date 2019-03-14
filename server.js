@@ -9,7 +9,7 @@ const routes = require("./routes");
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/wineDB', { useNewUrlParser: true });
 mongoose.connection.on("open", function (ref) {
-  console.log("Connected to mongo server.");
+  // console.log("Connected to mongo server.");
 });
 mongoose.connection.on('error', function (err) { console.log(err) });
 

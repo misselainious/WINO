@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
   // Gets all wine
   getWines: function() {
-    console.log("GETTING WINES")
+    // console.log("GETTING WINES")
     return axios.get("/api/wines");
   },
   // Gets the wine with the given id
@@ -22,7 +22,7 @@ export default {
     return axios.get("/api/producers");
   },
   getProducer: function(id) {
-    console.log("GET PRODUCER")
+    // console.log("GET PRODUCER")
     return axios.get("/api/producers/" + id);
   }
   // saveWine: function(producerData) {
