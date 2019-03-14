@@ -2,7 +2,7 @@
     {
       "id": 1,
       "name": "Meliza Mokrani",
-      "image": "",
+      "image": "MelizaMokrani1.jpg",
       "region": "San Francisco",
       "email": "meliza@winewise.biz",
       "phone": "707.363.1055",
@@ -20,7 +20,7 @@
     {
       "id": 3,
       "name": "Elizabeth Darden",
-      "image": "",
+      "image": "ElizabethDarden3.jpg",
       "region": "Marin County and Sonoma County",
       "email": "elizabethd@winewise.biz",
       "phone": "415.640.8503",
@@ -38,7 +38,7 @@
     {
       "id": 5,
       "name": "Brian Cook",
-      "image": "",
+      "image": "BrianCook5.jpg",
       "region": "Peninsula, San Francisco",
       "email": "bcook@winewise.biz",
       "phone": "415.539.8010",
@@ -74,7 +74,7 @@
     {
       "id": 9,
       "name": "John Bauccio",
-      "image": "",
+      "image": "JohnBauccio9.jpg",
       "region": "Los Angeles",
       "email": "john@winewise.biz",
       "phone": "213.400.8620",
@@ -92,7 +92,7 @@
     {
       "id": 11,
       "name": "Mark Johnson",
-      "image": "",
+      "image": "MarkJohnson11.jpg",
       "region": "Mendocino County, Humboldt County",
       "email": "markdj@winewise.biz",
       "phone": "707.813.8183",
@@ -101,7 +101,7 @@
     {
       "id": 12,
       "name": "Nicole (Puncochar) Frazier",
-      "image": "",
+      "image": "NicoleFrazier12.jpg",
       "region": "Orange County",
       "email": "nicole@winewise.biz",
       "phone": "612.839.2695",
