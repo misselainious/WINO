@@ -15,4 +15,9 @@ router
   // .put(wineController.update)
   // .delete(wineController.remove);
 
+
+router
+.route("/:producer")
+.get(wineController.findByProducer)
+
 module.exports = router;
