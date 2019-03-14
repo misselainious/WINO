@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import { List, ListItem } from "../components/List";
+// import { List, ListItem } from "../components/List";
 import { DataProducer} from "../components/DataWineTable";
 import { Link } from "react-router-dom";
-import { Grid, Table} from "semantic-ui-react";
+import { Grid, Table, List} from "semantic-ui-react";
+import Winecard from "../components/WineCard"
 
 class OneProducer extends Component {
   state = {
@@ -23,9 +24,13 @@ class OneProducer extends Component {
       .then(res => this.setState({ producer: res.data }))
       .catch(err => console.log(err))
 
-      API.getProducerWines(this.state.producer.Producer)
-      .then(res => this.console.log({ wines: res.data }))
-      .then(res => this.setState({ wines: res.data }))
+      API.getWines(this.state.producer.Producer)
+      .then(res => {
+        let selectWines = [];
+        if(this.state.producer.Producer === res.Producer){
+          selectWines.push(res.data)
+        }
+        this.setState({ wines: selectWines })})
       .catch(err => console.log(err));
 
   }
@@ -33,7 +38,10 @@ class OneProducer extends Component {
 render() {
     const { producer } = this.state;
     delete producer._id
-    const producerObjKeys = Object.keys(producer)
+    const producerObjKeys = Object.keys(producer).filter(key => key!=='URL');
+    let producerWines = this.state.wines
+
+    // let returnWines = producerWines.filter(this.state.producer.Producer === this.state.wines.Producer)
 
     return (
      <Grid>
@@ -55,7 +63,39 @@ render() {
       
         </Table.Body>
         </Table>
-        <h1></h1>
+        
+
+
+        <Grid>
+        {/*CheckboxSidebar renders with a double layered array*/}
+        <Grid.Row>
+
+          <Grid.Column width={12}>
+          
+            {producerWines.length ? (
+              <List >
+                <Grid >
+                  <Grid.Row columns={4}>
+                    {producerWines.map(wine => (
+                      <Winecard header={wine.Wine} producer={wine.Producer} country={wine.Country} wineid={wine._id} key={wine._id} url={wine.URL} />
+                    ))}
+                  </Grid.Row>
+                </Grid>
+              </List>
+            ) : (
+                <h3>{this.state.isLoading ? "loading..." : "No results to display"}</h3>
+              )}
+
+
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+
+
+
+
+
+
     </Grid>
  
     );
