@@ -109,6 +109,10 @@ class Wines extends Component {
     }]
     //TODO Make the footer less wonky
     let wineList = this.state.wines
+<<<<<<< HEAD
+=======
+    // console.log("preWinelist", wineList)
+>>>>>>> 7f6a23bed103505909a8a79a697bc2038b8cb04e
     //this is a hacky way to access the wine data field given that each word is
     //slightly different than the actual keyword
     const wineFieldAdjuster = { "countries": "Country", "regions": "Region", "producers": "Producer", "colors": "Color" }
