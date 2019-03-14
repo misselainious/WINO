@@ -1,7 +1,7 @@
 import React from "react";
 import HomeHeading from "../components/Homepage/HomeHeading/HomeHeading";
 import Carousel from "../components/common/Carousel/Carousel";
-// import PropTypes from 'prop-types';
+
 import {
   Button,
   Container,
