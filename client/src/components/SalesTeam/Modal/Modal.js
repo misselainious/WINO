@@ -28,7 +28,8 @@ const SalesTeamModal = props => {
       </Modal.Content>
       <Modal.Content
       textAlign='center'>
-        <Button onClick={props.closeModal} >Close</Button>
+        <Button onClick={props.closeModal} className="seeAllWinesBtn" size='small'>
+        <p className="seeAllWinesText">Close</p></Button>
       </Modal.Content>
 
     </Modal>
