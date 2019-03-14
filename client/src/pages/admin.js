@@ -40,7 +40,7 @@ class Admin extends Component {
   handleSelectColorChange=({value})=>this.setState({color:value})
 
   handleFormSubmit = event => {
-    console.log(this);
+    // console.log(this);
     event.preventDefault();
     if (this.state.producer) {
       API.saveWine({
