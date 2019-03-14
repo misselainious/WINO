@@ -38,11 +38,14 @@ const ResponsiveContainer = ({ children }) => (
 const authService = new AuthService();
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={(props) => (
+  <Route {...rest} render={(props) => {
+    // sessionStorage.setItem('referrer', window.location.pathname);
+    return (
     authService.loggedIn()
       ? <Component {...props} />
       : <Redirect to='/login' />
-  )} />
+    )}
+  } />
 )
 
 class App extends Component {
@@ -78,7 +81,7 @@ const PageSwitch = props => {
       <Route path="/allwines" component={AllWines} />
       <PrivateRoute path="/admin" component={Admin} />
       <Route path="/details/:id" component={OneWine} />
-      <Route path="/producers" component={Producers} />
+      <PrivateRoute path="/producers" component={Producers} />
       <Route path="/producerdetails/:id" component={OneProducer} />
       <Route path="/aboutus" component={AboutUs} />
       <Route path="/login" component={Login}/>
