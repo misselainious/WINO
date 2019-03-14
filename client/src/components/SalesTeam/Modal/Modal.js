@@ -9,6 +9,7 @@ const SalesTeamModal = props => {
   const phone = props.member ? props.member.phone : "";
   const bio = props.member ? props.member.bio : "";
   const image = props.member ? props.member.image : "";
+  console.log(props.member);
 
   return (
 
@@ -18,7 +19,7 @@ const SalesTeamModal = props => {
     >
       <Modal.Header>{name}</Modal.Header>
       <Modal.Content image>
-        <Image wrapped size='medium' src='{image}' />
+        <Image wrapped size='medium' src='{`${props.member.image}' />
         <Modal.Description>
           <Header>{`${email} • ${phone}`}</Header>
           <p>
