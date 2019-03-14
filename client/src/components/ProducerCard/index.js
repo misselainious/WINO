@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import { Card, Grid, Image, Button} from 'semantic-ui-react'
+import { Card, Button} from 'semantic-ui-react'
 
 const Producercard = (props) => {
-  console.log(props)
   return (
 <Card className="card">
     <Card.Content>

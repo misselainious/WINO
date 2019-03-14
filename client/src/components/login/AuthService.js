@@ -9,7 +9,7 @@ export default class AuthService {
 
     login(username, password) {
         // Get a token from api server using the fetch api
-        console.log('logindomain', this.domain);
+        // console.log('logindomain', this.domain);
         return this.fetch(`/api/login`, {
             method: 'POST',
             body: JSON.stringify({
