@@ -7,15 +7,27 @@ import { Grid, Table} from "semantic-ui-react";
 
 class OneProducer extends Component {
   state = {
-    producer: {}
+    producer: {},
+    wines: []
   };
   removeUnderscores(myString){
     return myString.split("_").join(" ")
   }
+
+
+  
+
+
   componentDidMount() {
     API.getProducer(this.props.match.params.id)
       .then(res => this.setState({ producer: res.data }))
+      .catch(err => console.log(err))
+
+      API.getProducerWines(this.state.producer.Producer)
+      .then(res => this.console.log({ wines: res.data }))
+      .then(res => this.setState({ wines: res.data }))
       .catch(err => console.log(err));
+
   }
 
 render() {
@@ -43,6 +55,7 @@ render() {
       }
         </Table.Body>
         </Table>
+        <h1></h1>
     </Grid>
  
     );
