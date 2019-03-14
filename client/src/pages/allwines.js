@@ -89,6 +89,7 @@ class Wines extends Component {
 
   render() {
     const mainStyle = { marginLeft: "250px" }
+    const wineAreaStyle= {minHeight:"100vh"};
     const countries = ["Germany", "France", "Austria", "Spain", "Portugal", "Greece"].sort();
     const colors = ["Rosé", "White", "Red"].sort()
     const regions = this.state.regionNames.sort();
@@ -109,14 +110,6 @@ class Wines extends Component {
     }]
     //TODO Make the footer less wonky
     let wineList = this.state.wines
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    // console.log("preWinelist", wineList)
->>>>>>> 7f6a23bed103505909a8a79a697bc2038b8cb04e
-=======
-
->>>>>>> 8c4d5caf896328ca98fa86eb8062e7fb5c866dae
     //this is a hacky way to access the wine data field given that each word is
     //slightly different than the actual keyword
     const wineFieldAdjuster = { "countries": "Country", "regions": "Region", "producers": "Producer", "colors": "Color" }
@@ -136,7 +129,7 @@ class Wines extends Component {
         {/*CheckboxSidebar renders with a double layered array*/}
         <Grid.Row>
 
-          <Grid.Column width={2}>
+          <Grid.Column width={2} style={wineAreaStyle}>
           <SearchWines />
             <CheckboxSidebar checkableArrays={filterElements} handleFilterChange={this.handleFilterChange} />
           </Grid.Column>
