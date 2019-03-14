@@ -94,8 +94,9 @@ class Admin extends Component {
         <Form.Button
           disabled={!(this.state.producer && this.state.code)}
           onClick={this.handleFormSubmit}
-        >
-          Submit</Form.Button>
+          className="seeAllWinesBtn" size='small'>
+          <p className="seeAllWinesText">
+          Submit</p></Form.Button>
       </Form>
     )
   }

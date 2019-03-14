@@ -13,7 +13,9 @@ const Producercard = (props) => {
       <Card.Description> 
       {props.producer.country}
         <Link to={"/producerdetails/" + props.id}>
-          <Button basic color='red'>View Producer</Button>
+
+          <Button className="seeAllWinesBtn" size='small'>
+        <p className="seeAllWinesText">View Producer</p></Button>
         </Link> </Card.Description>
     </Card.Content>
   </Card>
