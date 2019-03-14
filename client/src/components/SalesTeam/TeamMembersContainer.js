@@ -8,11 +8,11 @@ function pairTeamMembers(modalFn) {
     const teamMemberCards = salesTeamMembers.map((member, i) => {
         return <TeamMemberCard key={i} member={member} openModal={modalFn} />
     });
-    
+
     const pairs = [];
-    for (let i=0; i < teamMemberCards.length; i+=2) {
+    for (let i = 0; i < teamMemberCards.length; i += 2) {
         let first = teamMemberCards[i];
-        let second = teamMemberCards[i+1];
+        let second = teamMemberCards[i + 1];
         pairs.push([first, second]);
     };
     return pairs;
@@ -23,12 +23,12 @@ function TeamMembersContainer(props) {
     return (
         <Container>
             <Grid>
-                <Grid.Column
-                    textAlign='center'>
-                    <Button size='huge'>Sales Team</Button>
+                <Grid.Column textAlign='center'>
+                    <Button className="seeAllWinesBtn" size='small'>
+                        <p className="seeAllWinesText">Sales Team</p></Button>
                 </Grid.Column>
             </Grid>
-            { pairs && (
+            {pairs && (
                 pairs.map((pair, i) => {
                     return (
                         <Segment style={{ padding: '0em' }} vertical key={i}>
@@ -41,7 +41,7 @@ function TeamMembersContainer(props) {
                         </Segment>
                     )
                 })
-            ) }
+            )}
         </Container>
 
     )
