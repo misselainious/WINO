@@ -6,6 +6,7 @@ import "./index.css";
 const Navbar = props => {
   const fixed = props.fixed;
   const {pathname} = window.location;
+  const scrollToTop = () => { window.scroll(0,0)};
   return (
    
     <Menu
@@ -18,10 +19,10 @@ const Navbar = props => {
     >
       <Container className="navbarcustomstyle">
         <img src="../images/winewisehead.png" alt="owlhead" className="owlHeadLogo"/>
-      <Link to="/"><Menu.Item className={pathname === "/" ? "nav-link active" : "nav-link"}><p>Wine Wise</p></Menu.Item></Link>
-        <Link to="/allwines"><Menu.Item className={pathname === "/allwines" ? "nav-link active" : "nav-link"}><p>All Wines</p></Menu.Item></Link>
-        <Link to="/producers"><Menu.Item className={pathname === "/producers" ? "nav-link active" : "nav-link"}><p>Producers</p></Menu.Item></Link>
-        <Link to="/aboutus" ><Menu.Item className={pathname === "/aboutus" ? "nav-link active" : "nav-link"}><p>About Us</p></Menu.Item></Link>
+      <Link to="/" onClick={scrollToTop}><Menu.Item className={pathname === "/" ? "nav-link active" : "nav-link"}><p>Wine Wise</p></Menu.Item></Link>
+        <Link to="/allwines" onClick={scrollToTop}><Menu.Item className={pathname === "/allwines" ? "nav-link active" : "nav-link"}><p>All Wines</p></Menu.Item></Link>
+        <Link to="/producers" onClick={scrollToTop}><Menu.Item className={pathname === "/producers" ? "nav-link active" : "nav-link"}><p>Producers</p></Menu.Item></Link>
+        <Link to="/aboutus" onClick={scrollToTop}><Menu.Item className={pathname === "/aboutus" ? "nav-link active" : "nav-link"}><p>About Us</p></Menu.Item></Link>
         <Menu.Item position='right'>
           <Button className="registerBtn"  style={{ marginLeft: '0.5em' }}>
             <p className="registerBtnText">Register</p>
