@@ -133,7 +133,7 @@ class Wines extends Component {
         <SearchWines />
         <Grid.Row>
 
-          <Grid.Column width={2} style={wineAreaStyle}>
+          <Grid.Column width={2} >
    
             <CheckboxSidebar checkableArrays={filterElements} handleFilterChange={this.handleFilterChange} />
           </Grid.Column>

@@ -3,7 +3,7 @@ import API from "../utils/API";
 // import { List, ListItem } from "../components/List";
 import { DataProducer} from "../components/DataWineTable";
 import { Link } from "react-router-dom";
-import { Grid, Table, List} from "semantic-ui-react";
+import { Grid, Table, List, Header} from "semantic-ui-react";
 import Winecard from "../components/WineCard"
 
 class OneProducer extends Component {
@@ -15,22 +15,17 @@ class OneProducer extends Component {
     return myString.split("_").join(" ")
   }
 
-
-  
-
-
   componentDidMount() {
     API.getProducer(this.props.match.params.id)
       .then(res => this.setState({ producer: res.data }))
       .catch(err => console.log(err))
 
-      API.getWines(this.state.producer.Producer)
+      API.getWines()
       .then(res => {
-        let selectWines = [];
-        if(this.state.producer.Producer === res.Producer){
-          selectWines.push(res.data)
-        }
-        this.setState({ wines: selectWines })})
+        let data = res.data
+        data = data.filter((item) => item.Producer == this.state.producer.Producer)
+        this.setState({ wines: data })
+      })
       .catch(err => console.log(err));
 
   }
@@ -45,6 +40,8 @@ render() {
 
     return (
      <Grid>
+       <Grid.Row>
+         <Grid.Column width={8}>
         <Table celled>
             <Table.Header>
                 <Table.Row>
@@ -60,17 +57,16 @@ render() {
                     </Table.Row>
             )
         }
-      
         </Table.Body>
         </Table>
-        
-
-
-        <Grid>
-        {/*CheckboxSidebar renders with a double layered array*/}
+        </Grid.Column>
+         </Grid.Row>
+         <Header as='h3'>{this.state.producer.Producer}'s Wines</Header>
+       
         <Grid.Row>
+          
 
-          <Grid.Column width={12}>
+          <Grid.Column width={8}>
           
             {producerWines.length ? (
               <List >
@@ -89,7 +85,7 @@ render() {
 
           </Grid.Column>
         </Grid.Row>
-      </Grid>
+
 
 
 
