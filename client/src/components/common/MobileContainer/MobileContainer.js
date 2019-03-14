@@ -14,6 +14,7 @@ class MobileContainer extends React.Component {
   render() {
     const { children } = this.props
     const { sidebarOpened } = this.state
+    const {pathname} = window.location;
 
     return (
       <Responsive
@@ -32,18 +33,21 @@ class MobileContainer extends React.Component {
           <Menu.Item as='a' active>
             Wine Wise
           </Menu.Item>
-          <Link to="/allwines">All Wines</Link>
-          <Link to="/producers">Producers</Link>
-          <Link to="/aboutus">About Us</Link>
-          <Link to="/register">Register</Link>
-          {/* <Link to="/members">Members</Link> */}
+          <Link to="/"><Menu.Item className={pathname === "/" ? "nav-link active" : "nav-link"}>
+            <p className="sideBarText">Home</p></Menu.Item></Link>
+            <Link to="/allwines"><Menu.Item className={pathname === "/allwines" ? "nav-link active" : "nav-link"}>
+              <p className="sideBarText">All Wines</p></Menu.Item></Link>
+            <Link to="/producers"><Menu.Item className={pathname === "/producers" ? "nav-link active" : "nav-link"}>
+              <p className="sideBarText">Producers</p></Menu.Item></Link>
+            <Link to="/aboutus" ><Menu.Item className={pathname === "/aboutus" ? "nav-link active" : "nav-link"}>
+              <p className="sideBarText">About Us</p></Menu.Item></Link>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 350, padding: '1em 0em' }}
+            style={{ minHeight: 140, padding: '1em 0em' }}
             vertical
           >
             <Container>
@@ -52,12 +56,9 @@ class MobileContainer extends React.Component {
                   <Icon name='sidebar' />
                 </Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted>
-                    Register
-                  </Button>
-                  <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
-                    Sign Up
-                  </Button>
+                    <Button className="registerBtn"  style={{ marginLeft: '0.5em' }}>
+                        <p className="registerBtnText">Register</p>
+                    </Button>
                 </Menu.Item>
               </Menu>
             </Container>
