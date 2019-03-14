@@ -38,7 +38,7 @@ class Producers extends Component {
   
 render() {
     return (
-        <Grid>
+        <Grid style={{marginTop: "50px"}}>
         {this.state.Producers.length ? (
               <List>
                 <Grid>
@@ -46,7 +46,7 @@ render() {
                       <center>
                           <SearchProducers />
                       </center>
-                  </Grid.Row>>   
+                  </Grid.Row>  
                 {this.state.Producers.map(producer => (
                     <Producercard id={producer._id} producer={producer.Producer} country={producer.Country} region={producer.Region} key={producer._id}/>            
                 ))}

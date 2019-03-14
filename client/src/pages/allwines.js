@@ -125,7 +125,7 @@ class Wines extends Component {
 
     return (
 
-      <Grid>
+      <Grid style={{marginTop: "50px"}}>
         {/*CheckboxSidebar renders with a double layered array*/}
         <Grid.Row>
 
