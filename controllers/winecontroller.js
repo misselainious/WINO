@@ -14,7 +14,6 @@ module.exports = {
     .findOne({ _id: req.params.id })
     .then( wine => {
       res.json(wine)
-      console.log("I found one!")
     })
     .catch(err => {
       console.log(err);
