@@ -19,6 +19,7 @@ import OneWine from "./pages/onewine";
 import OneProducer from "./pages/oneproducer";
 import OtherHeading from "./components/Homepage/HomeHeading/OtherHeading";
 import ErrorPage from "./pages/errorpage";
+import "./App.css";
 
 
 
