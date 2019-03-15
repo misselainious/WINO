@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Segment, Grid } from "semantic-ui-react";
+import { Button, Container, Divider, Segment, Grid } from "semantic-ui-react";
 import salesTeamMembers from "../../salesTeam.json";
 import TeamMemberCard from "./TeamMemberCard";
 
@@ -24,8 +24,17 @@ function TeamMembersContainer(props) {
         <Container>
             <Grid>
                 <Grid.Column textAlign='center'>
-                    <Button className="seeAllWinesBtn" size='small'>
-                        <p className="seeAllWinesText">Sales Team</p></Button>
+
+                    {/* <Button className="seeAllWinesBtn" size='small'>
+                        <p className="seeAllWinesText">Sales Team</p></Button> */}
+                    <Divider
+                        as='h2'
+                        className='header'
+                        horizontal
+                        style={{ margin: '1em 0em', textTransform: 'uppercase' }}>
+                        <a href=''>SALES TEAM</a>
+                    </Divider>
+
                 </Grid.Column>
             </Grid>
             {pairs && (
