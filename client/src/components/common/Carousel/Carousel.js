@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import HomeHeading from "../../Homepage/HomeHeading/HomeHeading";
 import {  Segment } from "semantic-ui-react";
-//import Home from "../../../pages/home";
-// import { Carousel } from "react-responsive-carousel";
 
 
 class imageScrolling extends Component {

@@ -1,8 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import API from "../utils/API";
 import {
+  Button,
   Form,
-  } from 'semantic-ui-react'
+  Segment,
+} from 'semantic-ui-react';
+
 
 const options = [
   { key: 'r', text: 'Red', value: 'Red' },
@@ -11,14 +14,12 @@ const options = [
   { key: 'ro', text: 'Rose', value: 'Rose' },
   { key: 'd', text: 'Dessert', value: 'Dessert' },
 ]
-const countryOptions =[
-  {key: 'f', text: 'France', value: 'France'},
+const countryOptions = [
+  { key: 'f', text: 'France', value: 'France' },
   { key: 'g', text: 'Greece', value: 'Greece' },
   { key: 's', text: 'Spain', value: 'Spain' },
   { key: 'p', text: 'Portugal', value: 'Portugal' },
 ]
-
-
 
 
 class Admin extends Component {
@@ -31,13 +32,13 @@ class Admin extends Component {
     description: ""
   };
 
-  handleInputChange = (event, { value }) =>{
+  handleInputChange = (event, { value }) => {
     //this will capture form input
     this.setState({ [event.target.name]: event.target.value });
   }
   // separate onChange methods to assign state for Select form values
-  handleSelectCountryChange=({value})=>this.setState({country:value})
-  handleSelectColorChange=({value})=>this.setState({color:value})
+  handleSelectCountryChange = ({ value }) => this.setState({ country: value })
+  handleSelectColorChange = ({ value }) => this.setState({ color: value })
 
   handleFormSubmit = event => {
     // console.log(this);
@@ -60,44 +61,51 @@ class Admin extends Component {
   render() {
     const { value } = this.state
     return (
-      <Form onSubmit={this.handleFormSubmit}>
-        <Form.Group widths='equal'>
-          <Form.Input fluid label= 'Producer' name='producer' placeholder='Producer' value={this.state.producer} onChange={this.handleInputChange}/>
-          <Form.Input fluid label='Wine' name='wine' placeholder='Wine' value={this.state.wine} onChange={this.handleInputChange}/>
-          <Form.Select
-            fluid
-            label='Color'
-            name='color'
-            options={options}
-            placeholder='Color'
-            // this should be value prop to capture form select instead of state
-            value={value} 
-            onChange={this.handleSelectColorChange}
-          />
-        </Form.Group>
-        <Form.Group widths='equal'>
-          <Form.Input fluid label='Code' name='code' placeholder='Code' value={this.state.code} onChange={this.handleInputChange}/>
-          <Form.Select
-            fluid
-            label='Country'
-            // name='country'
-            options={countryOptions}
-            placeholder='Country'
-            // this should be value prop to capture form select instead of state
-            value={value}
-            onChange={this.handleSelectCountryChange}
-          />
-          <Form.Input fluid label='Region' name= 'region' placeholder='Region' value={this.state.region} onChange={this.handleInputChange} />
-          <Form.Input fluid label='Subregion' name='subregion' placeholder='Subregion' value={this.state.subregion} onChange={this.handleInputChange} />
-        </Form.Group>
-        <Form.TextArea label='Description' name='description' placeholder='Tell us more about you...' value={this.state.description} onChange={this.handleInputChange}/>
-        <Form.Button
-          disabled={!(this.state.producer && this.state.code)}
-          onClick={this.handleFormSubmit}
-          className="seeAllWinesBtn" size='small'>
-          <p className="seeAllWinesText">
-          Submit</p></Form.Button>
-      </Form>
+      <Fragment>
+        <Segment>
+          <Form style={{ height: '650px' }} onSubmit={this.handleFormSubmit}>
+            <Form.Group widths='equal'>
+              <Form.Input fluid label='Producer' name='producer' placeholder='Producer' value={this.state.producer} onChange={this.handleInputChange} />
+              <Form.Input fluid label='Wine' name='wine' placeholder='Wine' value={this.state.wine} onChange={this.handleInputChange} />
+              <Form.Select
+                fluid
+                label='Color'
+                name='color'
+                options={options}
+                placeholder='Color'
+                // this should be value prop to capture form select instead of state
+                value={value}
+                onChange={this.handleSelectColorChange}
+              />
+            </Form.Group>
+            <Form.Group widths='equal'>
+              <Form.Input fluid label='Code' name='code' placeholder='Code' value={this.state.code} onChange={this.handleInputChange} />
+              <Form.Select
+                fluid
+                label='Country'
+                // name='country'
+                options={countryOptions}
+                placeholder='Country'
+                // this should be value prop to capture form select instead of state
+                value={value}
+                onChange={this.handleSelectCountryChange}
+              />
+              <Form.Input fluid label='Region' name='region' placeholder='Region' value={this.state.region} onChange={this.handleInputChange} />
+              <Form.Input fluid label='Subregion' name='subregion' placeholder='Subregion' value={this.state.subregion} onChange={this.handleInputChange} />
+            </Form.Group>
+            <Form.TextArea style={{ height: '300px' }} label='Description' name='description' placeholder='Tell us more about you...' value={this.state.description} onChange={this.handleInputChange} />
+            <Button
+              floated='right'
+              disabled={!(this.state.producer && this.state.code)}
+              style={{ textAlign: "center" }}
+              onClick={this.handleFormSubmit}
+              size='small'
+              className="seeAllWinesBtn">
+              <p className="seeAllWinesText">
+                Submit</p></Button>
+          </Form>
+        </Segment>
+      </Fragment>
     )
   }
 }

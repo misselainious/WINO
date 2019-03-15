@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { Container, Menu, Segment, Responsive, Sidebar, Icon, Button } from "semantic-ui-react";
-import HomeHeading from '../../Homepage/HomeHeading/HomeHeading';
+
 import { Link } from 'react-router-dom';
 
 class MobileContainer extends React.Component {
@@ -31,10 +31,10 @@ class MobileContainer extends React.Component {
           visible={sidebarOpened}
         >
           <Menu.Item as='a' active>
-            Wine Wise
+            {/* Wine Wise */}
           </Menu.Item>
           <Link to="/"><Menu.Item className={pathname === "/" ? "nav-link active" : "nav-link"}>
-            <p className="sideBarText">Home</p></Menu.Item></Link>
+            <p className="sideBarText">Wine Wise</p></Menu.Item></Link>
             <Link to="/allwines"><Menu.Item className={pathname === "/allwines" ? "nav-link active" : "nav-link"}>
               <p className="sideBarText">All Wines</p></Menu.Item></Link>
             <Link to="/producers"><Menu.Item className={pathname === "/producers" ? "nav-link active" : "nav-link"}>
@@ -57,12 +57,12 @@ class MobileContainer extends React.Component {
                 </Menu.Item>
                 <Menu.Item position='right'>
                     <Button className="registerBtn"  style={{ marginLeft: '0.5em' }}>
-                        <p className="registerBtnText">Register</p>
+                        <p className="registerBtnText">For The Trade</p>
                     </Button>
                 </Menu.Item>
               </Menu>
             </Container>
-            {/* <HomeHeading mobile /> */}
+          
           </Segment>
 
           {children}
