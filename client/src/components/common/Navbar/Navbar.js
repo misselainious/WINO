@@ -25,7 +25,7 @@ const Navbar = props => {
         <Link to="/aboutus" onClick={scrollToTop}><Menu.Item className={pathname === "/aboutus" ? "nav-link active" : "nav-link"}><p>About Us</p></Menu.Item></Link>
         <Menu.Item position='right'>
           <Button className="registerBtn"  style={{ marginLeft: '0.5em' }}>
-            <p className="registerBtnText">Register</p>
+            <p className="registerBtnText">For The Trade</p>
           </Button>
         </Menu.Item>
       </Container>

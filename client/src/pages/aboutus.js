@@ -32,13 +32,6 @@ class AboutUs extends React.Component {
         return (
             <React.Fragment>
 
-                {/* <Segment
-                inverted
-                textAlign='center'
-                style={{ minHeight: 700, padding: '1em 0em', backgroundImage: `url("./images/vineyard.jpg")` }}
-                vertical>
-            </Segment> */}
-
                 <Segment style={{ padding: '8em 0em' }} vertical>
                     <Grid container stackable verticalAlign='middle'>
                         <Grid.Row>
@@ -58,7 +51,7 @@ class AboutUs extends React.Component {
 
                             </Grid.Column>
                             <Grid.Column floated='right' width={6}>
-                                <Image bordered rounded size='large' src='/images/Hiram.jpg' />
+                                <Image bordered rounded size='large' src='/images/HiramFlipped.png' />
                             </Grid.Column>
                         </Grid.Row>
 
@@ -131,30 +124,9 @@ class AboutUs extends React.Component {
                         </Grid>
                     </Segment>
 
-                    {/* <Grid>
-                    <Grid.Column
-                        textAlign='center'>
-                        <Button size='huge'>Sales Team</Button>
-                    </Grid.Column>
-                </Grid> */}
-
-                    {/* <Segment
-                    inverted
-                    textAlign='center'
-                    style={{ minHeight: 200, padding: '1em 0em', backgroundImage: `url("./images//wineBarrels.jpg")` }}
-                    vertical>
-                </Segment> */}
 
                     <TeamMembersContainer handleOpenModal={this.handleOpenModal} />
 
-                    {/* <Divider
-                        as='h2'
-                        className='header'
-                        horizontal
-                        style={{ margin: '1em 0em', textTransform: 'uppercase' }}>
-                        <a href=''>SALES TEAM</a>
-                    </Divider> */}
-                    {/* <Container> */}
 
                     <SalesTeamModal open={modal} member={currentMember} closeModal={this.handleCloseModal} />
 
@@ -163,7 +135,6 @@ class AboutUs extends React.Component {
         )
     }
 }
-// <ResponsiveContainer>
-// </ResponsiveContainer>
-// )
+
+
 export default AboutUs;
