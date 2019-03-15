@@ -14,14 +14,12 @@ import {
 
 
 const Home = () => (
-  // <ResponsiveContainer>
+  
   <React.Fragment>
 
-    <Carousel>
+    <Carousel />
       <HomeHeading />
-    </Carousel>
-
-    {/* </Segment> */}
+   
 
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
@@ -103,7 +101,7 @@ const Home = () => (
 
         <Grid.Column floated='right' width={6}>
           {/* <Carousel /> */}
-          <Image bordered rounded size='large' src='/images/StockRed.png' />
+          <Image bordered rounded size='large' src='/images/bottles.jpg' />
         </Grid.Column>
         <br />
 

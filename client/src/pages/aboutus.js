@@ -32,7 +32,7 @@ class AboutUs extends React.Component {
         return (
             <React.Fragment>
 
-                <Segment style={{ padding: '6em 0em' }} vertical>
+                <Segment style={{ padding: '8em 0em' }} vertical>
                     <Grid container stackable verticalAlign='middle'>
                         <Grid.Row>
                             <Grid.Column width={8}>
