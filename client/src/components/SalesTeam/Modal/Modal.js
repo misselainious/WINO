@@ -14,7 +14,7 @@ const SalesTeamModal = props => {
   return (
 
     <Modal
-      // trigger={<Button>More Info</Button>}
+    
       open={props.open}
     >
       <Modal.Header>{name}</Modal.Header>
