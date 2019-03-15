@@ -124,30 +124,9 @@ class AboutUs extends React.Component {
                         </Grid>
                     </Segment>
 
-                    {/* <Grid>
-                    <Grid.Column
-                        textAlign='center'>
-                        <Button size='huge'>Sales Team</Button>
-                    </Grid.Column>
-                </Grid> */}
-
-                    {/* <Segment
-                    inverted
-                    textAlign='center'
-                    style={{ minHeight: 200, padding: '1em 0em', backgroundImage: `url("./images//wineBarrels.jpg")` }}
-                    vertical>
-                </Segment> */}
 
                     <TeamMembersContainer handleOpenModal={this.handleOpenModal} />
 
-                    {/* <Divider
-                        as='h2'
-                        className='header'
-                        horizontal
-                        style={{ margin: '1em 0em', textTransform: 'uppercase' }}>
-                        <a href=''>SALES TEAM</a>
-                    </Divider> */}
-                    {/* <Container> */}
 
                     <SalesTeamModal open={modal} member={currentMember} closeModal={this.handleCloseModal} />
 
@@ -156,7 +135,6 @@ class AboutUs extends React.Component {
         )
     }
 }
-// <ResponsiveContainer>
-// </ResponsiveContainer>
-// )
+
+
 export default AboutUs;
