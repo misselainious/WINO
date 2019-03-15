@@ -6,10 +6,9 @@
     max-height: 150px;
 }
 
-.checkbox {
-    padding-top: 10%;
+.sidebar {
+    max-width: 200px;
+    position: fixed;
+    padding-left: 50px;
 }
 
-.row {
-    padding-top: 10%;
-}

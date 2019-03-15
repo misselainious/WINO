@@ -5,7 +5,7 @@ import API from "../utils/API";
 import { List } from "../components/List";
 import { DataWine } from "../components/DataWineTable";
 // import { Link } from "react-router-dom";
-import { Grid, GridRow } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 import Winecard from "../components/WineCard"
 import SearchWines from "../components/SearchWines"
 
@@ -91,6 +91,7 @@ class Wines extends Component {
   }
 
   render() {
+
     const mainStyle = { marginLeft: "250px" }
     const countries = ["Germany", "France", "Austria", "Spain", "Portugal", "Greece"]
     const colors = ["Rosé", "White", "Red"]
@@ -128,12 +129,12 @@ class Wines extends Component {
 
     return (
 
-      <Grid style={{marginTop: "50px"}}>
+    <Grid style={{marginTop: "50px"}}>
         {/*CheckboxSidebar renders with a double layered array*/}
         <SearchWines />
         <Grid.Row>
 
-          <Grid.Column width={2} >
+          <Grid.Column width={3} >
    
             <CheckboxSidebar checkableArrays={filterElements} handleFilterChange={this.handleFilterChange} />
           </Grid.Column>
@@ -158,8 +159,6 @@ class Wines extends Component {
           </Grid.Column>
         </Grid.Row>
       </Grid>
-
-
   )
             }
             }

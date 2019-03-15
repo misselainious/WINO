@@ -17,9 +17,9 @@ const Home = () => (
   
   <React.Fragment>
 
-    <Carousel />
+    <Carousel>
       <HomeHeading />
-   
+      </Carousel>
 
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
