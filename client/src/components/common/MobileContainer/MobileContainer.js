@@ -57,7 +57,7 @@ class MobileContainer extends React.Component {
                 </Menu.Item>
                 <Menu.Item position='right'>
                     <Button className="registerBtn"  style={{ marginLeft: '0.5em' }}>
-                        <p className="registerBtnText">Register</p>
+                        <p className="registerBtnText">For The Trade</p>
                     </Button>
                 </Menu.Item>
               </Menu>
