@@ -31,10 +31,10 @@ class MobileContainer extends React.Component {
           visible={sidebarOpened}
         >
           <Menu.Item as='a' active>
-            Wine Wise
+            {/* Wine Wise */}
           </Menu.Item>
           <Link to="/"><Menu.Item className={pathname === "/" ? "nav-link active" : "nav-link"}>
-            <p className="sideBarText">Home</p></Menu.Item></Link>
+            <p className="sideBarText">Wine Wise</p></Menu.Item></Link>
             <Link to="/allwines"><Menu.Item className={pathname === "/allwines" ? "nav-link active" : "nav-link"}>
               <p className="sideBarText">All Wines</p></Menu.Item></Link>
             <Link to="/producers"><Menu.Item className={pathname === "/producers" ? "nav-link active" : "nav-link"}>
