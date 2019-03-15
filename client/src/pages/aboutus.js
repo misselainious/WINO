@@ -32,7 +32,7 @@ class AboutUs extends React.Component {
         return (
             <React.Fragment>
 
-                <Segment style={{ padding: '8em 0em' }} vertical>
+                <Segment style={{ padding: '6em 0em' }} vertical>
                     <Grid container stackable verticalAlign='middle'>
                         <Grid.Row>
                             <Grid.Column width={8}>
@@ -55,13 +55,13 @@ class AboutUs extends React.Component {
                             </Grid.Column>
                         </Grid.Row>
 
-                        <Grid.Row>
+                        {/* <Grid.Row>
                             <Grid.Column textAlign='center'>
                                 <Button className="seeAllWinesBtn" size='small'>
                                     <p className="seeAllWinesText">Read More</p>
                                 </Button>
                             </Grid.Column>
-                        </Grid.Row>
+                        </Grid.Row> */}
                     </Grid>
 
                     {/* // testing section here */}
@@ -86,13 +86,13 @@ class AboutUs extends React.Component {
 
                                 </Grid.Column>
                             </Grid.Row>
-                            <Grid.Row>
+                            {/* <Grid.Row>
                                 <Grid.Column textAlign='center'>
                                 <Button className="seeAllWinesBtn" size='small'>
                                     <p className="seeAllWinesText">Read More</p>
                                 </Button>
                                 </Grid.Column>
-                            </Grid.Row>
+                            </Grid.Row> */}
                         </Grid>
                     </Segment>
 
