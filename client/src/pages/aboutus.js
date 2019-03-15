@@ -32,13 +32,6 @@ class AboutUs extends React.Component {
         return (
             <React.Fragment>
 
-                {/* <Segment
-                inverted
-                textAlign='center'
-                style={{ minHeight: 700, padding: '1em 0em', backgroundImage: `url("./images/vineyard.jpg")` }}
-                vertical>
-            </Segment> */}
-
                 <Segment style={{ padding: '8em 0em' }} vertical>
                     <Grid container stackable verticalAlign='middle'>
                         <Grid.Row>
@@ -58,7 +51,7 @@ class AboutUs extends React.Component {
 
                             </Grid.Column>
                             <Grid.Column floated='right' width={6}>
-                                <Image bordered rounded size='large' src='/images/Hiram.jpg' />
+                                <Image bordered rounded size='large' src='/images/HiramFlipped.png' />
                             </Grid.Column>
                         </Grid.Row>
 
