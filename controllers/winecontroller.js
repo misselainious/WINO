@@ -26,6 +26,12 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findByProducer: function(req, res) {
+    db.Wine
+      .findByProducer(req.params.Producer)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   create: function(req, res) {
     db.Wine
       .create(req.body)

@@ -6,6 +6,9 @@ export default {
     // console.log("GETTING WINES")
     return axios.get("/api/wines");
   },
+  getProducerWines: function(producer) {
+    return axios.get("/api/wines/" + producer);
+  },
   // Gets the wine with the given id
   getWine: function(id) {
     return axios.get("/api/wines/" + id);
