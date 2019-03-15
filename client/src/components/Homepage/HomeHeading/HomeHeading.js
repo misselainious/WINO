@@ -12,7 +12,7 @@ const HomeHeading = ({ mobile }) => (
         fontSize: mobile ? '2em' : '4em',
         fontWeight: 'normal',
         marginBottom: 0,
-        marginTop: mobile ? '1.5em' : '3em',
+        marginTop: mobile ? '1.5em' : '2.2em',
         fontFamily: 'Merriweather',
         textShadowColor: 'rgba(0, 0, 0, 0)',
         textShadowOffset: {width: -1, height: 1},
