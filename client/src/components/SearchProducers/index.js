@@ -37,11 +37,11 @@ export default class SearchBar extends Component {
 
       const re = new RegExp(_.escapeRegExp(this.state.value), "i");
       //what is being tested for in search input
-      const isMatch = result => re.test(result.producer);
+      const isMatch = result => re.test(result.Producer);
 
       this.setState({
         isLoading: false,
-        wines: _.filter(this.state.producers, isMatch)
+        producers: _.filter(this.state.producers, isMatch)
       });
     }, 300);
   };

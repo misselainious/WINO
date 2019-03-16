@@ -6,13 +6,6 @@ import API from '../../utils/API'
 import { Link } from "react-router-dom"
 
 
-// const source = _.times(5, () => ({
-//   title: faker.company.companyName(),
-//   description: faker.company.catchPhrase(),
-//   image: faker.internet.avatar(),
-//   price: faker.finance.amount(0, 100, 2, "$")
-// }));
-
 export default class SearchBar extends Component {
 
     state = {
