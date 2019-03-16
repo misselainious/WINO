@@ -1,29 +1,49 @@
-# Create React Express App
+# Wine Wise
 
-## About This Boilerplate
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+[Wine Wise](https://winewise.herokuapp.com/) is a website and mobile app that ...
+ 
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+## Getting Started
 
-## Starting the app locally
+- Clone Repo
+- Run command in Terminal "npm install"
+- Run command "npm start"
+- Run "ctrl + c" to exit mode
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
 
-```
-npm install
-```
+## Empower Yourself & Register Your Bike Today!
 
-This should install node modules within the server and the client folder.
+![winewise](client/public/images/wineWise.gif "Wine Wise")
 
-After both installations complete, run the following command in your terminal:
 
-```
-npm start
-```
+## Technologies Utilized
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+- CSS3
+    - Semantic-ui 2.4.1
+- JavaScript
+    - Node.js
+        - Axios
+        - Express
+        - Express-jwt
+        - Fast-CSV
+        - JSONwebToken
+        - Mongoose
+        - React
+        - React-Dom
+        - React-Router-Dom
+        - Sequelize
+- Database
+    - MongoDB
+- Deployment
+    - Heroku
 
-## Deployment (Heroku)
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+## Mobile Responsive
+
+![winewise](client/public/images/wineWiseMobile.gif "Wine Wise Mobile App")
+
+
+## License & Copyright
+
+&copy; Brett Byars, Elaine Cadman, Ajay Paladagu, Susye Weng-Reeder, Michael Whittemore: [Wine Wise 2019](https://winewise.herokuapp.com/). UC Berkeley Coding Bootcamp.
