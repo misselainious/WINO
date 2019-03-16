@@ -57,7 +57,7 @@ class AboutUs extends React.Component {
 
                         <Grid.Row>
                             <Grid.Column textAlign='center'>
-                                <Button href="https://winewise.herokuapp.com/hiram" className="seeAllWinesBtn" size='small'>
+                                <Button href="/hiram" className="seeAllWinesBtn" size='small'>
                                     <p className="seeAllWinesText">Read More</p>
                                 </Button>
                             </Grid.Column>
@@ -87,7 +87,7 @@ class AboutUs extends React.Component {
                             </Grid.Row>
                             <Grid.Row>
                                 <Grid.Column textAlign='center'>
-                                <Button href="https://winewise.herokuapp.com/greenwood" className="seeAllWinesBtn" size='small'>
+                                <Button href="/greenwood" className="seeAllWinesBtn" size='small'>
                                     <p className="seeAllWinesText">Read More</p>
                                 </Button>
                                 </Grid.Column>

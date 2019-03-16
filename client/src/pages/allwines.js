@@ -95,6 +95,7 @@ class Wines extends Component {
     const colors = ["Rosé", "White", "Red"]
     const regions = this.state.regionNames;
     const producers = this.state.producerNames;
+    const wineAreaStyle= {minHeight:"100vh"};
     //
     const filterElements = [{
       filterType: "countries",
@@ -137,7 +138,7 @@ class Wines extends Component {
             <CheckboxSidebar checkableArrays={filterElements} handleFilterChange={this.handleFilterChange} />
           </Grid.Column>
 
-          <Grid.Column width={12}>
+          <Grid.Column style={wineAreaStyle} width={12}>
           
             {wineList.length ? (
               <List >
