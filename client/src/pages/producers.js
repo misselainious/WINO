@@ -42,9 +42,11 @@ render() {
         {this.state.Producers.length ? (
               <List>
                 <Grid>
+
+                <SearchProducers />
                   <Grid.Row>
                       <center>
-                          <SearchProducers />
+                      {/* <SearchProducers /> */}
                       </center>
                   </Grid.Row>   
                 {this.state.Producers.map(producer => (
