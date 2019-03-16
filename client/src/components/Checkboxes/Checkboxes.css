@@ -1,15 +1,15 @@
 .checkboxContainer{
     text-align: left;
     border: 1px solid;
-    margin: 3px;
+    margin: 5px;
     overflow-y: scroll;
     max-height: 150px;
 }
 
 .sidebar {
     max-width: 200px;
+    padding-left: 70px;
     position: fixed;
-    padding-left: 50px;
 }
 
 
