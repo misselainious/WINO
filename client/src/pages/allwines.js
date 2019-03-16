@@ -5,7 +5,7 @@ import API from "../utils/API";
 import { List } from "../components/List";
 import { DataWine } from "../components/DataWineTable";
 // import { Link } from "react-router-dom";
-import { Grid, GridRow } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 import Winecard from "../components/WineCard"
 import SearchWines from "../components/SearchWines"
 
@@ -28,7 +28,6 @@ class Wines extends Component {
   //onload we get all the wine and producer data
 
 
-    
   componentDidMount() {
     this.loadWines();
     this.loadProducers();
@@ -133,7 +132,7 @@ class Wines extends Component {
         <SearchWines />
         <Grid.Row>
 
-          <Grid.Column width={2} >
+          <Grid.Column width={3} >
    
             <CheckboxSidebar checkableArrays={filterElements} handleFilterChange={this.handleFilterChange} />
           </Grid.Column>

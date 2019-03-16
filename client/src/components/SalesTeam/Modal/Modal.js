@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Header, Image, Modal } from 'semantic-ui-react';
-
+import "./Modal.css";
 
 const SalesTeamModal = props => {
 
@@ -19,7 +19,7 @@ const SalesTeamModal = props => {
     >
       <Modal.Header>{name}</Modal.Header>
       <Modal.Content image>
-        <Image wrapped size='medium' src={image}/>
+        <Image className="modalImageSize" src={image}/>
         <Modal.Description>
           <Header>{`${email} • ${phone}`}</Header>
           <p>

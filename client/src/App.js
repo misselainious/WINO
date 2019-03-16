@@ -19,6 +19,8 @@ import OneWine from "./pages/onewine";
 import OneProducer from "./pages/oneproducer";
 import OtherHeading from "./components/Homepage/HomeHeading/OtherHeading";
 import ErrorPage from "./pages/errorpage";
+import Hiram from "./pages/hiram";
+import Greenwood from "./pages/greenwood";
 import "./App.css";
 
 
@@ -85,6 +87,8 @@ const PageSwitch = props => {
       <Route path="/producers" component={Producers} />
       <Route path="/producerdetails/:id" component={OneProducer} />
       <Route path="/aboutus" component={AboutUs} />
+      <Route path="/hiram" component={Hiram} />
+      <Route path="/greenwood" component={Greenwood} />
       <Route path="/login" component={Login}/>
       <Route path="*" component={ErrorPage} />
     </Switch>
