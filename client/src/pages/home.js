@@ -101,7 +101,7 @@ const Home = () => (
 
         <Grid.Column floated='right' width={6}>
           {/* <Carousel /> */}
-          <Image bordered rounded size='large' src='/images/StockRed.png' />
+          <Image bordered rounded size='large' src='/images/bottles.jpg' />
         </Grid.Column>
         <br />
 
