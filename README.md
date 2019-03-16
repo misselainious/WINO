@@ -1,20 +1,13 @@
 # Wine Wise
 
 
-[Wine Wise](https://winewise.herokuapp.com/) is a website and mobile app that ...
+[Wine Wise](https://winewise.herokuapp.com/) 
  
 
-## Getting Started
+## About WineWise
+- WineWise is a local Bay Area company that imports wines from 55 producers in select countries in Europe and distributes throughout California. All the statistics and information on this website is direct from Producers and the Principals themselves.
 
-- Clone Repo
-- Run command in Terminal "npm install"
-- Run command "npm start"
-- Run "ctrl + c" to exit mode
-
-
-## Empower Yourself & Register Your Bike Today!
-
-![winewise](client/public/images/wineWise.gif "Wine Wise")
+![winewise](client/public/images/wineWise.gif "WineWise")
 
 
 ## Technologies Utilized
@@ -44,6 +37,9 @@
 ![winewise](client/public/images/wineWiseMobile.gif "Wine Wise Mobile App")
 
 
-## License & Copyright
-
-&copy; Brett Byars, Elaine Cadman, Ajay Paladagu, Susye Weng-Reeder, Michael Whittemore: [Wine Wise 2019](https://winewise.herokuapp.com/). UC Berkeley Coding Bootcamp.
+## Author(s)
+  - :cookie: [Elaine Cadman](https://github.com/Gunnem) _(Concept / Project Management)_
+  - :green_apple: [Brett Byars](https://github.com/FyperTheViper) _(Back-end / Logo Design / React Execution)_
+  - :coffee: [Ajay Paladugu](https://github.com/akp28) _(Log-in / Deployment)_
+  - :chocolate_bar: [Susye Weng-Reeder](https://github.com/eveasian88) _(Front-End / Design)_
+  - :tophat: [Michael Whittemore](https://github.com/michaelwhittemore) _(React Execution/ Database Integration)_
